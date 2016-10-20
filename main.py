@@ -1,24 +1,29 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+import numpy as np
 
 from readers.mat_reader import MatReader
 import matplotlib.pyplot as plt
-from sklearn import cross_validation
 from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.naive_bayes import GaussianNB
 from sklearn.svm import SVC
+from sklearn.model_selection import cross_val_score
+from sklearn import datasets
 
 
 def main(mat_folder_path):
-    mat_reader = MatReader(mat_folder_path)
-    xs, ys = mat_reader.read()
-    print '# of x = %d, # of y = %d' % (len(xs), len(ys))
-    #print xs[0], xs[1], xs[2]
-    #print ys[0], ys[1], ys[2]
-    cmp_regression_algs(xs, ys)
+  # mat_reader = MatReader(mat_folder_path)
+  # xs, ys = mat_reader.read()
+  # print '# of x = %d, # of y = %d' % (len(xs), len(ys))
+  #print xs[0], xs[1], xs[2]
+  #print ys[0], ys[1], ys[2]
+  digits = datasets.load_digits()
+  x = digits.data[:1000]
+  y = digits.target[:1000]
+  cmp_regression_algs(x, y)
 
 def cmp_regression_algs(xs, ys):
 # prepare configuration for cross validation test harness
@@ -38,8 +43,7 @@ def cmp_regression_algs(xs, ys):
   names = []
   scoring = 'accuracy'
   for name, model in models:
-    kfold = cross_validation.KFold(n=num_instances, n_folds=num_folds, random_state=seed)
-    cv_results = cross_validation.cross_val_score(model, xs, ys, cv=kfold, scoring=scoring)
+    cv_results = cross_val_score(model, xs, ys, cv=2, scoring=scoring)
     results.append(cv_results)
     names.append(name)
     msg = "%s: %f (%f)" % (name, cv_results.mean(), cv_results.std())
