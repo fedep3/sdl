@@ -15,21 +15,12 @@ from sklearn import datasets
 
 
 def main(mat_folder_path):
-  # mat_reader = MatReader(mat_folder_path)
-  # xs, ys = mat_reader.read()
-  # print '# of x = %d, # of y = %d' % (len(xs), len(ys))
-  #print xs[0], xs[1], xs[2]
-  #print ys[0], ys[1], ys[2]
-  digits = datasets.load_digits()
-  x = digits.data[:1000]
-  y = digits.target[:1000]
-  cmp_regression_algs(x, y)
+  mat_reader = MatReader(mat_folder_path)
+  xs, ys = mat_reader.read()
+  cmp_regression_algs(xs, ys)
 
 def cmp_regression_algs(xs, ys):
-# prepare configuration for cross validation test harness
   num_folds = 10
-  num_instances = len(xs)
-  seed = 7
 # prepare models
   models = []
   models.append(('LR', LogisticRegression()))
@@ -43,7 +34,7 @@ def cmp_regression_algs(xs, ys):
   names = []
   scoring = 'accuracy'
   for name, model in models:
-    cv_results = cross_val_score(model, xs, ys, cv=2, scoring=scoring)
+    cv_results = cross_val_score(model, xs, ys, cv=num_folds, scoring=scoring)
     results.append(cv_results)
     names.append(name)
     msg = "%s: %f (%f)" % (name, cv_results.mean(), cv_results.std())
