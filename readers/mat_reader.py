@@ -25,7 +25,7 @@ class MatReader:
         ys = []
         for filename in os.listdir(self._folder_path):
             if filename.endswith('.mat'):
-                n = int(filename.lstrip('data').rstrip('.mat'))
+                n = int(filename.lstrip('data').rstrip('.mat')) - 1
                 starting_datetime = self.BEGINNING_DATETIME + timedelta(days=n)
                 mat_data = sio.loadmat(os.path.join(self._folder_path, filename))
                 for row in mat_data['Info'][0][0][0]:
