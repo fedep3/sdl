@@ -13,11 +13,33 @@ from sklearn.svm import SVC
 from sklearn.model_selection import cross_val_score
 
 
+from sklearn import svm
+
 def main(mat_folder_path):
     mat_reader = MatReader(mat_folder_path)
     ts, xs, ys = mat_reader.read()
     print len(ts), len(xs), len(ys)
-    cmp_regression_algs(xs, ys)
+    #cmp_regression_algs(xs, ys)
+    predict_residuals(xs, ys)
+
+
+def predict_residuals(xs, ys):
+    # Assume hardcoded model for now
+    clf = svm.SVR()
+    clf.fit(xs[:3000], ys[:3000])
+    mat_reader = MatReader('ColdComplaintData/Testing')
+    ttest, xtest, ytest = mat_reader.read()
+    plt.figure()
+    plt.title('Actual vs. Prediction')
+    plt.plot(ytest)
+    pred = []
+    pred_res = []
+    for x in xrange(len(xtest)):
+      pred.append(clf.predict(xtest[x])[0])
+      pred_res.append(pred[x] - ytest[x])
+    plt.plot(pred)
+    plt.plot(pred_res)
+    plt.show()
 
 
 def cmp_regression_algs(xs, ys):
