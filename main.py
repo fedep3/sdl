@@ -12,6 +12,9 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.svm import SVC
 from sklearn.model_selection import cross_val_score
 
+import pandas as pd
+import pyflux as pf
+
 
 from sklearn import svm
 
@@ -19,11 +22,12 @@ def main(mat_folder_path):
     mat_reader = MatReader(mat_folder_path)
     ts, xs, ys = mat_reader.read()
     print len(ts), len(xs), len(ys)
+    print ts[0], ts[1]
     #cmp_regression_algs(xs, ys)
-    predict_residuals(xs, ys)
+    predict_residuals(xs, ys, ts)
 
 
-def predict_residuals(xs, ys):
+def predict_residuals(xs, ys,ts):
     # Assume hardcoded model for now
     clf = svm.SVR()
     clf.fit(xs[:3000], ys[:3000])
@@ -35,18 +39,25 @@ def predict_residuals(xs, ys):
     pred = []
     pred_res = []
     for x in xrange(len(xtest)):
-      pred.append(clf.predict(xtest[x])[0])
-      pred_res.append(pred[x] - ytest[x])
+        pred.append(clf.predict(xtest[x])[0])
+        pred_res.append(pred[x] - ytest[x])
     plt.plot(pred)
     plt.plot(pred_res)
     plt.show()
+
+    # Predicting future residuals
+    df = pd.DataFrame(pred_res[:10], index=ttest[:10], columns=['residuals'])
+    df.plot(figsize=(16,12))
+    model = pf.ARIMA(data=df,ar=4,ma=4,integ=0,target='residuals')
+    model.plot_predict(h=3,past_values=5,figsize=(15,5))
+    mod = model.fit("MLE")
+    mod.summary()
 
 
 def cmp_regression_algs(xs, ys):
     num_folds = 10
     # prepare models
-    models = [('LR', LogisticRegression()), ('LDA', LinearDiscriminantAnalysis()), ('KNN', KNeighborsClassifier()),
-              ('CART', DecisionTreeClassifier()), ('NB', GaussianNB()), ('SVM', SVC())]
+    models = [('LR', LogisticRegression()), ('LDA', LinearDiscriminantAnalysis()), ('NB', GaussianNB()), ('SVM', SVC())]
     # evaluate each model in turn
     results = []
     names = []
