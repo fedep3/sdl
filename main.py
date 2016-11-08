@@ -56,11 +56,11 @@ def cmp_regression_algs(xs, ys):
     num_folds = 10
     # prepare models
     models = [('SVM', svm.SVR()), ('KNN', KNeighborsRegressor()), ('LR', LinearRegression()),
-              ('DT', DecisionTreeRegressor), ('BNN', BaggingRegressor()), ('RANSAC', RANSACRegressor())]
+              ('BNN', BaggingRegressor()), ('RANSAC', RANSACRegressor())]
     # evaluate each model in tusvm.rn
     results = []
     names = []
-    scoring = 'mean_squared_error'
+    scoring = 'neg_mean_squared_error'
     for name, model in models:
         cv_results = cross_val_score(model, xs, ys, cv=num_folds, scoring=scoring)
         results.append(cv_results)
