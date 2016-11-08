@@ -21,9 +21,6 @@ from sklearn import svm
 def main(mat_folder_path):
     mat_reader = MatReader(mat_folder_path)
     ts, xs, ys = mat_reader.read()
-    print len(ts), len(xs), len(ys)
-    print ts[0], ts[1]
-    #cmp_regression_algs(xs, ys)
     predict_residuals(xs, ys, ts)
 
 
@@ -46,12 +43,12 @@ def predict_residuals(xs, ys,ts):
     plt.show()
 
     # Predicting future residuals
-    df = pd.DataFrame(pred_res[:10], index=ttest[:10], columns=['residuals'])
+    df = pd.DataFrame(pred_res, index=ttest, columns=['residuals'])
     df.plot(figsize=(16,12))
     model = pf.ARIMA(data=df,ar=4,ma=4,integ=0,target='residuals')
-    model.plot_predict(h=3,past_values=5,figsize=(15,5))
     mod = model.fit("MLE")
     mod.summary()
+    model.plot_predict(h=3,past_values=5,figsize=(15,5))
 
 
 def cmp_regression_algs(xs, ys):
