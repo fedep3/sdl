@@ -4,11 +4,12 @@ import numpy as np
 
 from readers.mat_reader import MatReader
 import matplotlib.pyplot as plt
-from sklearn.linear_model import LogisticRegression
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.neighbors import KNeighborsClassifier
+from sklearn.tree import DecisionTreeRegressor
+from sklearn.neighbors import KNeighborsRegressor
+from sklearn.linear_model import LinearRegression
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
-from sklearn.naive_bayes import GaussianNB
+from sklearn.ensemble import BaggingRegressor
+from sklearn.linear_model import RANSACRegressor
 from sklearn.svm import SVC
 from sklearn.model_selection import cross_val_score
 
@@ -21,7 +22,7 @@ from sklearn import svm
 def main(mat_folder_path):
     mat_reader = MatReader(mat_folder_path)
     ts, xs, ys = mat_reader.read()
-    predict_residuals(xs, ys, ts)
+    cmp_regression_algs(xs, ys)
 
 
 def predict_residuals(xs, ys,ts):
@@ -54,11 +55,12 @@ def predict_residuals(xs, ys,ts):
 def cmp_regression_algs(xs, ys):
     num_folds = 10
     # prepare models
-    models = [('LR', LogisticRegression()), ('LDA', LinearDiscriminantAnalysis()), ('NB', GaussianNB()), ('SVM', SVC())]
-    # evaluate each model in turn
+    models = [('SVM', svm.SVR()), ('KNN', KNeighborsRegressor()), ('LR', LinearRegression()),
+              ('DT', DecisionTreeRegressor), ('BNN', BaggingRegressor()), ('RANSAC', RANSACRegressor())]
+    # evaluate each model in tusvm.rn
     results = []
     names = []
-    scoring = 'accuracy'
+    scoring = 'mean_squared_error'
     for name, model in models:
         cv_results = cross_val_score(model, xs, ys, cv=num_folds, scoring=scoring)
         results.append(cv_results)
