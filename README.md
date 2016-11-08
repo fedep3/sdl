@@ -4,6 +4,11 @@
 Team 2, Project C3
 Host: Rodney Martin
 
+* [Jenna MacCarley](https://github.com/jmaccarl)
+* [Federico Ponte](https://github.com/fedep3)
+* [Victor Hu](https://github.com/vhu)
+* [Dan Yang] (https://github.com/buptyangdan)
+
 ## Installation 
 
 Install virtual env and the requirements, executes this commands:
