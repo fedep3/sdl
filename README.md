@@ -4,6 +4,7 @@
 Team 2, Project C3
 Host: Rodney Martin
 
+Team Members:
 * [Jenna MacCarley](https://github.com/jmaccarl)
 * [Federico Ponte](https://github.com/fedep3)
 * [Victor Hu](https://github.com/vhu)
