@@ -19,18 +19,22 @@ import pyflux as pf
 
 from sklearn import svm
 
-def main(mat_folder_path):
-    mat_reader = MatReader(mat_folder_path)
+def main():
+    mat_reader = MatReader('ColdComplaintData/Training')
     ts, xs, ys = mat_reader.read()
-    cmp_regression_algs(xs, ys)
+    predict_residuals(xs, ys)
+
+    #cmp_regression_algs(xs, ys)
 
 
-def predict_residuals(xs, ys,ts):
+def predict_residuals(xs, ys):
     # Assume hardcoded model for now
-    clf = svm.SVR()
-    clf.fit(xs[:3000], ys[:3000])
+    clf = LinearRegression()
+    clf.fit(xs, ys)
+    # Using validation or training data for prediction?
     mat_reader = MatReader('ColdComplaintData/Testing')
     ttest, xtest, ytest = mat_reader.read()
+
     plt.figure()
     plt.title('Actual vs. Prediction')
     plt.plot(ytest)
@@ -44,12 +48,43 @@ def predict_residuals(xs, ys,ts):
     plt.show()
 
     # Predicting future residuals
-    df = pd.DataFrame(pred_res, index=ttest, columns=['residuals'])
-    df.plot(figsize=(16,12))
-    model = pf.ARIMA(data=df,ar=4,ma=4,integ=0,target='residuals')
-    mod = model.fit("MLE")
-    mod.summary()
-    model.plot_predict(h=3,past_values=5,figsize=(15,5))
+    for x in xrange(len(pred_res)-10):
+        df = pd.DataFrame(pred_res[x:x+10], index=ttest[x:x+10], columns=['residuals'])
+        #df.plot(figsize=(16,12))
+        model = pf.ARIMA(data=df,ar=4,ma=4,integ=0,target='residuals')
+        mod = model.fit("MLE")
+        #mod.summary()
+        #model.plot_predict(h=12,past_values=10,figsize=(15,5))
+        pred_future = model.predict(h=12)
+        print pred_future
+        return None
+
+    # TODO change
+    La = 0
+    print pred_future
+    alarms = []
+    for p in pred_future:
+        if abs(p) > La:
+            alarms.append(True)
+        else
+            alarms.append(False)
+    alarmvals = []
+    for i in xrange(len(ytest)-10):
+        alarmval = False
+        for x in xrange(10):
+            if ytest[i+x] < 68.1:
+                alarmval = True
+        alarmvals.append(alarmval)
+
+    fa_count = 0
+    md_count = 0
+    for r in xrange(len(alarms)):
+        if alarms[r] == True and alarmvals[r] == False:
+            fa_count += 1
+        elif alarms[r] == False and alarmvals[r] == True:
+            md_count += 1
+
+    return pred_future
 
 
 def cmp_regression_algs(xs, ys):
