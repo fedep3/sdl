@@ -7,6 +7,7 @@ from sklearn.metrics import auc
 
 from readers.mat_reader import MatReader
 
+from sklearn.model_selection import PredefinedSplit
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.neighbors import KNeighborsRegressor
 from sklearn.linear_model import LinearRegression
@@ -17,14 +18,18 @@ from sklearn import svm
 from sklearn.metrics import roc_curve
 from scipy.optimize import brentq
 from scipy.interpolate import interp1d
+from pyelm.elm import ELMRegressor
 
+import warnings
+warnings.filterwarnings("ignore", category=DeprecationWarning) 
+warnings.filterwarnings("ignore", category=RuntimeWarning) 
 
 def main():
     mat_reader = MatReader('ColdComplaintData/Training')
     ts, xs, ys = mat_reader.read()
     
     if __debug__:
-        cmp_regression_algs(xs, ys)
+        cmp_regression_algs(xs, ys, 5)
 
     # Build the ideal linear regression model
     clf = LinearRegression()
@@ -47,7 +52,6 @@ def main():
     print "Correct Alarm Count: ", cor_count
     print "False Alarm Count: ", fa_count
     print "Missed Detection Count: ", md_count
-
 
 def predict_residuals(clf, ttest, xtest, ytest):
     # Calculate residuals
@@ -104,16 +108,17 @@ def calc_threshold(pred_future, actuals):
     false_positive_rate, true_positive_rate, thresholds = roc_curve(alarm_actuals, alarms_predictions)
     roc_auc = auc(false_positive_rate, true_positive_rate)
 
-    plt.title('Receiver Operating Characteristic')
-    plt.plot(false_positive_rate, true_positive_rate, 'b',
-             label='AUC = %0.2f' % roc_auc)
-    plt.legend(loc='lower right')
-    plt.plot([0, 1], [0, 1], 'r--')
-    plt.xlim([-0.1, 1.2])
-    plt.ylim([-0.1, 1.2])
-    plt.ylabel('True Positive Rate')
-    plt.xlabel('False Positive Rate')
-    plt.show()
+    if __debug__:
+        plt.title('Receiver Operating Characteristic')
+        plt.plot(false_positive_rate, true_positive_rate, 'b',
+                 label='AUC = %0.2f' % roc_auc)
+        plt.legend(loc='lower right')
+        plt.plot([0, 1], [0, 1], 'r--')
+        plt.xlim([-0.1, 1.2])
+        plt.ylim([-0.1, 1.2])
+        plt.ylabel('True Positive Rate')
+        plt.xlabel('False Positive Rate')
+        plt.show()
 
     return brentq(lambda x: 1. - x - interp1d(false_positive_rate, true_positive_rate)(x), 0., 1.)
 
@@ -154,18 +159,17 @@ def calc_error_rates(threshold, pred_future, actuals):
     return cor_count, fa_count, md_count
 
 
-
-def cmp_regression_algs(xs, ys):
-    num_folds = 10
+def cmp_regression_algs(xs, ys, ps):
+    num_folds = 5
     # prepare models
     models = [('SVM', svm.SVR()), ('KNN', KNeighborsRegressor()), ('LR', LinearRegression()),
-              ('BNN', BaggingRegressor()), ('RANSAC', RANSACRegressor())]
+              ('BNN', BaggingRegressor()), ('RANSAC', RANSACRegressor()), ('ELM', ELMRegressor())]
     # evaluate each model in tusvm.rn
     results = []
     names = []
     scoring = 'neg_mean_squared_error'
     for name, model in models:
-        cv_results = cross_val_score(model, xs, ys, cv=num_folds, scoring=scoring)
+        cv_results = cross_val_score(model, xs, ys, cv=ps, scoring=scoring)
         results.append(cv_results)
         names.append(name)
         msg = "%s: %f (%f)" % (name, cv_results.mean(), cv_results.std())
@@ -178,7 +182,34 @@ def cmp_regression_algs(xs, ys):
     ax.set_xticklabels(names)
     plt.show()
 
+# only perform cross validation between training and validation sets
+def compare_training_validation():
+    mat_reader_train = MatReader('ColdComplaintData/Training')
+    ts_train, X_train, Y_train = mat_reader_train.read()
+    mat_reader_validation = MatReader('ColdComplaintData/Validation')
+    ts_validation, X_validation, Y_validation = mat_reader_validation.read()
+    xs = X_train + X_validation
+    ys = Y_train + Y_validation
+    test_fold = len(Y_train)*[-1] + len(Y_validation)*[0]
+    ps = PredefinedSplit(test_fold)
+    cmp_regression_algs(xs, ys, ps)  
+
 # Simple example on how to read the data.
 if __name__ == "__main__":
     main()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
