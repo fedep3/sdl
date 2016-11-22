@@ -3,6 +3,8 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 import pyflux as pf
+import numpy as np
+
 from sklearn.metrics import auc
 
 from readers.mat_reader import MatReader
@@ -24,7 +26,11 @@ import warnings
 warnings.filterwarnings("ignore", category=DeprecationWarning) 
 warnings.filterwarnings("ignore", category=RuntimeWarning) 
 
-pred_horizon = 32
+# This will be varied
+past_pred_horizon = 32
+
+# Do not change this
+fut_pred_horizon = 12
 
 def main():
     mat_reader = MatReader('ColdComplaintData/Training')
@@ -41,21 +47,67 @@ def main():
     # Using validation or training data for prediction?
     mat_reader = MatReader('ColdComplaintData/Testing')
     ttest, xtest, ytest = mat_reader.read()
+    
+    if __debug__:
+        print "Actuals: ", ytest
 
-    print "Actuals: ", ytest
-
+    # TODO change past prediction time frame and compute different curves
     pred_future = predict_residuals(clf, ttest, xtest, ytest)
-    print "Future residual predictions: ", pred_future
+    if __debug__:
+        print "Future residual predictions: ", pred_future
 
-    # TODO change threshold levels
     #threshold = calc_threshold(pred_future, ytest)
-    #print calculate_roc_curve(pred_future, ytest)
-    threshold = 3.5
-    cor_count, fa_count, md_count = calc_error_rates(threshold, pred_future[:-12],
-            ytest[pred_horizon:])
-    print "Correct Alarm Count: ", cor_count
-    print "False Alarm Count: ", fa_count
-    print "Missed Detection Count: ", md_count
+    #threshold = 3.5
+    roc_auc, threshold, fa_rate, md_rate = calc_roc_curve(pred_future, ytest)
+    print "ROC AUC: ", roc_auc
+    print "Idea threshold found: ", threshold
+    print "FA rate: %0.2f, MD rate: %0.2f" % (fa_rate, md_rate)
+
+def calc_roc_curve(pred_future, ytest):
+    fa_rate_data = []
+    md_rate_data = []
+
+    ideal_threshold = -1.0
+    ideal_fa_rate = -1.0
+    ideal_md_rate = -1.0
+
+    threshold_found = False
+    for t in xrange(1, 41):
+        threshold = 1.0 + float(t)*0.1
+        print "Checking threshold: ", threshold
+        cor_count, fa_count, md_count = calc_error_rates(threshold,
+                pred_future[:-fut_pred_horizon], ytest[past_pred_horizon:])
+        total_count = cor_count + fa_count + md_count
+        print "Correct Alarm Count: ", cor_count
+        print "False Alarm Count: ", fa_count
+        print "Missed Detection Count: ", md_count
+        print "------------------------------------"
+        fa_rate = fa_count/total_count
+        md_rate = md_count/total_count
+
+        if not threshold_found and fa_count < md_count:
+            ideal_threshold = threshold
+            ideal_fa_rate = fa_rate
+            ideal_md_rate = md_rate
+            threshold_found = True
+
+        fa_rate_data.append(fa_rate)
+        md_rate_data.append(md_rate_data)
+    
+    roc_auc = auc(np.array(fa_rate_data),np.array(md_rate_data), reorder=True)
+    plt.title('Receiver Operating Characteristic')
+    plt.plot(fa_rate_data, md_rate_data, 'b',
+             label='AUC = %0.2f' % roc_auc)
+    plt.legend(loc='lower right')
+    plt.plot([0, 1], [0, 1], 'r--')
+    plt.xlim([-0.1, 1.2])
+    plt.ylim([-0.1, 1.2])
+    plt.ylabel('False Negative Rate')
+    plt.xlabel('False Positive Rate')
+    plt.show()
+
+    return roc_auc, ideal_threshold, ideal_fa_rate, idea_md_rate
+
 
 
 def predict_residuals(clf, ttest, xtest, ytest):
@@ -77,14 +129,14 @@ def predict_residuals(clf, ttest, xtest, ytest):
 
     # Predicting future residuals
     pred_future = []
-    for x in xrange(len(pred_res)-pred_horizon):
-        df = pd.DataFrame(pred_res[x:x+pred_horizon], index=ttest[x:x+pred_horizon], columns=['residuals'])
+    for x in xrange(len(pred_res)-past_pred_horizon):
+        df = pd.DataFrame(pred_res[x:x+past_pred_horizon], index=ttest[x:x+past_pred_horizon], columns=['residuals'])
         #df.plot(figsize=(16,12))
         model = pf.ARIMA(data=df,ar=4,ma=4,integ=0,target='residuals')
         mod = model.fit("MLE")
         #mod.summary()
         #model.plot_predict(h=12,past_values=16,figsize=(15,5))
-        pred_future.append(model.predict(h=12)['residuals'][11])
+        pred_future.append(model.predict(h=fut_pred_horizon)['residuals'][11])
         #print pred_future
 
     return pred_future
@@ -103,9 +155,9 @@ def calc_threshold(pred_future, actuals):
     # Calcuate whether or not there was actually an alarm anywhere
     # in the next time period
     alarm_actuals = []
-    for i in xrange(len(actuals) - pred_horizon):
+    for i in xrange(len(actuals) - past_pred_horizon):
         alarm_actual = False
-        for x in xrange(pred_horizon):
+        for x in xrange(past_pred_horizon):
             if actuals[i + x] < 68.1:
                 alarm_actual = True
         alarm_actuals.append(alarm_actual)
@@ -142,9 +194,9 @@ def calc_error_rates(threshold, pred_future, actuals):
     # Calcuate whether or not there was actually an alarm anywhere
     # in the next time period
     alarm_actuals = []
-    for i in xrange(len(actuals)-12):
+    for i in xrange(len(actuals)-fut_pred_horizon):
         alarm_actual = False
-        for x in xrange(12):
+        for x in xrange(fut_pred_horizon):
             if actuals[i+x] < 68.1:
                 alarm_actual = True
         alarm_actuals.append(alarm_actual)
