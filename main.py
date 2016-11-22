@@ -24,6 +24,8 @@ import warnings
 warnings.filterwarnings("ignore", category=DeprecationWarning) 
 warnings.filterwarnings("ignore", category=RuntimeWarning) 
 
+past_horizon = 32
+
 def main():
     mat_reader = MatReader('ColdComplaintData/Training')
     ts, xs, ys = mat_reader.read()
@@ -71,8 +73,8 @@ def predict_residuals(clf, ttest, xtest, ytest):
 
     # Predicting future residuals
     pred_future = []
-    for x in xrange(len(pred_res)-16):
-        df = pd.DataFrame(pred_res[x:x+16], index=ttest[x:x+16], columns=['residuals'])
+    for x in xrange(len(pred_res)-pred_horizon):
+        df = pd.DataFrame(pred_res[x:x+pred_horizon], index=ttest[x:x+pred_horizon], columns=['residuals'])
         #df.plot(figsize=(16,12))
         model = pf.ARIMA(data=df,ar=4,ma=4,integ=0,target='residuals')
         mod = model.fit("MLE")
@@ -97,9 +99,9 @@ def calc_threshold(pred_future, actuals):
     # Calcuate whether or not there was actually an alarm anywhere
     # in the next time period
     alarm_actuals = []
-    for i in xrange(len(actuals) - 16):
+    for i in xrange(len(actuals) - pred_horizon):
         alarm_actual = False
-        for x in xrange(16):
+        for x in xrange(pred_horizon):
             if actuals[i + x] < 68.1:
                 alarm_actual = True
         alarm_actuals.append(alarm_actual)
@@ -136,9 +138,9 @@ def calc_error_rates(threshold, pred_future, actuals):
     # Calcuate whether or not there was actually an alarm anywhere
     # in the next time period
     alarm_actuals = []
-    for i in xrange(len(actuals)-16):
+    for i in xrange(len(actuals)-pred_horizon):
         alarm_actual = False
-        for x in xrange(16):
+        for x in xrange(pred_horizon):
             if actuals[i+x] < 68.1:
                 alarm_actual = True
         alarm_actuals.append(alarm_actual)
