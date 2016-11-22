@@ -24,7 +24,7 @@ import warnings
 warnings.filterwarnings("ignore", category=DeprecationWarning) 
 warnings.filterwarnings("ignore", category=RuntimeWarning) 
 
-past_horizon = 32
+pred_horizon = 32
 
 def main():
     mat_reader = MatReader('ColdComplaintData/Training')
@@ -48,11 +48,15 @@ def main():
     print "Future residual predictions: ", pred_future
 
     # TODO change threshold levels
-    threshold = calc_threshold(pred_future, ytest)
-    cor_count, fa_count, md_count = calc_error_rates(threshold, pred_future, ytest)
+    #threshold = calc_threshold(pred_future, ytest)
+    #print calculate_roc_curve(pred_future, ytest)
+    threshold = 3.5
+    cor_count, fa_count, md_count = calc_error_rates(threshold, pred_future[:-12],
+            ytest[pred_horizon:])
     print "Correct Alarm Count: ", cor_count
     print "False Alarm Count: ", fa_count
     print "Missed Detection Count: ", md_count
+
 
 def predict_residuals(clf, ttest, xtest, ytest):
     # Calculate residuals
@@ -138,9 +142,9 @@ def calc_error_rates(threshold, pred_future, actuals):
     # Calcuate whether or not there was actually an alarm anywhere
     # in the next time period
     alarm_actuals = []
-    for i in xrange(len(actuals)-pred_horizon):
+    for i in xrange(len(actuals)-12):
         alarm_actual = False
-        for x in xrange(pred_horizon):
+        for x in xrange(12):
             if actuals[i+x] < 68.1:
                 alarm_actual = True
         alarm_actuals.append(alarm_actual)
