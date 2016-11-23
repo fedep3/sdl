@@ -58,10 +58,11 @@ class DetectionToolbox:
                                            future_residuals_prediction[:-self.future_prediction_model.future_prediction_horizon],
                                            ys[self.past_prediction_horizon:])
             total_count = correct_count + fa_count + md_count
-            print 'Correct Alarm Count: ', correct_count
-            print 'False Alarm Count: ', fa_count
-            print 'Missed Detection Count: ', md_count
-            print '------------------------------------'
+            if __debug__:
+                print 'Correct Alarm Count: ', correct_count
+                print 'False Alarm Count: ', fa_count
+                print 'Missed Detection Count: ', md_count
+                print '------------------------------------'
             fa_rate = float(fa_count) / total_count
             md_rate = float(md_count) / total_count
 

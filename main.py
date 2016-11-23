@@ -40,7 +40,9 @@ def main():
                                     GARCHFuturePredictionModel(FUTURE_PREDICTION_HORIZON, 1, 1),
                                     GGSMFuturePredictionModel(FUTURE_PREDICTION_HORIZON),
                                     AggregatingFuturePredictionModel(FUTURE_PREDICTION_HORIZON)]:
-        for past_prediction_horizon in [32, 64]:
+        for past_prediction_horizon in [32, 64, 96, 128]:
+            if isinstance(future_prediction_model, AggregatingFuturePredictionModel) and past_prediction_horizon < 64:
+                continue
             print 'Past prediction horizon: ', past_prediction_horizon
             detection_toolbox = DetectionToolbox(regression_model, past_prediction_horizon, future_prediction_model)
 
@@ -57,10 +59,12 @@ def main():
             print 'ROC AUC: ', roc_auc
             print 'Idea threshold found: ', threshold
             print 'FA rate: %0.2f, MD rate: %0.2f' % (fa_rate, md_rate)
-            print '======================'
 
             future_prediction_model_results.append((future_prediction_model, past_prediction_horizon, threshold, fa_rate, md_rate))
+            print 'Model=%s, Past Prediction Horizon=%s, Threshold=%s, FA=%s, MD=%s' % future_prediction_model_results[-1]
+            print '======================'
 
+    print 'Sorted results'
     future_prediction_model_results.sort(key=lambda s: s[3]+s[4])
     for future_prediction_model_result in future_prediction_model_results:
         print 'Model=%s, Past Prediction Horizon=%s, Threshold=%s, FA=%s, MD=%s' % future_prediction_model_result

@@ -14,7 +14,7 @@ class FuturePredictionModel:
         pass
 
     def future(self):
-        return self.model.predict(h=self.future_prediction_horizon)['residuals'][self.future_prediction_horizon-1]
+        return self.model.predict(h=self.future_prediction_horizon)['residuals'][self.future_prediction_horizon - 1]
 
 
 class ARIMAFuturePredictionModel(FuturePredictionModel):
@@ -73,7 +73,7 @@ class AggregatingFuturePredictionModel(FuturePredictionModel):
 
     def train(self, df):
         mix = pf.Aggregate(learning_rate=1.0, loss_type='squared')
-        model_one = pf.ARIMA(data=df, ar=1, ma=1)
+        model_one = pf.ARIMA(data=df, ar=1, ma=0)
         model_two = pf.ARIMA(data=df, ar=2, ma=0)
         model_three = pf.LLEV(data=df)
         model_four = pf.GASLLEV(data=df, family=pf.GASt())
@@ -85,12 +85,16 @@ class AggregatingFuturePredictionModel(FuturePredictionModel):
         mix.tune_learning_rate(16)
 
         if __debug__:
+            print mix.learning_rate
             mix.plot_weights(h=16, figsize=(15, 5))
 
         self.model = mix
 
     def fit(self):
-        self.model.fit()
+        pass
+
+    def future(self):
+        return self.model.predict(h=self.future_prediction_horizon).values[self.future_prediction_horizon - 1]
 
     def __str__(self):
         return 'AggregatingFuturePredictionModel()'
