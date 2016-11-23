@@ -33,13 +33,12 @@ def main():
     future_prediction_model_results = []
 
     for future_prediction_model in [ARIMAFuturePredictionModel(FUTURE_PREDICTION_HORIZON, 1, 1),
-                                    ARIMAFuturePredictionModel(FUTURE_PREDICTION_HORIZON, 2, 2),
+                                    ARIMAFuturePredictionModel(FUTURE_PREDICTION_HORIZON, 1, 0),
                                     ARIMAFuturePredictionModel(FUTURE_PREDICTION_HORIZON, 2, 0),
                                     ARIMAFuturePredictionModel(FUTURE_PREDICTION_HORIZON, 4, 4),
                                     ARIMAFuturePredictionModel(FUTURE_PREDICTION_HORIZON, 4, 0),
                                     GARCHFuturePredictionModel(FUTURE_PREDICTION_HORIZON, 1, 1),
-                                    GGSMFuturePredictionModel(FUTURE_PREDICTION_HORIZON),
-                                    AggregatingFuturePredictionModel(FUTURE_PREDICTION_HORIZON)]:
+                                    GGSMFuturePredictionModel(FUTURE_PREDICTION_HORIZON)]:
         for past_prediction_horizon in [32, 64, 96, 128]:
             if isinstance(future_prediction_model, AggregatingFuturePredictionModel) and past_prediction_horizon < 64:
                 continue

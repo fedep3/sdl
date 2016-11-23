@@ -1,0 +1,1320 @@
+/home/federico/.virtualenvs/sdl/bin/python2 -O "/home/federico/CMU/Statistical Discovery and Learning/sdl/main.py"
+Past prediction horizon:  32
+Checking threshold:  1.1
+Checking threshold:  1.2
+Checking threshold:  1.3
+Checking threshold:  1.4
+Checking threshold:  1.5
+Checking threshold:  1.6
+Checking threshold:  1.7
+Checking threshold:  1.8
+Checking threshold:  1.9
+Checking threshold:  2.0
+Checking threshold:  2.1
+Checking threshold:  2.2
+Checking threshold:  2.3
+Checking threshold:  2.4
+Checking threshold:  2.5
+Checking threshold:  2.6
+Checking threshold:  2.7
+Checking threshold:  2.8
+Checking threshold:  2.9
+Checking threshold:  3.0
+Checking threshold:  3.1
+Checking threshold:  3.2
+Checking threshold:  3.3
+Checking threshold:  3.4
+Checking threshold:  3.5
+Checking threshold:  3.6
+Checking threshold:  3.7
+Checking threshold:  3.8
+Checking threshold:  3.9
+Checking threshold:  4.0
+Checking threshold:  4.1
+Checking threshold:  4.2
+Checking threshold:  4.3
+Checking threshold:  4.4
+Checking threshold:  4.5
+Checking threshold:  4.6
+Checking threshold:  4.7
+Checking threshold:  4.8
+Checking threshold:  4.9
+Checking threshold:  5.0
+ROC AUC:  0
+Idea threshold found:  4.2
+FA rate: 0.03, MD rate: 0.05
+Model=ARIMAFuturePredictionModel(1, 1), Past Prediction Horizon=32, Threshold=4.2, FA=0.0300751879699, MD=0.0451127819549
+======================
+Past prediction horizon:  64
+Checking threshold:  1.1
+Checking threshold:  1.2
+Checking threshold:  1.3
+Checking threshold:  1.4
+Checking threshold:  1.5
+Checking threshold:  1.6
+Checking threshold:  1.7
+Checking threshold:  1.8
+Checking threshold:  1.9
+Checking threshold:  2.0
+Checking threshold:  2.1
+Checking threshold:  2.2
+Checking threshold:  2.3
+Checking threshold:  2.4
+Checking threshold:  2.5
+Checking threshold:  2.6
+Checking threshold:  2.7
+Checking threshold:  2.8
+Checking threshold:  2.9
+Checking threshold:  3.0
+Checking threshold:  3.1
+Checking threshold:  3.2
+Checking threshold:  3.3
+Checking threshold:  3.4
+Checking threshold:  3.5
+Checking threshold:  3.6
+Checking threshold:  3.7
+Checking threshold:  3.8
+Checking threshold:  3.9
+Checking threshold:  4.0
+Checking threshold:  4.1
+Checking threshold:  4.2
+Checking threshold:  4.3
+Checking threshold:  4.4
+Checking threshold:  4.5
+Checking threshold:  4.6
+Checking threshold:  4.7
+Checking threshold:  4.8
+Checking threshold:  4.9
+Checking threshold:  5.0
+ROC AUC:  0
+Idea threshold found:  4.1
+FA rate: 0.01, MD rate: 0.02
+Model=ARIMAFuturePredictionModel(1, 1), Past Prediction Horizon=64, Threshold=4.1, FA=0.01, MD=0.024
+======================
+Past prediction horizon:  96
+Checking threshold:  1.1
+Checking threshold:  1.2
+Checking threshold:  1.3
+Checking threshold:  1.4
+Checking threshold:  1.5
+Checking threshold:  1.6
+Checking threshold:  1.7
+Checking threshold:  1.8
+Checking threshold:  1.9
+Checking threshold:  2.0
+Checking threshold:  2.1
+Checking threshold:  2.2
+Checking threshold:  2.3
+Checking threshold:  2.4
+Checking threshold:  2.5
+Checking threshold:  2.6
+Checking threshold:  2.7
+Checking threshold:  2.8
+Checking threshold:  2.9
+Checking threshold:  3.0
+Checking threshold:  3.1
+Checking threshold:  3.2
+Checking threshold:  3.3
+Checking threshold:  3.4
+Checking threshold:  3.5
+Checking threshold:  3.6
+Checking threshold:  3.7
+Checking threshold:  3.8
+Checking threshold:  3.9
+Checking threshold:  4.0
+Checking threshold:  4.1
+Checking threshold:  4.2
+Checking threshold:  4.3
+Checking threshold:  4.4
+Checking threshold:  4.5
+Checking threshold:  4.6
+Checking threshold:  4.7
+Checking threshold:  4.8
+Checking threshold:  4.9
+Checking threshold:  5.0
+ROC AUC:  0
+Idea threshold found:  4.6
+FA rate: 0.02, MD rate: 0.03
+Model=ARIMAFuturePredictionModel(1, 1), Past Prediction Horizon=96, Threshold=4.6, FA=0.0213675213675, MD=0.025641025641
+======================
+Past prediction horizon:  128
+Checking threshold:  1.1
+Checking threshold:  1.2
+Checking threshold:  1.3
+Checking threshold:  1.4
+Checking threshold:  1.5
+Checking threshold:  1.6
+Checking threshold:  1.7
+Checking threshold:  1.8
+Checking threshold:  1.9
+Checking threshold:  2.0
+Checking threshold:  2.1
+Checking threshold:  2.2
+Checking threshold:  2.3
+Checking threshold:  2.4
+Checking threshold:  2.5
+Checking threshold:  2.6
+Checking threshold:  2.7
+Checking threshold:  2.8
+Checking threshold:  2.9
+Checking threshold:  3.0
+Checking threshold:  3.1
+Checking threshold:  3.2
+Checking threshold:  3.3
+Checking threshold:  3.4
+Checking threshold:  3.5
+Checking threshold:  3.6
+Checking threshold:  3.7
+Checking threshold:  3.8
+Checking threshold:  3.9
+Checking threshold:  4.0
+Checking threshold:  4.1
+Checking threshold:  4.2
+Checking threshold:  4.3
+Checking threshold:  4.4
+Checking threshold:  4.5
+Checking threshold:  4.6
+Checking threshold:  4.7
+Checking threshold:  4.8
+Checking threshold:  4.9
+Checking threshold:  5.0
+ROC AUC:  0
+Idea threshold found:  4.6
+FA rate: 0.03, MD rate: 0.03
+Model=ARIMAFuturePredictionModel(1, 1), Past Prediction Horizon=128, Threshold=4.6, FA=0.0252293577982, MD=0.0344036697248
+======================
+Past prediction horizon:  32
+Checking threshold:  1.1
+Checking threshold:  1.2
+Checking threshold:  1.3
+Checking threshold:  1.4
+Checking threshold:  1.5
+Checking threshold:  1.6
+Checking threshold:  1.7
+Checking threshold:  1.8
+Checking threshold:  1.9
+Checking threshold:  2.0
+Checking threshold:  2.1
+Checking threshold:  2.2
+Checking threshold:  2.3
+Checking threshold:  2.4
+Checking threshold:  2.5
+Checking threshold:  2.6
+Checking threshold:  2.7
+Checking threshold:  2.8
+Checking threshold:  2.9
+Checking threshold:  3.0
+Checking threshold:  3.1
+Checking threshold:  3.2
+Checking threshold:  3.3
+Checking threshold:  3.4
+Checking threshold:  3.5
+Checking threshold:  3.6
+Checking threshold:  3.7
+Checking threshold:  3.8
+Checking threshold:  3.9
+Checking threshold:  4.0
+Checking threshold:  4.1
+Checking threshold:  4.2
+Checking threshold:  4.3
+Checking threshold:  4.4
+Checking threshold:  4.5
+Checking threshold:  4.6
+Checking threshold:  4.7
+Checking threshold:  4.8
+Checking threshold:  4.9
+Checking threshold:  5.0
+ROC AUC:  0
+Idea threshold found:  4.1
+FA rate: 0.04, MD rate: 0.05
+Model=ARIMAFuturePredictionModel(1, 0), Past Prediction Horizon=32, Threshold=4.1, FA=0.0375939849624, MD=0.0488721804511
+======================
+Past prediction horizon:  64
+Checking threshold:  1.1
+Checking threshold:  1.2
+Checking threshold:  1.3
+Checking threshold:  1.4
+Checking threshold:  1.5
+Checking threshold:  1.6
+Checking threshold:  1.7
+Checking threshold:  1.8
+Checking threshold:  1.9
+Checking threshold:  2.0
+Checking threshold:  2.1
+Checking threshold:  2.2
+Checking threshold:  2.3
+Checking threshold:  2.4
+Checking threshold:  2.5
+Checking threshold:  2.6
+Checking threshold:  2.7
+Checking threshold:  2.8
+Checking threshold:  2.9
+Checking threshold:  3.0
+Checking threshold:  3.1
+Checking threshold:  3.2
+Checking threshold:  3.3
+Checking threshold:  3.4
+Checking threshold:  3.5
+Checking threshold:  3.6
+Checking threshold:  3.7
+Checking threshold:  3.8
+Checking threshold:  3.9
+Checking threshold:  4.0
+Checking threshold:  4.1
+Checking threshold:  4.2
+Checking threshold:  4.3
+Checking threshold:  4.4
+Checking threshold:  4.5
+Checking threshold:  4.6
+Checking threshold:  4.7
+Checking threshold:  4.8
+Checking threshold:  4.9
+Checking threshold:  5.0
+ROC AUC:  0
+Idea threshold found:  4.1
+FA rate: 0.00, MD rate: 0.02
+Model=ARIMAFuturePredictionModel(1, 0), Past Prediction Horizon=64, Threshold=4.1, FA=0.004, MD=0.024
+======================
+Past prediction horizon:  96
+Checking threshold:  1.1
+Checking threshold:  1.2
+Checking threshold:  1.3
+Checking threshold:  1.4
+Checking threshold:  1.5
+Checking threshold:  1.6
+Checking threshold:  1.7
+Checking threshold:  1.8
+Checking threshold:  1.9
+Checking threshold:  2.0
+Checking threshold:  2.1
+Checking threshold:  2.2
+Checking threshold:  2.3
+Checking threshold:  2.4
+Checking threshold:  2.5
+Checking threshold:  2.6
+Checking threshold:  2.7
+Checking threshold:  2.8
+Checking threshold:  2.9
+Checking threshold:  3.0
+Checking threshold:  3.1
+Checking threshold:  3.2
+Checking threshold:  3.3
+Checking threshold:  3.4
+Checking threshold:  3.5
+Checking threshold:  3.6
+Checking threshold:  3.7
+Checking threshold:  3.8
+Checking threshold:  3.9
+Checking threshold:  4.0
+Checking threshold:  4.1
+Checking threshold:  4.2
+Checking threshold:  4.3
+Checking threshold:  4.4
+Checking threshold:  4.5
+Checking threshold:  4.6
+Checking threshold:  4.7
+Checking threshold:  4.8
+Checking threshold:  4.9
+Checking threshold:  5.0
+ROC AUC:  0
+Idea threshold found:  4.5
+FA rate: 0.00, MD rate: 0.03
+Model=ARIMAFuturePredictionModel(1, 0), Past Prediction Horizon=96, Threshold=4.5, FA=0.0042735042735, MD=0.025641025641
+======================
+Past prediction horizon:  128
+Checking threshold:  1.1
+Checking threshold:  1.2
+Checking threshold:  1.3
+Checking threshold:  1.4
+Checking threshold:  1.5
+Checking threshold:  1.6
+Checking threshold:  1.7
+Checking threshold:  1.8
+Checking threshold:  1.9
+Checking threshold:  2.0
+Checking threshold:  2.1
+Checking threshold:  2.2
+Checking threshold:  2.3
+Checking threshold:  2.4
+Checking threshold:  2.5
+Checking threshold:  2.6
+Checking threshold:  2.7
+Checking threshold:  2.8
+Checking threshold:  2.9
+Checking threshold:  3.0
+Checking threshold:  3.1
+Checking threshold:  3.2
+Checking threshold:  3.3
+Checking threshold:  3.4
+Checking threshold:  3.5
+Checking threshold:  3.6
+Checking threshold:  3.7
+Checking threshold:  3.8
+Checking threshold:  3.9
+Checking threshold:  4.0
+Checking threshold:  4.1
+Checking threshold:  4.2
+Checking threshold:  4.3
+Checking threshold:  4.4
+Checking threshold:  4.5
+Checking threshold:  4.6
+Checking threshold:  4.7
+Checking threshold:  4.8
+Checking threshold:  4.9
+Checking threshold:  5.0
+ROC AUC:  0
+Idea threshold found:  4.6
+FA rate: 0.01, MD rate: 0.03
+Model=ARIMAFuturePredictionModel(1, 0), Past Prediction Horizon=128, Threshold=4.6, FA=0.00688073394495, MD=0.0344036697248
+======================
+Past prediction horizon:  32
+Checking threshold:  1.1
+Checking threshold:  1.2
+Checking threshold:  1.3
+Checking threshold:  1.4
+Checking threshold:  1.5
+Checking threshold:  1.6
+Checking threshold:  1.7
+Checking threshold:  1.8
+Checking threshold:  1.9
+Checking threshold:  2.0
+Checking threshold:  2.1
+Checking threshold:  2.2
+Checking threshold:  2.3
+Checking threshold:  2.4
+Checking threshold:  2.5
+Checking threshold:  2.6
+Checking threshold:  2.7
+Checking threshold:  2.8
+Checking threshold:  2.9
+Checking threshold:  3.0
+Checking threshold:  3.1
+Checking threshold:  3.2
+Checking threshold:  3.3
+Checking threshold:  3.4
+Checking threshold:  3.5
+Checking threshold:  3.6
+Checking threshold:  3.7
+Checking threshold:  3.8
+Checking threshold:  3.9
+Checking threshold:  4.0
+Checking threshold:  4.1
+Checking threshold:  4.2
+Checking threshold:  4.3
+Checking threshold:  4.4
+Checking threshold:  4.5
+Checking threshold:  4.6
+Checking threshold:  4.7
+Checking threshold:  4.8
+Checking threshold:  4.9
+Checking threshold:  5.0
+ROC AUC:  0
+Idea threshold found:  4.1
+FA rate: 0.04, MD rate: 0.04
+Model=ARIMAFuturePredictionModel(2, 0), Past Prediction Horizon=32, Threshold=4.1, FA=0.0375939849624, MD=0.0432330827068
+======================
+Past prediction horizon:  64
+Checking threshold:  1.1
+Checking threshold:  1.2
+Checking threshold:  1.3
+Checking threshold:  1.4
+Checking threshold:  1.5
+Checking threshold:  1.6
+Checking threshold:  1.7
+Checking threshold:  1.8
+Checking threshold:  1.9
+Checking threshold:  2.0
+Checking threshold:  2.1
+Checking threshold:  2.2
+Checking threshold:  2.3
+Checking threshold:  2.4
+Checking threshold:  2.5
+Checking threshold:  2.6
+Checking threshold:  2.7
+Checking threshold:  2.8
+Checking threshold:  2.9
+Checking threshold:  3.0
+Checking threshold:  3.1
+Checking threshold:  3.2
+Checking threshold:  3.3
+Checking threshold:  3.4
+Checking threshold:  3.5
+Checking threshold:  3.6
+Checking threshold:  3.7
+Checking threshold:  3.8
+Checking threshold:  3.9
+Checking threshold:  4.0
+Checking threshold:  4.1
+Checking threshold:  4.2
+Checking threshold:  4.3
+Checking threshold:  4.4
+Checking threshold:  4.5
+Checking threshold:  4.6
+Checking threshold:  4.7
+Checking threshold:  4.8
+Checking threshold:  4.9
+Checking threshold:  5.0
+ROC AUC:  0
+Idea threshold found:  4.1
+FA rate: 0.00, MD rate: 0.02
+Model=ARIMAFuturePredictionModel(2, 0), Past Prediction Horizon=64, Threshold=4.1, FA=0.004, MD=0.024
+======================
+Past prediction horizon:  96
+Checking threshold:  1.1
+Checking threshold:  1.2
+Checking threshold:  1.3
+Checking threshold:  1.4
+Checking threshold:  1.5
+Checking threshold:  1.6
+Checking threshold:  1.7
+Checking threshold:  1.8
+Checking threshold:  1.9
+Checking threshold:  2.0
+Checking threshold:  2.1
+Checking threshold:  2.2
+Checking threshold:  2.3
+Checking threshold:  2.4
+Checking threshold:  2.5
+Checking threshold:  2.6
+Checking threshold:  2.7
+Checking threshold:  2.8
+Checking threshold:  2.9
+Checking threshold:  3.0
+Checking threshold:  3.1
+Checking threshold:  3.2
+Checking threshold:  3.3
+Checking threshold:  3.4
+Checking threshold:  3.5
+Checking threshold:  3.6
+Checking threshold:  3.7
+Checking threshold:  3.8
+Checking threshold:  3.9
+Checking threshold:  4.0
+Checking threshold:  4.1
+Checking threshold:  4.2
+Checking threshold:  4.3
+Checking threshold:  4.4
+Checking threshold:  4.5
+Checking threshold:  4.6
+Checking threshold:  4.7
+Checking threshold:  4.8
+Checking threshold:  4.9
+Checking threshold:  5.0
+ROC AUC:  0
+Idea threshold found:  4.5
+FA rate: 0.02, MD rate: 0.03
+Model=ARIMAFuturePredictionModel(2, 0), Past Prediction Horizon=96, Threshold=4.5, FA=0.017094017094, MD=0.025641025641
+======================
+Past prediction horizon:  128
+Checking threshold:  1.1
+Checking threshold:  1.2
+Checking threshold:  1.3
+Checking threshold:  1.4
+Checking threshold:  1.5
+Checking threshold:  1.6
+Checking threshold:  1.7
+Checking threshold:  1.8
+Checking threshold:  1.9
+Checking threshold:  2.0
+Checking threshold:  2.1
+Checking threshold:  2.2
+Checking threshold:  2.3
+Checking threshold:  2.4
+Checking threshold:  2.5
+Checking threshold:  2.6
+Checking threshold:  2.7
+Checking threshold:  2.8
+Checking threshold:  2.9
+Checking threshold:  3.0
+Checking threshold:  3.1
+Checking threshold:  3.2
+Checking threshold:  3.3
+Checking threshold:  3.4
+Checking threshold:  3.5
+Checking threshold:  3.6
+Checking threshold:  3.7
+Checking threshold:  3.8
+Checking threshold:  3.9
+Checking threshold:  4.0
+Checking threshold:  4.1
+Checking threshold:  4.2
+Checking threshold:  4.3
+Checking threshold:  4.4
+Checking threshold:  4.5
+Checking threshold:  4.6
+Checking threshold:  4.7
+Checking threshold:  4.8
+Checking threshold:  4.9
+Checking threshold:  5.0
+ROC AUC:  0
+Idea threshold found:  4.6
+FA rate: 0.02, MD rate: 0.03
+Model=ARIMAFuturePredictionModel(2, 0), Past Prediction Horizon=128, Threshold=4.6, FA=0.0160550458716, MD=0.0344036697248
+======================
+Past prediction horizon:  32
+Checking threshold:  1.1
+Checking threshold:  1.2
+Checking threshold:  1.3
+Checking threshold:  1.4
+Checking threshold:  1.5
+Checking threshold:  1.6
+Checking threshold:  1.7
+Checking threshold:  1.8
+Checking threshold:  1.9
+Checking threshold:  2.0
+Checking threshold:  2.1
+Checking threshold:  2.2
+Checking threshold:  2.3
+Checking threshold:  2.4
+Checking threshold:  2.5
+Checking threshold:  2.6
+Checking threshold:  2.7
+Checking threshold:  2.8
+Checking threshold:  2.9
+Checking threshold:  3.0
+Checking threshold:  3.1
+Checking threshold:  3.2
+Checking threshold:  3.3
+Checking threshold:  3.4
+Checking threshold:  3.5
+Checking threshold:  3.6
+Checking threshold:  3.7
+Checking threshold:  3.8
+Checking threshold:  3.9
+Checking threshold:  4.0
+Checking threshold:  4.1
+Checking threshold:  4.2
+Checking threshold:  4.3
+Checking threshold:  4.4
+Checking threshold:  4.5
+Checking threshold:  4.6
+Checking threshold:  4.7
+Checking threshold:  4.8
+Checking threshold:  4.9
+Checking threshold:  5.0
+ROC AUC:  0
+Idea threshold found:  4.2
+FA rate: 0.09, MD rate: 0.11
+Model=ARIMAFuturePredictionModel(4, 4), Past Prediction Horizon=32, Threshold=4.2, FA=0.0864661654135, MD=0.110902255639
+======================
+Past prediction horizon:  64
+Checking threshold:  1.1
+Checking threshold:  1.2
+Checking threshold:  1.3
+Checking threshold:  1.4
+Checking threshold:  1.5
+Checking threshold:  1.6
+Checking threshold:  1.7
+Checking threshold:  1.8
+Checking threshold:  1.9
+Checking threshold:  2.0
+Checking threshold:  2.1
+Checking threshold:  2.2
+Checking threshold:  2.3
+Checking threshold:  2.4
+Checking threshold:  2.5
+Checking threshold:  2.6
+Checking threshold:  2.7
+Checking threshold:  2.8
+Checking threshold:  2.9
+Checking threshold:  3.0
+Checking threshold:  3.1
+Checking threshold:  3.2
+Checking threshold:  3.3
+Checking threshold:  3.4
+Checking threshold:  3.5
+Checking threshold:  3.6
+Checking threshold:  3.7
+Checking threshold:  3.8
+Checking threshold:  3.9
+Checking threshold:  4.0
+Checking threshold:  4.1
+Checking threshold:  4.2
+Checking threshold:  4.3
+Checking threshold:  4.4
+Checking threshold:  4.5
+Checking threshold:  4.6
+Checking threshold:  4.7
+Checking threshold:  4.8
+Checking threshold:  4.9
+Checking threshold:  5.0
+ROC AUC:  0
+Idea threshold found:  5.0
+FA rate: 0.12, MD rate: 0.14
+Model=ARIMAFuturePredictionModel(4, 4), Past Prediction Horizon=64, Threshold=5.0, FA=0.118, MD=0.14
+======================
+Past prediction horizon:  96
+Checking threshold:  1.1
+Checking threshold:  1.2
+Checking threshold:  1.3
+Checking threshold:  1.4
+Checking threshold:  1.5
+Checking threshold:  1.6
+Checking threshold:  1.7
+Checking threshold:  1.8
+Checking threshold:  1.9
+Checking threshold:  2.0
+Checking threshold:  2.1
+Checking threshold:  2.2
+Checking threshold:  2.3
+Checking threshold:  2.4
+Checking threshold:  2.5
+Checking threshold:  2.6
+Checking threshold:  2.7
+Checking threshold:  2.8
+Checking threshold:  2.9
+Checking threshold:  3.0
+Checking threshold:  3.1
+Checking threshold:  3.2
+Checking threshold:  3.3
+Checking threshold:  3.4
+Checking threshold:  3.5
+Checking threshold:  3.6
+Checking threshold:  3.7
+Checking threshold:  3.8
+Checking threshold:  3.9
+Checking threshold:  4.0
+Checking threshold:  4.1
+Checking threshold:  4.2
+Checking threshold:  4.3
+Checking threshold:  4.4
+Checking threshold:  4.5
+Checking threshold:  4.6
+Checking threshold:  4.7
+Checking threshold:  4.8
+Checking threshold:  4.9
+Checking threshold:  5.0
+ROC AUC:  0
+Idea threshold found:  5.0
+FA rate: 0.13, MD rate: 0.14
+Model=ARIMAFuturePredictionModel(4, 4), Past Prediction Horizon=96, Threshold=5.0, FA=0.134615384615, MD=0.136752136752
+======================
+Past prediction horizon:  128
+Checking threshold:  1.1
+Checking threshold:  1.2
+Checking threshold:  1.3
+Checking threshold:  1.4
+Checking threshold:  1.5
+Checking threshold:  1.6
+Checking threshold:  1.7
+Checking threshold:  1.8
+Checking threshold:  1.9
+Checking threshold:  2.0
+Checking threshold:  2.1
+Checking threshold:  2.2
+Checking threshold:  2.3
+Checking threshold:  2.4
+Checking threshold:  2.5
+Checking threshold:  2.6
+Checking threshold:  2.7
+Checking threshold:  2.8
+Checking threshold:  2.9
+Checking threshold:  3.0
+Checking threshold:  3.1
+Checking threshold:  3.2
+Checking threshold:  3.3
+Checking threshold:  3.4
+Checking threshold:  3.5
+Checking threshold:  3.6
+Checking threshold:  3.7
+Checking threshold:  3.8
+Checking threshold:  3.9
+Checking threshold:  4.0
+Checking threshold:  4.1
+Checking threshold:  4.2
+Checking threshold:  4.3
+Checking threshold:  4.4
+Checking threshold:  4.5
+Checking threshold:  4.6
+Checking threshold:  4.7
+Checking threshold:  4.8
+Checking threshold:  4.9
+Checking threshold:  5.0
+ROC AUC:  0
+Idea threshold found:  4.9
+FA rate: 0.10, MD rate: 0.12
+Model=ARIMAFuturePredictionModel(4, 4), Past Prediction Horizon=128, Threshold=4.9, FA=0.100917431193, MD=0.116972477064
+======================
+Past prediction horizon:  32
+Checking threshold:  1.1
+Checking threshold:  1.2
+Checking threshold:  1.3
+Checking threshold:  1.4
+Checking threshold:  1.5
+Checking threshold:  1.6
+Checking threshold:  1.7
+Checking threshold:  1.8
+Checking threshold:  1.9
+Checking threshold:  2.0
+Checking threshold:  2.1
+Checking threshold:  2.2
+Checking threshold:  2.3
+Checking threshold:  2.4
+Checking threshold:  2.5
+Checking threshold:  2.6
+Checking threshold:  2.7
+Checking threshold:  2.8
+Checking threshold:  2.9
+Checking threshold:  3.0
+Checking threshold:  3.1
+Checking threshold:  3.2
+Checking threshold:  3.3
+Checking threshold:  3.4
+Checking threshold:  3.5
+Checking threshold:  3.6
+Checking threshold:  3.7
+Checking threshold:  3.8
+Checking threshold:  3.9
+Checking threshold:  4.0
+Checking threshold:  4.1
+Checking threshold:  4.2
+Checking threshold:  4.3
+Checking threshold:  4.4
+Checking threshold:  4.5
+Checking threshold:  4.6
+Checking threshold:  4.7
+Checking threshold:  4.8
+Checking threshold:  4.9
+Checking threshold:  5.0
+ROC AUC:  0
+Idea threshold found:  4.2
+FA rate: 0.03, MD rate: 0.05
+Model=ARIMAFuturePredictionModel(4, 0), Past Prediction Horizon=32, Threshold=4.2, FA=0.0300751879699, MD=0.0488721804511
+======================
+Past prediction horizon:  64
+Checking threshold:  1.1
+Checking threshold:  1.2
+Checking threshold:  1.3
+Checking threshold:  1.4
+Checking threshold:  1.5
+Checking threshold:  1.6
+Checking threshold:  1.7
+Checking threshold:  1.8
+Checking threshold:  1.9
+Checking threshold:  2.0
+Checking threshold:  2.1
+Checking threshold:  2.2
+Checking threshold:  2.3
+Checking threshold:  2.4
+Checking threshold:  2.5
+Checking threshold:  2.6
+Checking threshold:  2.7
+Checking threshold:  2.8
+Checking threshold:  2.9
+Checking threshold:  3.0
+Checking threshold:  3.1
+Checking threshold:  3.2
+Checking threshold:  3.3
+Checking threshold:  3.4
+Checking threshold:  3.5
+Checking threshold:  3.6
+Checking threshold:  3.7
+Checking threshold:  3.8
+Checking threshold:  3.9
+Checking threshold:  4.0
+Checking threshold:  4.1
+Checking threshold:  4.2
+Checking threshold:  4.3
+Checking threshold:  4.4
+Checking threshold:  4.5
+Checking threshold:  4.6
+Checking threshold:  4.7
+Checking threshold:  4.8
+Checking threshold:  4.9
+Checking threshold:  5.0
+ROC AUC:  0
+Idea threshold found:  4.1
+FA rate: 0.01, MD rate: 0.02
+Model=ARIMAFuturePredictionModel(4, 0), Past Prediction Horizon=64, Threshold=4.1, FA=0.008, MD=0.024
+======================
+Past prediction horizon:  96
+Checking threshold:  1.1
+Checking threshold:  1.2
+Checking threshold:  1.3
+Checking threshold:  1.4
+Checking threshold:  1.5
+Checking threshold:  1.6
+Checking threshold:  1.7
+Checking threshold:  1.8
+Checking threshold:  1.9
+Checking threshold:  2.0
+Checking threshold:  2.1
+Checking threshold:  2.2
+Checking threshold:  2.3
+Checking threshold:  2.4
+Checking threshold:  2.5
+Checking threshold:  2.6
+Checking threshold:  2.7
+Checking threshold:  2.8
+Checking threshold:  2.9
+Checking threshold:  3.0
+Checking threshold:  3.1
+Checking threshold:  3.2
+Checking threshold:  3.3
+Checking threshold:  3.4
+Checking threshold:  3.5
+Checking threshold:  3.6
+Checking threshold:  3.7
+Checking threshold:  3.8
+Checking threshold:  3.9
+Checking threshold:  4.0
+Checking threshold:  4.1
+Checking threshold:  4.2
+Checking threshold:  4.3
+Checking threshold:  4.4
+Checking threshold:  4.5
+Checking threshold:  4.6
+Checking threshold:  4.7
+Checking threshold:  4.8
+Checking threshold:  4.9
+Checking threshold:  5.0
+ROC AUC:  0
+Idea threshold found:  4.5
+FA rate: 0.02, MD rate: 0.03
+Model=ARIMAFuturePredictionModel(4, 0), Past Prediction Horizon=96, Threshold=4.5, FA=0.017094017094, MD=0.025641025641
+======================
+Past prediction horizon:  128
+Checking threshold:  1.1
+Checking threshold:  1.2
+Checking threshold:  1.3
+Checking threshold:  1.4
+Checking threshold:  1.5
+Checking threshold:  1.6
+Checking threshold:  1.7
+Checking threshold:  1.8
+Checking threshold:  1.9
+Checking threshold:  2.0
+Checking threshold:  2.1
+Checking threshold:  2.2
+Checking threshold:  2.3
+Checking threshold:  2.4
+Checking threshold:  2.5
+Checking threshold:  2.6
+Checking threshold:  2.7
+Checking threshold:  2.8
+Checking threshold:  2.9
+Checking threshold:  3.0
+Checking threshold:  3.1
+Checking threshold:  3.2
+Checking threshold:  3.3
+Checking threshold:  3.4
+Checking threshold:  3.5
+Checking threshold:  3.6
+Checking threshold:  3.7
+Checking threshold:  3.8
+Checking threshold:  3.9
+Checking threshold:  4.0
+Checking threshold:  4.1
+Checking threshold:  4.2
+Checking threshold:  4.3
+Checking threshold:  4.4
+Checking threshold:  4.5
+Checking threshold:  4.6
+Checking threshold:  4.7
+Checking threshold:  4.8
+Checking threshold:  4.9
+Checking threshold:  5.0
+ROC AUC:  0
+Idea threshold found:  4.6
+FA rate: 0.02, MD rate: 0.03
+Model=ARIMAFuturePredictionModel(4, 0), Past Prediction Horizon=128, Threshold=4.6, FA=0.0229357798165, MD=0.0344036697248
+======================
+Past prediction horizon:  32
+Checking threshold:  1.1
+Checking threshold:  1.2
+Checking threshold:  1.3
+Checking threshold:  1.4
+Checking threshold:  1.5
+Checking threshold:  1.6
+Checking threshold:  1.7
+Checking threshold:  1.8
+Checking threshold:  1.9
+Checking threshold:  2.0
+Checking threshold:  2.1
+Checking threshold:  2.2
+Checking threshold:  2.3
+Checking threshold:  2.4
+Checking threshold:  2.5
+Checking threshold:  2.6
+Checking threshold:  2.7
+Checking threshold:  2.8
+Checking threshold:  2.9
+Checking threshold:  3.0
+Checking threshold:  3.1
+Checking threshold:  3.2
+Checking threshold:  3.3
+Checking threshold:  3.4
+Checking threshold:  3.5
+Checking threshold:  3.6
+Checking threshold:  3.7
+Checking threshold:  3.8
+Checking threshold:  3.9
+Checking threshold:  4.0
+Checking threshold:  4.1
+Checking threshold:  4.2
+Checking threshold:  4.3
+Checking threshold:  4.4
+Checking threshold:  4.5
+Checking threshold:  4.6
+Checking threshold:  4.7
+Checking threshold:  4.8
+Checking threshold:  4.9
+Checking threshold:  5.0
+ROC AUC:  0
+Idea threshold found:  1.1
+FA rate: 0.15, MD rate: 0.29
+Model=GARCHFuturePredictionModel(1, 1), Past Prediction Horizon=32, Threshold=1.1, FA=0.154135338346, MD=0.289473684211
+======================
+Past prediction horizon:  64
+Checking threshold:  1.1
+Checking threshold:  1.2
+Checking threshold:  1.3
+Checking threshold:  1.4
+Checking threshold:  1.5
+Checking threshold:  1.6
+Checking threshold:  1.7
+Checking threshold:  1.8
+Checking threshold:  1.9
+Checking threshold:  2.0
+Checking threshold:  2.1
+Checking threshold:  2.2
+Checking threshold:  2.3
+Checking threshold:  2.4
+Checking threshold:  2.5
+Checking threshold:  2.6
+Checking threshold:  2.7
+Checking threshold:  2.8
+Checking threshold:  2.9
+Checking threshold:  3.0
+Checking threshold:  3.1
+Checking threshold:  3.2
+Checking threshold:  3.3
+Checking threshold:  3.4
+Checking threshold:  3.5
+Checking threshold:  3.6
+Checking threshold:  3.7
+Checking threshold:  3.8
+Checking threshold:  3.9
+Checking threshold:  4.0
+Checking threshold:  4.1
+Checking threshold:  4.2
+Checking threshold:  4.3
+Checking threshold:  4.4
+Checking threshold:  4.5
+Checking threshold:  4.6
+Checking threshold:  4.7
+Checking threshold:  4.8
+Checking threshold:  4.9
+Checking threshold:  5.0
+ROC AUC:  0
+Idea threshold found:  1.1
+FA rate: 0.17, MD rate: 0.34
+Model=GARCHFuturePredictionModel(1, 1), Past Prediction Horizon=64, Threshold=1.1, FA=0.174, MD=0.34
+======================
+Past prediction horizon:  96
+Checking threshold:  1.1
+Checking threshold:  1.2
+Checking threshold:  1.3
+Checking threshold:  1.4
+Checking threshold:  1.5
+Checking threshold:  1.6
+Checking threshold:  1.7
+Checking threshold:  1.8
+Checking threshold:  1.9
+Checking threshold:  2.0
+Checking threshold:  2.1
+Checking threshold:  2.2
+Checking threshold:  2.3
+Checking threshold:  2.4
+Checking threshold:  2.5
+Checking threshold:  2.6
+Checking threshold:  2.7
+Checking threshold:  2.8
+Checking threshold:  2.9
+Checking threshold:  3.0
+Checking threshold:  3.1
+Checking threshold:  3.2
+Checking threshold:  3.3
+Checking threshold:  3.4
+Checking threshold:  3.5
+Checking threshold:  3.6
+Checking threshold:  3.7
+Checking threshold:  3.8
+Checking threshold:  3.9
+Checking threshold:  4.0
+Checking threshold:  4.1
+Checking threshold:  4.2
+Checking threshold:  4.3
+Checking threshold:  4.4
+Checking threshold:  4.5
+Checking threshold:  4.6
+Checking threshold:  4.7
+Checking threshold:  4.8
+Checking threshold:  4.9
+Checking threshold:  5.0
+ROC AUC:  0
+Idea threshold found:  1.1
+FA rate: 0.13, MD rate: 0.28
+Model=GARCHFuturePredictionModel(1, 1), Past Prediction Horizon=96, Threshold=1.1, FA=0.130341880342, MD=0.277777777778
+======================
+Past prediction horizon:  128
+Checking threshold:  1.1
+Checking threshold:  1.2
+Checking threshold:  1.3
+Checking threshold:  1.4
+Checking threshold:  1.5
+Checking threshold:  1.6
+Checking threshold:  1.7
+Checking threshold:  1.8
+Checking threshold:  1.9
+Checking threshold:  2.0
+Checking threshold:  2.1
+Checking threshold:  2.2
+Checking threshold:  2.3
+Checking threshold:  2.4
+Checking threshold:  2.5
+Checking threshold:  2.6
+Checking threshold:  2.7
+Checking threshold:  2.8
+Checking threshold:  2.9
+Checking threshold:  3.0
+Checking threshold:  3.1
+Checking threshold:  3.2
+Checking threshold:  3.3
+Checking threshold:  3.4
+Checking threshold:  3.5
+Checking threshold:  3.6
+Checking threshold:  3.7
+Checking threshold:  3.8
+Checking threshold:  3.9
+Checking threshold:  4.0
+Checking threshold:  4.1
+Checking threshold:  4.2
+Checking threshold:  4.3
+Checking threshold:  4.4
+Checking threshold:  4.5
+Checking threshold:  4.6
+Checking threshold:  4.7
+Checking threshold:  4.8
+Checking threshold:  4.9
+Checking threshold:  5.0
+ROC AUC:  0
+Idea threshold found:  1.1
+FA rate: 0.02, MD rate: 0.30
+Model=GARCHFuturePredictionModel(1, 1), Past Prediction Horizon=128, Threshold=1.1, FA=0.0160550458716, MD=0.298165137615
+======================
+Past prediction horizon:  32
+Checking threshold:  1.1
+Checking threshold:  1.2
+Checking threshold:  1.3
+Checking threshold:  1.4
+Checking threshold:  1.5
+Checking threshold:  1.6
+Checking threshold:  1.7
+Checking threshold:  1.8
+Checking threshold:  1.9
+Checking threshold:  2.0
+Checking threshold:  2.1
+Checking threshold:  2.2
+Checking threshold:  2.3
+Checking threshold:  2.4
+Checking threshold:  2.5
+Checking threshold:  2.6
+Checking threshold:  2.7
+Checking threshold:  2.8
+Checking threshold:  2.9
+Checking threshold:  3.0
+Checking threshold:  3.1
+Checking threshold:  3.2
+Checking threshold:  3.3
+Checking threshold:  3.4
+Checking threshold:  3.5
+Checking threshold:  3.6
+Checking threshold:  3.7
+Checking threshold:  3.8
+Checking threshold:  3.9
+Checking threshold:  4.0
+Checking threshold:  4.1
+Checking threshold:  4.2
+Checking threshold:  4.3
+Checking threshold:  4.4
+Checking threshold:  4.5
+Checking threshold:  4.6
+Checking threshold:  4.7
+Checking threshold:  4.8
+Checking threshold:  4.9
+Checking threshold:  5.0
+ROC AUC:  0
+Idea threshold found:  4.1
+FA rate: 0.04, MD rate: 0.05
+Model=GGSMFuturePredictionModel(), Past Prediction Horizon=32, Threshold=4.1, FA=0.0375939849624, MD=0.0488721804511
+======================
+Past prediction horizon:  64
+Checking threshold:  1.1
+Checking threshold:  1.2
+Checking threshold:  1.3
+Checking threshold:  1.4
+Checking threshold:  1.5
+Checking threshold:  1.6
+Checking threshold:  1.7
+Checking threshold:  1.8
+Checking threshold:  1.9
+Checking threshold:  2.0
+Checking threshold:  2.1
+Checking threshold:  2.2
+Checking threshold:  2.3
+Checking threshold:  2.4
+Checking threshold:  2.5
+Checking threshold:  2.6
+Checking threshold:  2.7
+Checking threshold:  2.8
+Checking threshold:  2.9
+Checking threshold:  3.0
+Checking threshold:  3.1
+Checking threshold:  3.2
+Checking threshold:  3.3
+Checking threshold:  3.4
+Checking threshold:  3.5
+Checking threshold:  3.6
+Checking threshold:  3.7
+Checking threshold:  3.8
+Checking threshold:  3.9
+Checking threshold:  4.0
+Checking threshold:  4.1
+Checking threshold:  4.2
+Checking threshold:  4.3
+Checking threshold:  4.4
+Checking threshold:  4.5
+Checking threshold:  4.6
+Checking threshold:  4.7
+Checking threshold:  4.8
+Checking threshold:  4.9
+Checking threshold:  5.0
+ROC AUC:  0
+Idea threshold found:  4.2
+FA rate: 0.00, MD rate: 0.03
+Model=GGSMFuturePredictionModel(), Past Prediction Horizon=64, Threshold=4.2, FA=0.002, MD=0.03
+======================
+Past prediction horizon:  96
+Checking threshold:  1.1
+Checking threshold:  1.2
+Checking threshold:  1.3
+Checking threshold:  1.4
+Checking threshold:  1.5
+Checking threshold:  1.6
+Checking threshold:  1.7
+Checking threshold:  1.8
+Checking threshold:  1.9
+Checking threshold:  2.0
+Checking threshold:  2.1
+Checking threshold:  2.2
+Checking threshold:  2.3
+Checking threshold:  2.4
+Checking threshold:  2.5
+Checking threshold:  2.6
+Checking threshold:  2.7
+Checking threshold:  2.8
+Checking threshold:  2.9
+Checking threshold:  3.0
+Checking threshold:  3.1
+Checking threshold:  3.2
+Checking threshold:  3.3
+Checking threshold:  3.4
+Checking threshold:  3.5
+Checking threshold:  3.6
+Checking threshold:  3.7
+Checking threshold:  3.8
+Checking threshold:  3.9
+Checking threshold:  4.0
+Checking threshold:  4.1
+Checking threshold:  4.2
+Checking threshold:  4.3
+Checking threshold:  4.4
+Checking threshold:  4.5
+Checking threshold:  4.6
+Checking threshold:  4.7
+Checking threshold:  4.8
+Checking threshold:  4.9
+Checking threshold:  5.0
+ROC AUC:  0
+Idea threshold found:  4.2
+FA rate: 0.00, MD rate: 0.03
+Model=GGSMFuturePredictionModel(), Past Prediction Horizon=96, Threshold=4.2, FA=0.00213675213675, MD=0.0320512820513
+======================
+Past prediction horizon:  128
+Checking threshold:  1.1
+Checking threshold:  1.2
+Checking threshold:  1.3
+Checking threshold:  1.4
+Checking threshold:  1.5
+Checking threshold:  1.6
+Checking threshold:  1.7
+Checking threshold:  1.8
+Checking threshold:  1.9
+Checking threshold:  2.0
+Checking threshold:  2.1
+Checking threshold:  2.2
+Checking threshold:  2.3
+Checking threshold:  2.4
+Checking threshold:  2.5
+Checking threshold:  2.6
+Checking threshold:  2.7
+Checking threshold:  2.8
+Checking threshold:  2.9
+Checking threshold:  3.0
+Checking threshold:  3.1
+Checking threshold:  3.2
+Checking threshold:  3.3
+Checking threshold:  3.4
+Checking threshold:  3.5
+Checking threshold:  3.6
+Checking threshold:  3.7
+Checking threshold:  3.8
+Checking threshold:  3.9
+Checking threshold:  4.0
+Checking threshold:  4.1
+Checking threshold:  4.2
+Checking threshold:  4.3
+Checking threshold:  4.4
+Checking threshold:  4.5
+Checking threshold:  4.6
+Checking threshold:  4.7
+Checking threshold:  4.8
+Checking threshold:  4.9
+Checking threshold:  5.0
+ROC AUC:  0
+Idea threshold found:  4.2
+FA rate: 0.00, MD rate: 0.03
+Model=GGSMFuturePredictionModel(), Past Prediction Horizon=128, Threshold=4.2, FA=0.00229357798165, MD=0.0344036697248
+======================
+Sorted results
+Model=ARIMAFuturePredictionModel(1, 0), Past Prediction Horizon=64, Threshold=4.1, FA=0.004, MD=0.024
+Model=ARIMAFuturePredictionModel(2, 0), Past Prediction Horizon=64, Threshold=4.1, FA=0.004, MD=0.024
+Model=ARIMAFuturePredictionModel(1, 0), Past Prediction Horizon=96, Threshold=4.5, FA=0.0042735042735, MD=0.025641025641
+Model=ARIMAFuturePredictionModel(4, 0), Past Prediction Horizon=64, Threshold=4.1, FA=0.008, MD=0.024
+Model=GGSMFuturePredictionModel(), Past Prediction Horizon=64, Threshold=4.2, FA=0.002, MD=0.03
+Model=ARIMAFuturePredictionModel(1, 1), Past Prediction Horizon=64, Threshold=4.1, FA=0.01, MD=0.024
+Model=GGSMFuturePredictionModel(), Past Prediction Horizon=96, Threshold=4.2, FA=0.00213675213675, MD=0.0320512820513
+Model=GGSMFuturePredictionModel(), Past Prediction Horizon=128, Threshold=4.2, FA=0.00229357798165, MD=0.0344036697248
+Model=ARIMAFuturePredictionModel(1, 0), Past Prediction Horizon=128, Threshold=4.6, FA=0.00688073394495, MD=0.0344036697248
+Model=ARIMAFuturePredictionModel(2, 0), Past Prediction Horizon=96, Threshold=4.5, FA=0.017094017094, MD=0.025641025641
+Model=ARIMAFuturePredictionModel(4, 0), Past Prediction Horizon=96, Threshold=4.5, FA=0.017094017094, MD=0.025641025641
+Model=ARIMAFuturePredictionModel(1, 1), Past Prediction Horizon=96, Threshold=4.6, FA=0.0213675213675, MD=0.025641025641
+Model=ARIMAFuturePredictionModel(2, 0), Past Prediction Horizon=128, Threshold=4.6, FA=0.0160550458716, MD=0.0344036697248
+Model=ARIMAFuturePredictionModel(4, 0), Past Prediction Horizon=128, Threshold=4.6, FA=0.0229357798165, MD=0.0344036697248
+Model=ARIMAFuturePredictionModel(1, 1), Past Prediction Horizon=128, Threshold=4.6, FA=0.0252293577982, MD=0.0344036697248
+Model=ARIMAFuturePredictionModel(1, 1), Past Prediction Horizon=32, Threshold=4.2, FA=0.0300751879699, MD=0.0451127819549
+Model=ARIMAFuturePredictionModel(4, 0), Past Prediction Horizon=32, Threshold=4.2, FA=0.0300751879699, MD=0.0488721804511
+Model=ARIMAFuturePredictionModel(2, 0), Past Prediction Horizon=32, Threshold=4.1, FA=0.0375939849624, MD=0.0432330827068
+Model=ARIMAFuturePredictionModel(1, 0), Past Prediction Horizon=32, Threshold=4.1, FA=0.0375939849624, MD=0.0488721804511
+Model=GGSMFuturePredictionModel(), Past Prediction Horizon=32, Threshold=4.1, FA=0.0375939849624, MD=0.0488721804511
+Model=ARIMAFuturePredictionModel(4, 4), Past Prediction Horizon=32, Threshold=4.2, FA=0.0864661654135, MD=0.110902255639
+Model=ARIMAFuturePredictionModel(4, 4), Past Prediction Horizon=128, Threshold=4.9, FA=0.100917431193, MD=0.116972477064
+Model=ARIMAFuturePredictionModel(4, 4), Past Prediction Horizon=64, Threshold=5.0, FA=0.118, MD=0.14
+Model=ARIMAFuturePredictionModel(4, 4), Past Prediction Horizon=96, Threshold=5.0, FA=0.134615384615, MD=0.136752136752
+Model=GARCHFuturePredictionModel(1, 1), Past Prediction Horizon=128, Threshold=1.1, FA=0.0160550458716, MD=0.298165137615
+Model=GARCHFuturePredictionModel(1, 1), Past Prediction Horizon=96, Threshold=1.1, FA=0.130341880342, MD=0.277777777778
+Model=GARCHFuturePredictionModel(1, 1), Past Prediction Horizon=32, Threshold=1.1, FA=0.154135338346, MD=0.289473684211
+Model=GARCHFuturePredictionModel(1, 1), Past Prediction Horizon=64, Threshold=1.1, FA=0.174, MD=0.34
+
+Process finished with exit code 0
