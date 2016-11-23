@@ -62,8 +62,8 @@ class DetectionToolbox:
             print 'False Alarm Count: ', fa_count
             print 'Missed Detection Count: ', md_count
             print '------------------------------------'
-            fa_rate = fa_count / total_count
-            md_rate = md_count / total_count
+            fa_rate = float(fa_count) / total_count
+            md_rate = float(md_count) / total_count
 
             if not threshold_found and fa_count < md_count:
                 ideal_threshold = threshold
@@ -74,17 +74,20 @@ class DetectionToolbox:
             fa_rate_data.append(fa_rate)
             md_rate_data.append(md_rate_data)
 
-        roc_auc = auc(np.array(fa_rate_data), np.array(md_rate_data), reorder=True)
-        fig = plt.figure()
-        plt.title('Receiver Operating Characteristic')
-        plt.plot(fa_rate_data, md_rate_data, 'b', label='AUC = %0.2f' % roc_auc)
-        plt.legend(loc='lower right')
-        plt.plot([0, 1], [0, 1], 'r--')
-        plt.xlim([-0.1, 1.2])
-        plt.ylim([-0.1, 1.2])
-        plt.ylabel('False Negative Rate')
-        plt.xlabel('False Positive Rate')
-        fig.savefig('roc.png')
+        if __debug__:
+            roc_auc = auc(np.array(fa_rate_data), np.array(md_rate_data), reorder=True)
+            fig = plt.figure()
+            plt.title('Receiver Operating Characteristic')
+            plt.plot(fa_rate_data, md_rate_data, 'b', label='AUC = %0.2f' % roc_auc)
+            plt.legend(loc='lower right')
+            plt.plot([0, 1], [0, 1], 'r--')
+            plt.xlim([-0.1, 1.2])
+            plt.ylim([-0.1, 1.2])
+            plt.ylabel('False Negative Rate')
+            plt.xlabel('False Positive Rate')
+            fig.savefig('roc.png')
+        else:
+            roc_auc = 0
 
         return roc_auc, ideal_threshold, ideal_fa_rate, ideal_md_rate
 

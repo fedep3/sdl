@@ -1,7 +1,8 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 from detection_toolbox import DetectionToolbox
-from prediction_model import ARIMAFuturePredictionModel
+from prediction_model import ARIMAFuturePredictionModel, GARCHFuturePredictionModel, GGSMFuturePredictionModel, \
+    AggregatingFuturePredictionModel
 from readers.mat_reader import MatReader
 
 from sklearn.model_selection import PredefinedSplit
@@ -29,24 +30,40 @@ def main():
     regression_model = LinearRegression()
     regression_model.fit(training_xs, training_ys)
 
-    for past_prediction_horizon in [32, 64]:
-        print 'Past prediction horizon: ', past_prediction_horizon
-        future_prediction_model = ARIMAFuturePredictionModel(FUTURE_PREDICTION_HORIZON, 4, 4)
-        detection_toolbox = DetectionToolbox(regression_model, past_prediction_horizon, future_prediction_model)
+    future_prediction_model_results = []
 
-        # Calculate residuals and predict alarms using validation data
-        # Using validation or training data for prediction?
-        testing_ts, testing_xs, testing_ys = mat_reader.read('ColdComplaintData/Testing')
-        if __debug__:
-            print 'Actuals: ', testing_ys
-        future_residuals_prediction = detection_toolbox.predict_residuals(testing_ts, testing_xs, testing_ys)
-        if __debug__:
-            print 'Future residual predictions: ', future_residuals_prediction
+    for future_prediction_model in [ARIMAFuturePredictionModel(FUTURE_PREDICTION_HORIZON, 1, 1),
+                                    ARIMAFuturePredictionModel(FUTURE_PREDICTION_HORIZON, 2, 2),
+                                    ARIMAFuturePredictionModel(FUTURE_PREDICTION_HORIZON, 2, 0),
+                                    ARIMAFuturePredictionModel(FUTURE_PREDICTION_HORIZON, 4, 4),
+                                    ARIMAFuturePredictionModel(FUTURE_PREDICTION_HORIZON, 4, 0),
+                                    GARCHFuturePredictionModel(FUTURE_PREDICTION_HORIZON, 1, 1),
+                                    GGSMFuturePredictionModel(FUTURE_PREDICTION_HORIZON),
+                                    AggregatingFuturePredictionModel(FUTURE_PREDICTION_HORIZON)]:
+        for past_prediction_horizon in [32, 64]:
+            print 'Past prediction horizon: ', past_prediction_horizon
+            detection_toolbox = DetectionToolbox(regression_model, past_prediction_horizon, future_prediction_model)
 
-        roc_auc, threshold, fa_rate, md_rate = detection_toolbox.calculate_roc_curve(future_residuals_prediction, testing_ys)
-        print 'ROC AUC: ', roc_auc
-        print 'Idea threshold found: ', threshold
-        print 'FA rate: %0.2f, MD rate: %0.2f' % (fa_rate, md_rate)
+            # Calculate residuals and predict alarms using validation data
+            # Using validation or training data for prediction?
+            testing_ts, testing_xs, testing_ys = mat_reader.read('ColdComplaintData/Testing')
+            if __debug__:
+                print 'Actuals: ', testing_ys
+            future_residuals_prediction = detection_toolbox.predict_residuals(testing_ts, testing_xs, testing_ys)
+            if __debug__:
+                print 'Future residual predictions: ', future_residuals_prediction
+
+            roc_auc, threshold, fa_rate, md_rate = detection_toolbox.calculate_roc_curve(future_residuals_prediction, testing_ys)
+            print 'ROC AUC: ', roc_auc
+            print 'Idea threshold found: ', threshold
+            print 'FA rate: %0.2f, MD rate: %0.2f' % (fa_rate, md_rate)
+            print '======================'
+
+            future_prediction_model_results.append((future_prediction_model, past_prediction_horizon, threshold, fa_rate, md_rate))
+
+    future_prediction_model_results.sort(key=lambda s: s[3]+s[4])
+    for future_prediction_model_result in future_prediction_model_results:
+        print 'Model=%s, Past Prediction Horizon=%s, Threshold=%s, FA=%s, MD=%s' % future_prediction_model_result
 
 
 # only perform cross validation between training and validation sets

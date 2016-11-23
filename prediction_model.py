@@ -25,7 +25,72 @@ class ARIMAFuturePredictionModel(FuturePredictionModel):
         self.ma = ma
 
     def train(self, df):
-        self.model = pf.ARIMA(data=df, ar=self.ar, ma=self.ar, integ=0, target='residuals')
+        self.model = pf.ARIMA(data=df, ar=self.ar, ma=self.ma, integ=0, target='residuals')
 
     def fit(self):
-        self.model.fit("MLE")
+        self.model.fit('MLE')
+
+    def __str__(self):
+        return 'ARIMAFuturePredictionModel(%s, %s)' % (self.ar, self.ma)
+
+
+class GARCHFuturePredictionModel(FuturePredictionModel):
+
+    def __init__(self, future_prediction_horizon, p, q):
+        FuturePredictionModel.__init__(self, future_prediction_horizon)
+        self.p = p
+        self.q = q
+
+    def train(self, df):
+        self.model = pf.GARCH(data=df, p=self.p, q=self.q, target='residuals')
+
+    def fit(self):
+        self.model.fit()
+
+    def __str__(self):
+        return 'GARCHFuturePredictionModel(%s, %s)' % (self.p, self.q)
+
+
+class GGSMFuturePredictionModel(FuturePredictionModel):
+
+    def __init__(self, future_prediction_horizon):
+        FuturePredictionModel.__init__(self, future_prediction_horizon)
+
+    def train(self, df):
+        self.model = pf.LLEV(data=df, target='residuals')
+
+    def fit(self):
+        self.model.fit()
+
+    def __str__(self):
+        return 'GGSMFuturePredictionModel()'
+
+
+class AggregatingFuturePredictionModel(FuturePredictionModel):
+
+    def __init__(self, future_prediction_horizon):
+        FuturePredictionModel.__init__(self, future_prediction_horizon)
+
+    def train(self, df):
+        mix = pf.Aggregate(learning_rate=1.0, loss_type='squared')
+        model_one = pf.ARIMA(data=df, ar=1, ma=1)
+        model_two = pf.ARIMA(data=df, ar=2, ma=0)
+        model_three = pf.LLEV(data=df)
+        model_four = pf.GASLLEV(data=df, family=pf.GASt())
+
+        mix.add_model(model_one)
+        mix.add_model(model_two)
+        mix.add_model(model_three)
+        mix.add_model(model_four)
+        mix.tune_learning_rate(16)
+
+        if __debug__:
+            mix.plot_weights(h=16, figsize=(15, 5))
+
+        self.model = mix
+
+    def fit(self):
+        self.model.fit()
+
+    def __str__(self):
+        return 'AggregatingFuturePredictionModel()'
