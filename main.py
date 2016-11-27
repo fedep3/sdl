@@ -39,7 +39,7 @@ def compare_detection_algorithms():
     regression_model = LinearRegression()
     regression_model.fit(training_xs, training_ys)
 
-    testing_ts, testing_xs, testing_ys = mat_reader.read('ColdComplaintData/Testing')
+    testing_ts, testing_xs, testing_ys = mat_reader.read('ColdComplaintData/Validation')
     future_prediction_model_results = []
     for future_prediction_model in [ARIMAFuturePredictionModel(FUTURE_PREDICTION_HORIZON, 1, 1),
                                     ARIMAFuturePredictionModel(FUTURE_PREDICTION_HORIZON, 1, 0),
@@ -48,7 +48,7 @@ def compare_detection_algorithms():
                                     ARIMAFuturePredictionModel(FUTURE_PREDICTION_HORIZON, 4, 0),
                                     GARCHFuturePredictionModel(FUTURE_PREDICTION_HORIZON, 1, 1),
                                     GGSMFuturePredictionModel(FUTURE_PREDICTION_HORIZON)]:
-        for past_prediction_horizon in [32, 64, 96, 128]:
+        for past_prediction_horizon in [32, 64, 96]:
             if isinstance(future_prediction_model, AggregatingFuturePredictionModel) and past_prediction_horizon < 64:
                 continue
             print 'Past prediction horizon: ', past_prediction_horizon
