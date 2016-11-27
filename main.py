@@ -1,5 +1,8 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+import warnings
+import argparse
+
 from detection_toolbox import DetectionToolbox
 from prediction_model import ARIMAFuturePredictionModel, GARCHFuturePredictionModel, GGSMFuturePredictionModel, \
     AggregatingFuturePredictionModel
@@ -7,8 +10,6 @@ from readers.mat_reader import MatReader
 
 from sklearn.model_selection import PredefinedSplit
 from sklearn.linear_model import LinearRegression
-
-import warnings
 
 from regression_toolbox import RegressionToolbox
 
@@ -19,7 +20,7 @@ warnings.filterwarnings('ignore', category=RuntimeWarning)
 FUTURE_PREDICTION_HORIZON = 12
 
 
-def main():
+def best_run():
     mat_reader = MatReader()
     training_ts, training_xs, training_ys = mat_reader.read('ColdComplaintData/Training')
 
@@ -31,11 +32,14 @@ def main():
     detect(regression_model, future_prediction_model, 64, testing_ts, testing_xs, testing_ys)
 
 
-def compare_regression_algorithms(training_xs, training_ys):
-    RegressionToolbox.compare_regression_algorithms(training_xs, training_ys, 5)
+def compare_detection_algorithms():
+    mat_reader = MatReader()
+    training_ts, training_xs, training_ys = mat_reader.read('ColdComplaintData/Training')
 
+    regression_model = LinearRegression()
+    regression_model.fit(training_xs, training_ys)
 
-def compare_detection_algorithms(regression_model, ts, xs, ys):
+    testing_ts, testing_xs, testing_ys = mat_reader.read('ColdComplaintData/Testing')
     future_prediction_model_results = []
     for future_prediction_model in [ARIMAFuturePredictionModel(FUTURE_PREDICTION_HORIZON, 1, 1),
                                     ARIMAFuturePredictionModel(FUTURE_PREDICTION_HORIZON, 1, 0),
@@ -49,7 +53,7 @@ def compare_detection_algorithms(regression_model, ts, xs, ys):
                 continue
             print 'Past prediction horizon: ', past_prediction_horizon
             fa_rate, md_rate, threshold = detect(regression_model, future_prediction_model, past_prediction_horizon,
-                                                 ts, xs, ys)
+                                                 testing_ts, testing_xs, testing_ys)
             future_prediction_model_results.append(
                 (future_prediction_model, past_prediction_horizon, threshold, fa_rate, md_rate))
             print 'Model=%s, Past Prediction Horizon=%s, Threshold=%s, FA=%s, MD=%s' \
@@ -77,6 +81,10 @@ def detect(regression_model, future_prediction_model, past_prediction_horizon, t
     return fa_rate, md_rate, threshold
 
 
+def compare_regression_algorithms(training_xs, training_ys):
+    RegressionToolbox.compare_regression_algorithms(training_xs, training_ys, 5)
+
+
 # only perform cross validation between training and validation sets
 def compare_training_validation():
     mat_reader = MatReader()
@@ -89,7 +97,22 @@ def compare_training_validation():
     RegressionToolbox.compare_regression_algorithms(xs, ys, ps)
 
 if __name__ == '__main__':
-    main()
+    parser = argparse.ArgumentParser(description='Predicting Adverse Thermal Events in a Smart Building')
+    parser.add_argument("-t", "--type", type=int, choices=[1, 2, 3, 4], default=1,
+                        help="type of run:\n"
+                             "  1)Best arguments run\n"
+                             "  2)Compare regression algorithms\n"
+                             "  3)Compare regression algorithms with training and validation data\n"
+                             "  4)Compare detection algorithms\n")
+    args = parser.parse_args()
+    if args.type == 1:
+        best_run()
+    elif args.type == 2:
+        compare_training_validation()
+    elif args.type == 3:
+        compare_training_validation()
+    elif args.type == 4:
+        compare_detection_algorithms()
 
 
 
