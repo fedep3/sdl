@@ -99,11 +99,11 @@ def compare_training_validation():
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Predicting Adverse Thermal Events in a Smart Building')
     parser.add_argument("-t", "--type", type=int, choices=[1, 2, 3, 4], default=1,
-                        help="type of run:\n"
-                             "  1)Best arguments run\n"
-                             "  2)Compare regression algorithms\n"
-                             "  3)Compare regression algorithms with training and validation data\n"
-                             "  4)Compare detection algorithms\n")
+                        help="type of run: "
+                             "(1)Best arguments run, "
+                             "(2)Compare regression algorithms, "
+                             "(3)Compare regression algorithms with training and validation data, "
+                             "(4)Compare detection algorithms")
     args = parser.parse_args()
     if args.type == 1:
         best_run()
