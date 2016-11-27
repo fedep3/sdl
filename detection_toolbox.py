@@ -52,7 +52,8 @@ class DetectionToolbox:
         threshold_found = False
         for t in xrange(1, 41):
             threshold = 1.0 + float(t) * 0.1
-            print 'Checking threshold: ', threshold
+            if __debug__:
+                print 'Checking threshold: ', threshold
             correct_count, fa_count, md_count = \
                 self._calculate_error_rates(threshold,
                                            future_residuals_prediction[:-self.future_prediction_model.future_prediction_horizon],
