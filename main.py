@@ -89,7 +89,7 @@ def detect(regression_model, future_prediction_model, past_prediction_horizon, t
     roc_auc, threshold, fa_rate, md_rate = detection_toolbox.calculate_roc_curve(future_residuals_prediction, ys)
     print 'ROC AUC: ', roc_auc
     print 'Idea threshold found: ', threshold
-    print 'FA rate: %0.2f, MD rate: %0.2f' % (fa_rate, md_rate)
+    print 'FA rate: %0.3f, MD rate: %0.3f' % (fa_rate, md_rate)
     return fa_rate, md_rate, threshold
 
 
