@@ -28,7 +28,7 @@ def best_run():
     regression_model.fit(training_xs, training_ys)
 
     testing_ts, testing_xs, testing_ys = mat_reader.read('ColdComplaintData/Testing')
-    future_prediction_model = ARIMAFuturePredictionModel(FUTURE_PREDICTION_HORIZON, 1, 0)
+    future_prediction_model = GGSMFuturePredictionModel(FUTURE_PREDICTION_HORIZON)
     detect(regression_model, future_prediction_model, 64, testing_ts, testing_xs, testing_ys)
 
 
@@ -41,15 +41,19 @@ def compare_detection_algorithms():
 
     testing_ts, testing_xs, testing_ys = mat_reader.read('ColdComplaintData/Validation')
     future_prediction_model_results = []
+    best_model_position = -1
+    min_score = 2.0
+    count = 0
+
     for future_prediction_model in [ARIMAFuturePredictionModel(FUTURE_PREDICTION_HORIZON, 1, 1),
                                     ARIMAFuturePredictionModel(FUTURE_PREDICTION_HORIZON, 1, 0),
                                     ARIMAFuturePredictionModel(FUTURE_PREDICTION_HORIZON, 2, 0),
-                                    ARIMAFuturePredictionModel(FUTURE_PREDICTION_HORIZON, 4, 4),
                                     ARIMAFuturePredictionModel(FUTURE_PREDICTION_HORIZON, 4, 0),
                                     GARCHFuturePredictionModel(FUTURE_PREDICTION_HORIZON, 1, 1),
-                                    GGSMFuturePredictionModel(FUTURE_PREDICTION_HORIZON)]:
-        for past_prediction_horizon in [32, 64, 96]:
-            if isinstance(future_prediction_model, AggregatingFuturePredictionModel) and past_prediction_horizon < 64:
+                                    GGSMFuturePredictionModel(FUTURE_PREDICTION_HORIZON),
+                                    AggregatingFuturePredictionModel(FUTURE_PREDICTION_HORIZON)]:
+        for past_prediction_horizon in [16, 32, 48, 64, 80, 96]:
+            if isinstance(future_prediction_model, AggregatingFuturePredictionModel) and past_prediction_horizon < 48:
                 continue
             print 'Past prediction horizon: ', past_prediction_horizon
             fa_rate, md_rate, threshold = detect(regression_model, future_prediction_model, past_prediction_horizon,
@@ -59,6 +63,14 @@ def compare_detection_algorithms():
             print 'Model=%s, Past Prediction Horizon=%s, Threshold=%s, FA=%s, MD=%s' \
                   % future_prediction_model_results[-1]
             print '======================'
+            if best_model_position == -1 or fa_rate + md_rate < min_score:
+                best_model_position = count
+                min_score = fa_rate + md_rate
+            print 'Best: Model=%s, Past Prediction Horizon=%s, Threshold=%s, FA=%s, MD=%s' \
+                  % future_prediction_model_results[best_model_position]
+            count += 1
+            print '======================'
+
     print 'Sorted results'
     future_prediction_model_results.sort(key=lambda s: s[3] + s[4])
     for future_prediction_model_result in future_prediction_model_results:
@@ -113,19 +125,3 @@ if __name__ == '__main__':
         compare_training_validation()
     elif args.type == 4:
         compare_detection_algorithms()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

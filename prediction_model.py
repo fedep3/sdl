@@ -76,12 +76,10 @@ class AggregatingFuturePredictionModel(FuturePredictionModel):
         model_one = pf.ARIMA(data=df, ar=1, ma=0)
         model_two = pf.ARIMA(data=df, ar=2, ma=0)
         model_three = pf.LLEV(data=df)
-        model_four = pf.GASLLEV(data=df, family=pf.GASt())
 
         mix.add_model(model_one)
         mix.add_model(model_two)
         mix.add_model(model_three)
-        mix.add_model(model_four)
         mix.tune_learning_rate(16)
 
         if __debug__:
