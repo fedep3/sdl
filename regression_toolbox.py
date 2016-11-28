@@ -29,7 +29,7 @@ class RegressionToolbox:
 
         # boxplot algorithm comparison
         fig = plt.figure()
-        fig.suptitle('Algorithm Comparison')
+        fig.suptitle('Regression algorithms Comparison')
         ax = fig.add_subplot(111)
         plt.boxplot(results)
         ax.set_xticklabels(names)

@@ -93,8 +93,10 @@ def detect(regression_model, future_prediction_model, past_prediction_horizon, t
     return fa_rate, md_rate, threshold
 
 
-def compare_regression_algorithms(training_xs, training_ys):
-    RegressionToolbox.compare_regression_algorithms(training_xs, training_ys, 5)
+def compare_regression_algorithms():
+    mat_reader = MatReader()
+    training_ts, training_xs, training_ys = mat_reader.read('ColdComplaintData/Training')
+    RegressionToolbox.compare_regression_algorithms(training_xs, training_ys, 10)
 
 
 # only perform cross validation between training and validation sets
@@ -120,7 +122,7 @@ if __name__ == '__main__':
     if args.type == 1:
         best_run()
     elif args.type == 2:
-        compare_training_validation()
+        compare_regression_algorithms()
     elif args.type == 3:
         compare_training_validation()
     elif args.type == 4:
