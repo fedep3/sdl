@@ -28,9 +28,11 @@ class RegressionToolbox:
             print '%s: %f (%f)' % (name, cv_results.mean(), cv_results.std())
 
         # boxplot algorithm comparison
-        fig = plt.figure()
+        fig = plt.figure(figsize=(10, 6))
         fig.suptitle('Regression algorithms Comparison')
         ax = fig.add_subplot(111)
         plt.boxplot(results)
         ax.set_xticklabels(names)
+        ax.set_xlabel('Regression Algorithm')
+        ax.set_ylabel('Negative mean squared error')
         fig.savefig('comparision.png')
