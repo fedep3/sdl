@@ -49,6 +49,10 @@ class DetectionToolbox:
         ideal_fa_rate = -1.0
         ideal_md_rate = -1.0
 
+        old_threshold = -1.0
+        old_fa_rate = -1.0
+        old_md_rate = -1.0
+
         threshold_found = False
         for t in xrange(1, 41):
             threshold = 1.0 + float(t) * 0.1
@@ -68,10 +72,19 @@ class DetectionToolbox:
             md_rate = float(md_count) / total_count
 
             if not threshold_found and fa_count < md_count:
-                ideal_threshold = threshold
-                ideal_fa_rate = fa_rate
-                ideal_md_rate = md_rate
-                threshold_found = True
+                if fa_rate + md_rate < old_fa_rate + old_md_rate:
+                    ideal_threshold = threshold
+                    ideal_fa_rate = fa_rate
+                    ideal_md_rate = md_rate
+                    threshold_found = True
+                else:
+                    ideal_threshold = old_threshold
+                    ideal_fa_rate = old_fa_rate
+                    ideal_md_rate = old_md_rate
+            
+            old_threshold = threshold
+            old_fa_rate = fa_rate
+            old_md_rate = md_rate
 
             fa_rate_data.append(fa_rate)
             md_rate_data.append(md_rate_data)
