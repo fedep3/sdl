@@ -72,18 +72,19 @@ class DetectionToolbox:
                 threshold_found = True
             
             fa_rate_data.append(fa_rate)
-            md_rate_data.append(md_rate_data)
+            md_rate_data.append(md_rate)
 
         if __debug__:
+            print 'Plotting'
             roc_auc = auc(np.array(fa_rate_data), np.array(md_rate_data), reorder=True)
             fig = plt.figure()
-            plt.title('Receiver Operating Characteristic')
+            plt.title('Detection Error Tradeoff')
             plt.plot(fa_rate_data, md_rate_data, 'b', label='AUC = %0.2f' % roc_auc)
             plt.legend(loc='lower right')
             plt.plot([0, 1], [0, 1], 'r--')
-            plt.xlim([-0.1, 1.2])
-            plt.ylim([-0.1, 1.2])
-            plt.ylabel('False Negative Rate')
+            plt.xlim([0.0, 0.4])
+            plt.ylim([0.0, 0.4])
+            plt.ylabel('Missed Detection Rate')
             plt.xlabel('False Positive Rate')
             fig.savefig('roc.png')
         else:
