@@ -1,40 +1,38 @@
-Model=GGSMFuturePredictionModel(), Past Prediction Horizon=64, Threshold=3.7, FA=0.0120817843866, MD=0.0269516728625
-Model=GGSMFuturePredictionModel(), Past Prediction Horizon=48, Threshold=3.7, FA=0.0128205128205, MD=0.0265567765568
-Model=GGSMFuturePredictionModel(), Past Prediction Horizon=80, Threshold=3.7, FA=0.0122641509434, MD=0.027358490566
-Model=GGSMFuturePredictionModel(), Past Prediction Horizon=96, Threshold=3.7, FA=0.0124521072797, MD=0.0277777777778
-Model=ARIMAFuturePredictionModel(1, 0), Past Prediction Horizon=48, Threshold=3.8, FA=0.0201465201465, MD=0.0210622710623
-Model=ARIMAFuturePredictionModel(2, 0), Past Prediction Horizon=96, Threshold=4.2, FA=0.0181992337165, MD=0.0249042145594
-Model=ARIMAFuturePredictionModel(1, 0), Past Prediction Horizon=96, Threshold=4.1, FA=0.0201149425287, MD=0.0239463601533
-Model=ARIMAFuturePredictionModel(2, 0), Past Prediction Horizon=80, Threshold=4.1, FA=0.0216981132075, MD=0.0235849056604
-Model=ARIMAFuturePredictionModel(1, 0), Past Prediction Horizon=80, Threshold=4.1, FA=0.0216981132075, MD=0.0254716981132
-Model=ARIMAFuturePredictionModel(4, 0), Past Prediction Horizon=80, Threshold=4.1, FA=0.022641509434, MD=0.0254716981132
-Model=ARIMAFuturePredictionModel(4, 0), Past Prediction Horizon=64, Threshold=4.0, FA=0.0195167286245, MD=0.0288104089219
-Model=GGSMFuturePredictionModel(), Past Prediction Horizon=16, Threshold=3.7, FA=0.0133451957295, MD=0.0364768683274
-Model=GGSMFuturePredictionModel(), Past Prediction Horizon=32, Threshold=3.7, FA=0.0135379061372, MD=0.0370036101083
-Model=ARIMAFuturePredictionModel(4, 0), Past Prediction Horizon=96, Threshold=4.3, FA=0.0181992337165, MD=0.0325670498084
-Model=ARIMAFuturePredictionModel(2, 0), Past Prediction Horizon=48, Threshold=3.9, FA=0.0228937728938, MD=0.0283882783883
-Model=ARIMAFuturePredictionModel(1, 0), Past Prediction Horizon=64, Threshold=3.9, FA=0.025092936803, MD=0.0288104089219
-Model=ARIMAFuturePredictionModel(2, 0), Past Prediction Horizon=64, Threshold=4.0, FA=0.0223048327138, MD=0.0325278810409
-Model=ARIMAFuturePredictionModel(4, 0), Past Prediction Horizon=48, Threshold=4.0, FA=0.0228937728938, MD=0.0347985347985
-Model=ARIMAFuturePredictionModel(1, 0), Past Prediction Horizon=32, Threshold=3.5, FA=0.028880866426, MD=0.0324909747292
-Model=ARIMAFuturePredictionModel(1, 1), Past Prediction Horizon=96, Threshold=4.4, FA=0.0258620689655, MD=0.036398467433
-Model=ARIMAFuturePredictionModel(1, 1), Past Prediction Horizon=80, Threshold=4.3, FA=0.0283018867925, MD=0.0349056603774
-Model=ARIMAFuturePredictionModel(1, 0), Past Prediction Horizon=16, Threshold=3.7, FA=0.0284697508897, MD=0.0355871886121
-Model=ARIMAFuturePredictionModel(1, 1), Past Prediction Horizon=64, Threshold=4.0, FA=0.0306691449814, MD=0.0343866171004
-Model=ARIMAFuturePredictionModel(1, 1), Past Prediction Horizon=48, Threshold=4.0, FA=0.0265567765568, MD=0.0412087912088
-Model=ARIMAFuturePredictionModel(2, 0), Past Prediction Horizon=32, Threshold=3.6, FA=0.0333935018051, MD=0.0351985559567
-Model=ARIMAFuturePredictionModel(1, 1), Past Prediction Horizon=32, Threshold=3.6, FA=0.0342960288809, MD=0.0361010830325
-Model=ARIMAFuturePredictionModel(4, 0), Past Prediction Horizon=32, Threshold=3.7, FA=0.0361010830325, MD=0.0370036101083
-Model=ARIMAFuturePredictionModel(1, 1), Past Prediction Horizon=16, Threshold=4.0, FA=0.038256227758, MD=0.0435943060498
-Model=ARIMAFuturePredictionModel(2, 0), Past Prediction Horizon=16, Threshold=3.9, FA=0.0400355871886, MD=0.0418149466192
+Model=GGSMFuturePredictionModel(), Past Prediction Horizon=64, Threshold=3.625, FA=0.0167286245353, MD=0.0157992565056
+Model=GGSMFuturePredictionModel(), Past Prediction Horizon=96, Threshold=3.625, FA=0.0172413793103, MD=0.0162835249042
+Model=GGSMFuturePredictionModel(), Past Prediction Horizon=48, Threshold=3.625, FA=0.018315018315, MD=0.0155677655678
+Model=GGSMFuturePredictionModel(), Past Prediction Horizon=80, Threshold=3.625, FA=0.0179245283019, MD=0.0160377358491
+Model=ARIMAFuturePredictionModel(1, 0), Past Prediction Horizon=48, Threshold=3.775, FA=0.0201465201465, MD=0.0201465201465
+Model=GGSMFuturePredictionModel(), Past Prediction Horizon=32, Threshold=3.625, FA=0.0180505415162, MD=0.0261732851986
+Model=ARIMAFuturePredictionModel(1, 0), Past Prediction Horizon=96, Threshold=4.075, FA=0.0210727969349, MD=0.0239463601533
+Model=ARIMAFuturePredictionModel(4, 0), Past Prediction Horizon=64, Threshold=3.925, FA=0.021375464684, MD=0.0241635687732
+Model=ARIMAFuturePredictionModel(2, 0), Past Prediction Horizon=48, Threshold=3.825, FA=0.0238095238095, MD=0.021978021978
+Model=ARIMAFuturePredictionModel(2, 0), Past Prediction Horizon=96, Threshold=4.125, FA=0.022030651341, MD=0.0239463601533
+Model=ARIMAFuturePredictionModel(4, 0), Past Prediction Horizon=96, Threshold=4.225, FA=0.0229885057471, MD=0.0229885057471
+Model=ARIMAFuturePredictionModel(1, 0), Past Prediction Horizon=80, Threshold=4.025, FA=0.0235849056604, MD=0.022641509434
+Model=ARIMAFuturePredictionModel(2, 0), Past Prediction Horizon=80, Threshold=4.075, FA=0.0235849056604, MD=0.022641509434
+Model=ARIMAFuturePredictionModel(4, 0), Past Prediction Horizon=80, Threshold=4.075, FA=0.022641509434, MD=0.0235849056604
+Model=ARIMAFuturePredictionModel(4, 0), Past Prediction Horizon=48, Threshold=3.925, FA=0.0238095238095, MD=0.0283882783883
+Model=ARIMAFuturePredictionModel(1, 1), Past Prediction Horizon=96, Threshold=4.325, FA=0.0258620689655, MD=0.0268199233716
+Model=ARIMAFuturePredictionModel(1, 0), Past Prediction Horizon=64, Threshold=3.875, FA=0.0269516728625, MD=0.0269516728625
+Model=ARIMAFuturePredictionModel(2, 0), Past Prediction Horizon=64, Threshold=3.925, FA=0.0260223048327, MD=0.0288104089219
+Model=ARIMAFuturePredictionModel(1, 1), Past Prediction Horizon=80, Threshold=4.225, FA=0.0283018867925, MD=0.0301886792453
+Model=ARIMAFuturePredictionModel(1, 1), Past Prediction Horizon=48, Threshold=3.925, FA=0.0283882783883, MD=0.0302197802198
+Model=ARIMAFuturePredictionModel(1, 0), Past Prediction Horizon=32, Threshold=3.475, FA=0.0297833935018, MD=0.0306859205776
+Model=ARIMAFuturePredictionModel(1, 1), Past Prediction Horizon=64, Threshold=3.975, FA=0.0315985130112, MD=0.0334572490706
+Model=ARIMAFuturePredictionModel(2, 0), Past Prediction Horizon=32, Threshold=3.575, FA=0.0333935018051, MD=0.0342960288809
+Model=ARIMAFuturePredictionModel(1, 1), Past Prediction Horizon=32, Threshold=3.575, FA=0.0351985559567, MD=0.0351985559567
+Model=ARIMAFuturePredictionModel(4, 0), Past Prediction Horizon=32, Threshold=3.675, FA=0.0361010830325, MD=0.0351985559567
 Model=AggregatingFuturePredictionModel(), Past Prediction Horizon=96, Threshold=2.7, FA=0.0459770114943, MD=0.0613026819923
 Model=AggregatingFuturePredictionModel(), Past Prediction Horizon=48, Threshold=2.7, FA=0.0494505494505, MD=0.0659340659341
 Model=AggregatingFuturePredictionModel(), Past Prediction Horizon=80, Threshold=2.5, FA=0.0575471698113, MD=0.0594339622642
 Model=AggregatingFuturePredictionModel(), Past Prediction Horizon=64, Threshold=2.4, FA=0.0631970260223, MD=0.0669144981413
-Model=ARIMAFuturePredictionModel(4, 0), Past Prediction Horizon=16, Threshold=4.9, FA=0.0845195729537, MD=0.124555160142
-Model=GARCHFuturePredictionModel(1, 1), Past Prediction Horizon=96, Threshold=1.1, FA=0.0431034482759, MD=0.170498084291
-Model=GARCHFuturePredictionModel(1, 1), Past Prediction Horizon=80, Threshold=1.1, FA=0.077358490566, MD=0.172641509434
-Model=GARCHFuturePredictionModel(1, 1), Past Prediction Horizon=64, Threshold=1.1, FA=0.110594795539, MD=0.172862453532
-Model=GARCHFuturePredictionModel(1, 1), Past Prediction Horizon=48, Threshold=1.1, FA=0.137362637363, MD=0.172161172161
-Model=GARCHFuturePredictionModel(1, 1), Past Prediction Horizon=16, Threshold=1.6, FA=0.157473309609, MD=0.163701067616
-Model=GARCHFuturePredictionModel(1, 1), Past Prediction Horizon=32, Threshold=1.5, FA=0.159747292419, MD=0.166064981949
+Model=GARCHFuturePredictionModel(1, 1), Past Prediction Horizon=96, Threshold=1.025, FA=0.0431034482759, MD=0.170498084291
+Model=GARCHFuturePredictionModel(1, 1), Past Prediction Horizon=80, Threshold=1.025, FA=0.0792452830189, MD=0.172641509434
+Model=GARCHFuturePredictionModel(1, 1), Past Prediction Horizon=64, Threshold=1.025, FA=0.115241635688, MD=0.164498141264
+Model=GARCHFuturePredictionModel(1, 1), Past Prediction Horizon=48, Threshold=1.025, FA=0.141025641026, MD=0.169413919414
+Model=GARCHFuturePredictionModel(1, 1), Past Prediction Horizon=32, Threshold=1.425, FA=0.163357400722, MD=0.165162454874
+
+Model=ARIMAFuturePredictionModel(4, 0), Past Prediction Horizon=64, Threshold=3.925, FA=0.052, MD=0.0
+Model=ARIMAFuturePredictionModel(1, 0), Past Prediction Horizon=48, Threshold=3.775, FA=0.0755813953488, MD=0.00193798449612
+Model=GGSMFuturePredictionModel(), Past Prediction Horizon=64, Threshold=3.625, FA=0.084, MD=0.0

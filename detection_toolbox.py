@@ -55,9 +55,7 @@ class DetectionToolbox:
             if __debug__:
                 print 'Checking threshold: ', threshold
             correct_count, fa_count, md_count = \
-                self._calculate_error_rates(threshold,
-                                           future_residuals_prediction[:-self.future_prediction_model.future_prediction_horizon],
-                                           ys[self.past_prediction_horizon:])
+                self.calculate_counts(future_residuals_prediction, ys, threshold)
             total_count = correct_count + fa_count + md_count
             if __debug__:
                 print 'Correct Alarm Count: ', correct_count
@@ -92,6 +90,12 @@ class DetectionToolbox:
             roc_auc = 0
 
         return roc_auc, ideal_threshold, ideal_fa_rate, ideal_md_rate
+
+    def calculate_counts(self, future_residuals_prediction, ys, threshold):
+        return self._calculate_error_rates(threshold,
+                                           future_residuals_prediction[
+                                           :-self.future_prediction_model.future_prediction_horizon],
+                                           ys[self.past_prediction_horizon:])
 
     def _calculate_error_rates(self, threshold, future_residuals_prediction, actuals):
         La = threshold
