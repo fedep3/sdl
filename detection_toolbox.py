@@ -50,8 +50,8 @@ class DetectionToolbox:
         ideal_md_rate = -1.0
 
         threshold_found = False
-        for t in xrange(1, 81):
-            threshold = 1.0 + float(t) * 0.05
+        for t in xrange(1, 41):
+            threshold = 1.0 + float(t) * 0.1
             if __debug__:
                 print 'Checking threshold: ', threshold
             correct_count, fa_count, md_count = \
@@ -68,12 +68,9 @@ class DetectionToolbox:
             md_rate = float(md_count) / total_count
 
             if not threshold_found and fa_count < md_count:
-                final_correct_count, final_fa_count, final_md_count = self._calculate_error_rates(threshold-0.025,
-                    future_residuals_prediction[:-self.future_prediction_model.future_prediction_horizon],
-                    ys[self.past_prediction_horizon:])
-                ideal_fa_rate = float(final_fa_count) / (final_correct_count + final_fa_count + final_md_count)
-                ideal_md_rate = float(final_md_count) / (final_correct_count + final_fa_count + final_md_count)
-                ideal_threshold = threshold - 0.025
+                ideal_fa_rate = fa_rate
+                ideal_md_rate = md_rate
+                ideal_threshold = threshold
                 threshold_found = True
             
             fa_rate_data.append(fa_rate)
