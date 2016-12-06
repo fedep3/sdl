@@ -50,9 +50,9 @@ def compare_detection_algorithms():
                                     ARIMAFuturePredictionModel(FUTURE_PREDICTION_HORIZON, 2, 0),
                                     ARIMAFuturePredictionModel(FUTURE_PREDICTION_HORIZON, 4, 0),
                                     GARCHFuturePredictionModel(FUTURE_PREDICTION_HORIZON, 1, 1),
-                                    GGSMFuturePredictionModel(FUTURE_PREDICTION_HORIZON),
-                                    AggregatingFuturePredictionModel(FUTURE_PREDICTION_HORIZON)]:
-        for past_prediction_horizon in [16, 32, 48, 64, 80, 96]:
+                                    GGSMFuturePredictionModel(FUTURE_PREDICTION_HORIZON)]:
+                                    # AggregatingFuturePredictionModel(FUTURE_PREDICTION_HORIZON)
+        for past_prediction_horizon in [32, 48, 64, 80, 96]:
             if isinstance(future_prediction_model, AggregatingFuturePredictionModel) and past_prediction_horizon < 48:
                 continue
             print 'Past prediction horizon: ', past_prediction_horizon
