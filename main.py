@@ -16,9 +16,6 @@ from regression_toolbox import RegressionToolbox
 warnings.filterwarnings('ignore', category=DeprecationWarning)
 warnings.filterwarnings('ignore', category=RuntimeWarning) 
 
-# Do not change this
-FUTURE_PREDICTION_HORIZON = 12
-
 
 def best_run():
     mat_reader = MatReader()
@@ -30,9 +27,15 @@ def best_run():
     testing_ts, testing_xs, testing_ys = mat_reader.read('ColdComplaintData/Testing')
     future_prediction_model_results = []
 
-    for future_prediction_model, past_prediction_horizon, threshold in [(GGSMFuturePredictionModel(FUTURE_PREDICTION_HORIZON), 64, 3.625),
-                                                                        (ARIMAFuturePredictionModel(FUTURE_PREDICTION_HORIZON, 1, 0), 48, 3.775),
-                                                                        (ARIMAFuturePredictionModel(FUTURE_PREDICTION_HORIZON, 4, 0), 64, 3.925)]:
+    for future_prediction_model, past_prediction_horizon, threshold in [(GGSMFuturePredictionModel(18), 96, 3.275),
+                                                                        (ARIMAFuturePredictionModel(18, 4, 0), 48, 3.925),
+                                                                        (ARIMAFuturePredictionModel(18, 4, 0), 48, 3.775),
+                                                                        (GGSMFuturePredictionModel(12), 96, 3.625),
+                                                                        (ARIMAFuturePredictionModel(12, 1, 1), 32, 3.575),
+                                                                        (ARIMAFuturePredictionModel(12, 1, 0), 48, 3.775),
+                                                                        (GGSMFuturePredictionModel(6), 96, 3.875),
+                                                                        (ARIMAFuturePredictionModel(6, 1, 1), 32, 3.825),
+                                                                        (ARIMAFuturePredictionModel(6, 1, 0), 48, 3.925)]:
         fa_rate, md_rate = detect_with_threshold(regression_model, future_prediction_model, past_prediction_horizon, testing_ts, testing_xs, testing_ys, threshold)
         future_prediction_model_results.append(
             (future_prediction_model, past_prediction_horizon, threshold, fa_rate, md_rate))
