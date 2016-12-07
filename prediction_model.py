@@ -31,7 +31,7 @@ class ARIMAFuturePredictionModel(FuturePredictionModel):
         self.model.fit('MLE')
 
     def __str__(self):
-        return 'ARIMAFuturePredictionModel(%s, %s)' % (self.ar, self.ma)
+        return 'ARIMA(p=%s, q=%s)' % (self.ar, self.ma)
 
 
 class GARCHFuturePredictionModel(FuturePredictionModel):
@@ -48,7 +48,7 @@ class GARCHFuturePredictionModel(FuturePredictionModel):
         self.model.fit()
 
     def __str__(self):
-        return 'GARCHFuturePredictionModel(%s, %s)' % (self.p, self.q)
+        return 'GARCH(p=%s, q=%s)' % (self.p, self.q)
 
 
 class GGSMFuturePredictionModel(FuturePredictionModel):
@@ -63,7 +63,7 @@ class GGSMFuturePredictionModel(FuturePredictionModel):
         self.model.fit()
 
     def __str__(self):
-        return 'GGSMFuturePredictionModel()'
+        return 'GGSM'
 
 
 class AggregatingFuturePredictionModel(FuturePredictionModel):
@@ -95,4 +95,4 @@ class AggregatingFuturePredictionModel(FuturePredictionModel):
         return self.model.predict(h=self.future_prediction_horizon).values[self.future_prediction_horizon - 1]
 
     def __str__(self):
-        return 'AggregatingFuturePredictionModel()'
+        return 'Aggregating'
