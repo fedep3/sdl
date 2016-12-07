@@ -52,7 +52,7 @@ def compare_detection_algorithms():
     testing_ts, testing_xs, testing_ys = mat_reader.read('ColdComplaintData/Validation')
     future_prediction_model_results = []
     best_model_position = -1
-    min_score = 2.0
+    max_score = -1.0
     count = 0
 
     for future_prediction_model in [ARIMAFuturePredictionModel(FUTURE_PREDICTION_HORIZON, 1, 1),
@@ -66,32 +66,31 @@ def compare_detection_algorithms():
             if isinstance(future_prediction_model, AggregatingFuturePredictionModel) and past_prediction_horizon < 48:
                 continue
             print 'Past prediction horizon: ', past_prediction_horizon
-            fa_rate, md_rate, threshold = detect(regression_model, future_prediction_model, past_prediction_horizon,
+            roc_auc, fa_rate, md_rate, threshold = detect(regression_model, future_prediction_model, past_prediction_horizon,
                                                  testing_ts, testing_xs, testing_ys)
             future_prediction_model_results.append(
-                (future_prediction_model, past_prediction_horizon, threshold, fa_rate, md_rate))
-            print 'Model=%s, Past Prediction Horizon=%s, Threshold=%s, FA=%s, MD=%s' \
+                (future_prediction_model, roc_auc, past_prediction_horizon, threshold, fa_rate, md_rate))
+            print 'Model=%s, ROC AUC=%s, Past Prediction Horizon=%s, Threshold=%s, FA=%s, MD=%s' \
                   % future_prediction_model_results[-1]
             print '======================'
-            if best_model_position == -1 or fa_rate + md_rate < min_score:
+            if best_model_position == -1 or roc_auc > max_score:
                 best_model_position = count
-                min_score = fa_rate + md_rate
-            print 'Best: Model=%s, Past Prediction Horizon=%s, Threshold=%s, FA=%s, MD=%s' \
+                max_score = roc_auc
+            print 'Best: Model=%s, ROC AUC=%s, Past Prediction Horizon=%s, Threshold=%s, FA=%s, MD=%s' \
                   % future_prediction_model_results[best_model_position]
             count += 1
             print '======================'
 
     print 'Sorted results'
-    future_prediction_model_results.sort(key=lambda s: s[3] + s[4])
+    future_prediction_model_results.sort(key=lambda s: s[1], reverse=True)
     for future_prediction_model_result in future_prediction_model_results:
-        print 'Model=%s, Past Prediction Horizon=%s, Threshold=%s, FA=%s, MD=%s' % future_prediction_model_result
+        print 'Model=%s, ROC AUC=%s, Past Prediction Horizon=%s, Threshold=%s, FA=%s, MD=%s' % future_prediction_model_result
 
 
 def detect_with_threshold(regression_model, future_prediction_model, past_prediction_horizon, ts, xs, ys, threshold):
     detection_toolbox = DetectionToolbox(regression_model, past_prediction_horizon, future_prediction_model)
     future_residuals_prediction = detection_toolbox.predict_residuals(ts, xs, ys)
-    correct_count, fa_count, md_count = detection_toolbox.calculate_counts(future_residuals_prediction, ys, threshold)
-    total_count = correct_count + fa_count + md_count
+    total_count, fa_count, ta_count, md_count = detection_toolbox.calculate_counts(future_residuals_prediction, ys, threshold)
     fa_rate = float(fa_count) / total_count
     md_rate = float(md_count) / total_count
     return fa_rate, md_rate
@@ -110,7 +109,7 @@ def detect(regression_model, future_prediction_model, past_prediction_horizon, t
     print 'ROC AUC: ', roc_auc
     print 'Ideal threshold found: ', threshold
     print 'FA rate: %0.3f, MD rate: %0.3f' % (fa_rate, md_rate)
-    return fa_rate, md_rate, threshold
+    return roc_auc, fa_rate, md_rate, threshold
 
 
 def compare_regression_algorithms():

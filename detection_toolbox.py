@@ -44,6 +44,7 @@ class DetectionToolbox:
     def calculate_roc_curve(self, future_residuals_prediction, ys):
         fa_rate_data = []
         md_rate_data = []
+        ta_rate_data = []
 
         ideal_threshold = -1.0
         ideal_fa_rate = -1.0
@@ -54,16 +55,17 @@ class DetectionToolbox:
             threshold = 1.0 + float(t) * 0.1
             if __debug__:
                 print 'Checking threshold: ', threshold
-            correct_count, fa_count, md_count = \
+            total_count, fa_count, ta_count, md_count = \
                 self.calculate_counts(future_residuals_prediction, ys, threshold)
-            total_count = correct_count + fa_count + md_count
+            
             if __debug__:
-                print 'Correct Alarm Count: ', correct_count
+                print 'True Alarm Count: ', ta_count
                 print 'False Alarm Count: ', fa_count
                 print 'Missed Detection Count: ', md_count
                 print '------------------------------------'
             fa_rate = float(fa_count) / total_count
             md_rate = float(md_count) / total_count
+            ta_rate = float(ta_count) / total_count
 
             if not threshold_found and fa_count < md_count:
                 ideal_fa_rate = fa_rate
@@ -73,22 +75,33 @@ class DetectionToolbox:
             
             fa_rate_data.append(fa_rate)
             md_rate_data.append(md_rate)
+            ta_rate_data.append(ta_rate)
 
+        roc_auc = auc(np.array(fa_rate_data), np.array(ta_rate_data), reorder=True)
+        
         if __debug__:
-            print 'Plotting'
-            roc_auc = auc(np.array(fa_rate_data), np.array(md_rate_data), reorder=True)
+            print 'Plotting Detection Error Tradeoff'
             fig = plt.figure()
             plt.title('Detection Error Tradeoff')
-            plt.plot(fa_rate_data, md_rate_data, 'b', label='AUC = %0.2f' % roc_auc)
+            plt.plot(fa_rate_data, md_rate_data, 'b')
             plt.legend(loc='lower right')
             plt.plot([0, 1], [0, 1], 'r--')
-            plt.xlim([0.0, 0.4])
-            plt.ylim([0.0, 0.4])
+            plt.xlim([0.0, 1.0])
+            plt.ylim([0.0, 1.0])
             plt.ylabel('Missed Detection Rate')
             plt.xlabel('False Positive Rate')
+            fig.savefig('det.png')
+            print 'Plotting ROC Curve'
+            fig = plt.figure()
+            plt.title('ROC Curve')
+            plt.plot(fa_rate_data, ta_rate_data, 'b', label='AUC = %0.2f' % roc_auc)
+            plt.legend(loc='lower right')
+            plt.plot([0, 1], [0, 1], 'r--')
+            plt.xlim([0.0, 1.0])
+            plt.ylim([0.0, 1.0])
+            plt.ylabel('True Positive Rate')
+            plt.xlabel('False Positive Rate')
             fig.savefig('roc.png')
-        else:
-            roc_auc = 0
 
         return roc_auc, ideal_threshold, ideal_fa_rate, ideal_md_rate
 
@@ -120,15 +133,16 @@ class DetectionToolbox:
             alarm_actuals.append(alarm_actual)
 
         # Calculate the false alarm and missed detection rate
-        correct_count = 0
         fa_count = 0
         md_count = 0
+        ta_count = 0
         for r in xrange(len(alarms)):
             if alarms[r] == True and alarm_actuals[r] == False:
                 fa_count += 1
             elif alarms[r] == False and alarm_actuals[r] == True:
                 md_count += 1
-            else:
-                correct_count += 1
+            elif alarms[r] == True and alarm_actuals[r] == True:
+                ta_count += 1
 
-        return correct_count, fa_count, md_count
+        # return total events, false alarms, true alarms, missed detections
+        return len(alarms), fa_count, ta_count, md_count
