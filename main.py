@@ -3,6 +3,8 @@
 import warnings
 import argparse
 
+from sklearn.ensemble import BaggingRegressor
+
 from detection_toolbox import DetectionToolbox
 from prediction_model import ARIMAFuturePredictionModel, GARCHFuturePredictionModel, GGSMFuturePredictionModel, \
     AggregatingFuturePredictionModel
@@ -38,18 +40,43 @@ def best_run():
                                                                         (ARIMAFuturePredictionModel(6, 1, 0), 48, 3.925)]:
         fa_rate, md_rate = detect_with_threshold(regression_model, future_prediction_model, past_prediction_horizon, testing_ts, testing_xs, testing_ys, threshold)
         future_prediction_model_results.append(
-            (future_prediction_model, past_prediction_horizon, threshold, fa_rate, md_rate))
+            (future_prediction_model, past_prediction_horizon, future_prediction_model.future_prediction_horizon, threshold, fa_rate, md_rate))
 
-    future_prediction_model_results.sort(key=lambda s: s[3] + s[4])
+    future_prediction_model_results.sort(key=lambda s: s[4] + s[5])
+    print 'Using LR'
+    print '======================'
     for future_prediction_model_result in future_prediction_model_results:
-        print 'Model=%s, Past Prediction Horizon=%s, Threshold=%s, FA=%s, MD=%s' % future_prediction_model_result
+        print 'Model=%s, Past Prediction Horizon=%s, Future Prediction Horizon=%s, Threshold=%s, FA=%s, MD=%s' % future_prediction_model_result
+
+    regression_model = BaggingRegressor()
+    regression_model.fit(training_xs, training_ys)
+    future_prediction_model_results = []
+
+    for future_prediction_model, past_prediction_horizon, threshold in [(ARIMAFuturePredictionModel(18, 1, 0), 64, 3.325),
+                                                                        (GGSMFuturePredictionModel(18), 96, 2.875),
+                                                                        (ARIMAFuturePredictionModel(18, 4, 0), 48, 3.175),
+                                                                        (GGSMFuturePredictionModel(12), 96, 3.275),
+                                                                        (ARIMAFuturePredictionModel(12, 4, 0), 48, 3.325),
+                                                                        (ARIMAFuturePredictionModel(12, 2, 0), 48, 3.325),
+                                                                        (GGSMFuturePredictionModel(6), 96, 3.575),
+                                                                        (ARIMAFuturePredictionModel(6, 2, 0), 32, 3.325),
+                                                                        (ARIMAFuturePredictionModel(6, 4, 0), 48, 3.375)]:
+        fa_rate, md_rate = detect_with_threshold(regression_model, future_prediction_model, past_prediction_horizon, testing_ts, testing_xs, testing_ys, threshold)
+        future_prediction_model_results.append(
+            (future_prediction_model, past_prediction_horizon, future_prediction_model.future_prediction_horizon, threshold, fa_rate, md_rate))
+
+    print '\nUsing BNN'
+    print '======================'
+    future_prediction_model_results.sort(key=lambda s: s[4] + s[5])
+    for future_prediction_model_result in future_prediction_model_results:
+        print 'Model=%s, Past Prediction Horizon=%s, Future Prediction Horizon=%s, Threshold=%s, FA=%s, MD=%s' % future_prediction_model_result
 
 
-def compare_detection_algorithms():
+def compare_detection_algorithms(use_lr=True):
     mat_reader = MatReader()
     training_ts, training_xs, training_ys = mat_reader.read('ColdComplaintData/Training')
 
-    regression_model = LinearRegression()
+    regression_model = LinearRegression() if use_lr else BaggingRegressor()
     regression_model.fit(training_xs, training_ys)
 
     testing_ts, testing_xs, testing_ys = mat_reader.read('ColdComplaintData/Validation')
@@ -148,4 +175,9 @@ if __name__ == '__main__':
     elif args.type == 3:
         compare_training_validation()
     elif args.type == 4:
+        print 'Using LR'
+        print '======================'
         compare_detection_algorithms()
+        print '\nUsing BNN'
+        print '======================'
+        compare_detection_algorithms(False)
