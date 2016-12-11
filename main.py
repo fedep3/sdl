@@ -3,15 +3,9 @@
 import warnings
 import argparse
 
-from sklearn.ensemble import BaggingRegressor
-
 from detection_toolbox import DetectionToolbox
 from prediction_model import ARIMAFuturePredictionModel, GARCHFuturePredictionModel, GGSMFuturePredictionModel, \
     AggregatingFuturePredictionModel
-from readers.mat_reader import MatReader
-
-from sklearn.model_selection import PredefinedSplit
-from sklearn.linear_model import LinearRegression
 
 from regression_toolbox import RegressionToolbox
 
@@ -20,13 +14,7 @@ warnings.filterwarnings('ignore', category=RuntimeWarning)
 
 
 def best_run():
-    mat_reader = MatReader()
-    training_ts, training_xs, training_ys = mat_reader.read('ColdComplaintData/Training')
-
-    regression_model = LinearRegression()
-    regression_model.fit(training_xs, training_ys)
-
-    testing_ts, testing_xs, testing_ys = mat_reader.read('ColdComplaintData/Testing')
+    regression_model, ts, standardized_xs, ys = RegressionToolbox.get_instance('LR', 'ColdComplaintData/Training', 'ColdComplaintData/Testing')
     future_prediction_model_results = []
 
     for future_prediction_model, past_prediction_horizon, threshold in [(GGSMFuturePredictionModel(18), 96, 3.275),
@@ -38,7 +26,7 @@ def best_run():
                                                                         (GGSMFuturePredictionModel(6), 96, 3.875),
                                                                         (ARIMAFuturePredictionModel(6, 1, 1), 32, 3.825),
                                                                         (ARIMAFuturePredictionModel(6, 1, 0), 48, 3.925)]:
-        fa_rate, md_rate = detect_with_threshold(regression_model, future_prediction_model, past_prediction_horizon, testing_ts, testing_xs, testing_ys, threshold)
+        fa_rate, md_rate = detect_with_threshold(regression_model, future_prediction_model, past_prediction_horizon, ts, standardized_xs, ys, threshold)
         future_prediction_model_results.append(
             (future_prediction_model, past_prediction_horizon, future_prediction_model.future_prediction_horizon, threshold, fa_rate, md_rate))
 
@@ -48,8 +36,7 @@ def best_run():
     for future_prediction_model_result in future_prediction_model_results:
         print 'Model=%s, Past Prediction Horizon=%s, Future Prediction Horizon=%s, Threshold=%s, FA=%s, MD=%s' % future_prediction_model_result
 
-    regression_model = BaggingRegressor()
-    regression_model.fit(training_xs, training_ys)
+    regression_model, ts, standardized_xs, ys = RegressionToolbox.get_instance('BNN', 'ColdComplaintData/Training', 'ColdComplaintData/Testing')
     future_prediction_model_results = []
 
     for future_prediction_model, past_prediction_horizon, threshold in [(ARIMAFuturePredictionModel(18, 1, 0), 64, 3.325),
@@ -61,7 +48,7 @@ def best_run():
                                                                         (GGSMFuturePredictionModel(6), 96, 3.575),
                                                                         (ARIMAFuturePredictionModel(6, 2, 0), 32, 3.325),
                                                                         (ARIMAFuturePredictionModel(6, 4, 0), 48, 3.375)]:
-        fa_rate, md_rate = detect_with_threshold(regression_model, future_prediction_model, past_prediction_horizon, testing_ts, testing_xs, testing_ys, threshold)
+        fa_rate, md_rate = detect_with_threshold(regression_model, future_prediction_model, past_prediction_horizon, ts, standardized_xs, ys, threshold)
         future_prediction_model_results.append(
             (future_prediction_model, past_prediction_horizon, future_prediction_model.future_prediction_horizon, threshold, fa_rate, md_rate))
 
@@ -72,14 +59,9 @@ def best_run():
         print 'Model=%s, Past Prediction Horizon=%s, Future Prediction Horizon=%s, Threshold=%s, FA=%s, MD=%s' % future_prediction_model_result
 
 
-def compare_detection_algorithms(use_lr=True):
-    mat_reader = MatReader()
-    training_ts, training_xs, training_ys = mat_reader.read('ColdComplaintData/Training')
+def compare_detection_algorithms(algorithm):
+    regression_model, ts, standardized_xs, ys = RegressionToolbox.get_instance(algorithm, 'ColdComplaintData/Training', 'ColdComplaintData/Validation')
 
-    regression_model = LinearRegression() if use_lr else BaggingRegressor()
-    regression_model.fit(training_xs, training_ys)
-
-    testing_ts, testing_xs, testing_ys = mat_reader.read('ColdComplaintData/Validation')
     future_prediction_model_results = []
     best_model_position = -1
     max_score = -1.0
@@ -97,7 +79,7 @@ def compare_detection_algorithms(use_lr=True):
                         continue
                     print 'Past prediction horizon: ', past_prediction_horizon
                     roc_auc, fa_rate, md_rate, threshold = detect(regression_model, future_prediction_model, past_prediction_horizon,
-                                                         testing_ts, testing_xs, testing_ys)
+                                                         ts, standardized_xs, ys)
                     future_prediction_model_results.append(
                         (future_prediction_model, roc_auc, past_prediction_horizon, future_prediction_horizon, threshold, fa_rate, md_rate))
                     print 'Model=%s, ROC AUC=%s, Past Prediction Horizon=%s, Future Prediction Horizon=%s, Threshold=%s, FA=%s, MD=%s' \
@@ -143,41 +125,20 @@ def detect(regression_model, future_prediction_model, past_prediction_horizon, t
 
 
 def compare_regression_algorithms():
-    mat_reader = MatReader()
-    training_ts, training_xs, training_ys = mat_reader.read('ColdComplaintData/Training')
-    RegressionToolbox.compare_regression_algorithms(training_xs, training_ys, 10)
+    RegressionToolbox.compare_regression_algorithms()
 
-
-# only perform cross validation between training and validation sets
-def compare_training_validation():
-    mat_reader = MatReader()
-    training_ts, training_xs, training_ys = mat_reader.read('ColdComplaintData/Training')
-    validation_ts, validation_xs, validation_ys = mat_reader.read('ColdComplaintData/Validation')
-    xs = training_xs + validation_xs
-    ys = training_ys + validation_ys
-    test_fold = len(training_ys)*[-1] + len(validation_ys)*[0]
-    ps = PredefinedSplit(test_fold)
-    RegressionToolbox.compare_regression_algorithms(xs, ys, ps)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Predicting Adverse Thermal Events in a Smart Building')
-    parser.add_argument("-t", "--type", type=int, choices=[1, 2, 3, 4], default=1,
+    parser.add_argument("-t", "--type", type=int, choices=[1, 2, 3], default=1,
                         help="type of run: "
                              "(1)Best arguments run, "
                              "(2)Compare regression algorithms, "
-                             "(3)Compare regression algorithms with training and validation data, "
-                             "(4)Compare detection algorithms")
+                             "(3)Compare detection algorithms")
     args = parser.parse_args()
     if args.type == 1:
         best_run()
     elif args.type == 2:
         compare_regression_algorithms()
     elif args.type == 3:
-        compare_training_validation()
-    elif args.type == 4:
-        print 'Using LR'
-        print '======================'
-        compare_detection_algorithms()
-        print '\nUsing BNN'
-        print '======================'
-        compare_detection_algorithms(False)
+        compare_detection_algorithms('LR') #Change the name to the one you want to use
