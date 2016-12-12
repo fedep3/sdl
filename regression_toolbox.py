@@ -34,7 +34,7 @@ class RegressionToolbox:
         algorithm_functions = RegressionToolbox.MODELS[algorithm] if algorithm in RegressionToolbox.MODELS \
             else RegressionToolbox.MODELS['SVM']
         regression_model = algorithm_functions['constructor']()
-        regression_model.fit(training_xs, training_ys)
+        regression_model.fit(algorithm_functions['preprocessing'](training_xs), training_ys)
         testing_ts, testing_xs, testing_ys = mat_reader.read(testing_data_folder)
         return regression_model, testing_ts, algorithm_functions['preprocessing'](testing_xs), testing_ys
 
