@@ -95,7 +95,7 @@ def compare_detection_algorithms():
                             continue
                         print 'Past prediction horizon: ', past_prediction_horizon
                         roc_auc, fa_rate, md_rate, threshold = detect(regression_model, future_prediction_model, past_prediction_horizon,
-                                                             ts, standardized_xs, ys)
+                                                                      ts, standardized_xs, ys)
                         future_prediction_model_results.append(
                             (future_prediction_model, roc_auc, past_prediction_horizon, future_prediction_horizon, threshold, fa_rate, md_rate))
                         print 'Model=%s, ROC AUC=%s, Past Prediction Horizon=%s, Future Prediction Horizon=%s, Threshold=%s, FA=%s, MD=%s' \
