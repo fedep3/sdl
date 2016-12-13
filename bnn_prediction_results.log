@@ -1,811 +1,811 @@
 Past prediction horizon:  32
-ROC AUC:  0.0700928931278
-Ideal threshold found:  3.425
-FA rate: 0.030, MD rate: 0.033
-Model=ARIMA(p=1, q=1), ROC AUC=0.0700928931278, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.425, FA=0.0302775441548, MD=0.0328006728343
+ROC AUC:  0.0696662197138
+Ideal threshold found:  3.275
+FA rate: 0.031, MD rate: 0.025
+Model=ARIMA(p=1, q=1), ROC AUC=0.0696662197138, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.275, FA=0.0313293818798, MD=0.0254022015241
 ======================
-Best: Model=ARIMA(p=1, q=1), ROC AUC=0.0700928931278, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.425, FA=0.0302775441548, MD=0.0328006728343
+Best: Model=ARIMA(p=1, q=1), ROC AUC=0.0696662197138, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.275, FA=0.0313293818798, MD=0.0254022015241
 ======================
 Past prediction horizon:  48
-ROC AUC:  0.0665836377451
-Ideal threshold found:  3.475
-FA rate: 0.028, MD rate: 0.030
-Model=ARIMA(p=1, q=1), ROC AUC=0.0665836377451, Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=3.475, FA=0.0283018867925, MD=0.0300171526587
+ROC AUC:  0.0729124156854
+Ideal threshold found:  3.375
+FA rate: 0.025, MD rate: 0.032
+Model=ARIMA(p=1, q=1), ROC AUC=0.0729124156854, Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=3.375, FA=0.0249140893471, MD=0.0317869415808
 ======================
-Best: Model=ARIMA(p=1, q=1), ROC AUC=0.0700928931278, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.425, FA=0.0302775441548, MD=0.0328006728343
+Best: Model=ARIMA(p=1, q=1), ROC AUC=0.0729124156854, Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=3.375, FA=0.0249140893471, MD=0.0317869415808
 ======================
 Past prediction horizon:  64
-ROC AUC:  0.0662628424804
+ROC AUC:  0.0677807066397
+Ideal threshold found:  3.475
+FA rate: 0.023, MD rate: 0.019
+Model=ARIMA(p=1, q=1), ROC AUC=0.0677807066397, Past Prediction Horizon=64, Future Prediction Horizon=6, Threshold=3.475, FA=0.0230088495575, MD=0.0194690265487
+======================
+Best: Model=ARIMA(p=1, q=1), ROC AUC=0.0729124156854, Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=3.375, FA=0.0249140893471, MD=0.0317869415808
+======================
+Past prediction horizon:  80
+ROC AUC:  0.0639764299216
+Ideal threshold found:  3.525
+FA rate: 0.026, MD rate: 0.020
+Model=ARIMA(p=1, q=1), ROC AUC=0.0639764299216, Past Prediction Horizon=80, Future Prediction Horizon=6, Threshold=3.525, FA=0.0259623992838, MD=0.0196956132498
+======================
+Best: Model=ARIMA(p=1, q=1), ROC AUC=0.0729124156854, Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=3.375, FA=0.0249140893471, MD=0.0317869415808
+======================
+Past prediction horizon:  96
+ROC AUC:  0.063198185941
+Ideal threshold found:  3.575
+FA rate: 0.029, MD rate: 0.026
+Model=ARIMA(p=1, q=1), ROC AUC=0.063198185941, Past Prediction Horizon=96, Future Prediction Horizon=6, Threshold=3.575, FA=0.028802880288, MD=0.026102610261
+======================
+Best: Model=ARIMA(p=1, q=1), ROC AUC=0.0729124156854, Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=3.375, FA=0.0249140893471, MD=0.0317869415808
+======================
+Past prediction horizon:  32
+ROC AUC:  0.0698455111862
+Ideal threshold found:  3.275
+FA rate: 0.021, MD rate: 0.023
+Model=ARIMA(p=1, q=0), ROC AUC=0.0698455111862, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.275, FA=0.0214408233276, MD=0.0231560891938
+======================
+Best: Model=ARIMA(p=1, q=1), ROC AUC=0.0729124156854, Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=3.375, FA=0.0249140893471, MD=0.0317869415808
+======================
+Past prediction horizon:  48
+ROC AUC:  0.0732255367434
+Ideal threshold found:  3.375
+FA rate: 0.022, MD rate: 0.029
+Model=ARIMA(p=1, q=0), ROC AUC=0.0732255367434, Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=3.375, FA=0.0216076058773, MD=0.0293863439931
+======================
+Best: Model=ARIMA(p=1, q=0), ROC AUC=0.0732255367434, Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=3.375, FA=0.0216076058773, MD=0.0293863439931
+======================
+Past prediction horizon:  64
+ROC AUC:  0.0698337097386
+Ideal threshold found:  3.425
+FA rate: 0.017, MD rate: 0.015
+Model=ARIMA(p=1, q=0), ROC AUC=0.0698337097386, Past Prediction Horizon=64, Future Prediction Horizon=6, Threshold=3.425, FA=0.0169946332737, MD=0.0152057245081
+======================
+Best: Model=ARIMA(p=1, q=0), ROC AUC=0.0732255367434, Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=3.375, FA=0.0216076058773, MD=0.0293863439931
+======================
+Past prediction horizon:  80
+ROC AUC:  0.0667198483574
+Ideal threshold found:  3.525
+FA rate: 0.016, MD rate: 0.021
+Model=ARIMA(p=1, q=0), ROC AUC=0.0667198483574, Past Prediction Horizon=80, Future Prediction Horizon=6, Threshold=3.525, FA=0.0162601626016, MD=0.0207768744354
+======================
+Best: Model=ARIMA(p=1, q=0), ROC AUC=0.0732255367434, Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=3.375, FA=0.0216076058773, MD=0.0293863439931
+======================
+Past prediction horizon:  96
+ROC AUC:  0.062714739229
 Ideal threshold found:  3.575
 FA rate: 0.025, MD rate: 0.027
-Model=ARIMA(p=1, q=1), ROC AUC=0.0662628424804, Past Prediction Horizon=64, Future Prediction Horizon=6, Threshold=3.575, FA=0.0253940455342, MD=0.0271453590193
+Model=ARIMA(p=1, q=0), ROC AUC=0.062714739229, Past Prediction Horizon=96, Future Prediction Horizon=6, Threshold=3.575, FA=0.0252707581227, MD=0.0270758122744
 ======================
-Best: Model=ARIMA(p=1, q=1), ROC AUC=0.0700928931278, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.425, FA=0.0302775441548, MD=0.0328006728343
-======================
-Past prediction horizon:  80
-ROC AUC:  0.067508333656
-Ideal threshold found:  3.625
-FA rate: 0.027, MD rate: 0.027
-Model=ARIMA(p=1, q=1), ROC AUC=0.067508333656, Past Prediction Horizon=80, Future Prediction Horizon=6, Threshold=3.625, FA=0.0274822695035, MD=0.0274822695035
-======================
-Best: Model=ARIMA(p=1, q=1), ROC AUC=0.0700928931278, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.425, FA=0.0302775441548, MD=0.0328006728343
-======================
-Past prediction horizon:  96
-ROC AUC:  0.0663201814059
-Ideal threshold found:  3.725
-FA rate: 0.030, MD rate: 0.029
-Model=ARIMA(p=1, q=1), ROC AUC=0.0663201814059, Past Prediction Horizon=96, Future Prediction Horizon=6, Threshold=3.725, FA=0.0304659498208, MD=0.0286738351254
-======================
-Best: Model=ARIMA(p=1, q=1), ROC AUC=0.0700928931278, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.425, FA=0.0302775441548, MD=0.0328006728343
+Best: Model=ARIMA(p=1, q=0), ROC AUC=0.0732255367434, Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=3.375, FA=0.0216076058773, MD=0.0293863439931
 ======================
 Past prediction horizon:  32
-ROC AUC:  0.0698644475889
-Ideal threshold found:  3.325
-FA rate: 0.025, MD rate: 0.024
-Model=ARIMA(p=1, q=0), ROC AUC=0.0698644475889, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.325, FA=0.0247651579846, MD=0.0239111870196
-======================
-Best: Model=ARIMA(p=1, q=1), ROC AUC=0.0700928931278, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.425, FA=0.0302775441548, MD=0.0328006728343
-======================
-Past prediction horizon:  48
-ROC AUC:  0.0698512944549
-Ideal threshold found:  3.425
-FA rate: 0.028, MD rate: 0.025
-Model=ARIMA(p=1, q=0), ROC AUC=0.0698512944549, Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=3.425, FA=0.0276100086281, MD=0.0250215703192
-======================
-Best: Model=ARIMA(p=1, q=1), ROC AUC=0.0700928931278, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.425, FA=0.0302775441548, MD=0.0328006728343
-======================
-Past prediction horizon:  64
-ROC AUC:  0.0673912040754
-Ideal threshold found:  3.525
-FA rate: 0.023, MD rate: 0.017
-Model=ARIMA(p=1, q=0), ROC AUC=0.0673912040754, Past Prediction Horizon=64, Future Prediction Horizon=6, Threshold=3.525, FA=0.0230700976043, MD=0.01685891748
-======================
-Best: Model=ARIMA(p=1, q=1), ROC AUC=0.0700928931278, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.425, FA=0.0302775441548, MD=0.0328006728343
-======================
-Past prediction horizon:  80
-ROC AUC:  0.0699785102556
-Ideal threshold found:  3.625
-FA rate: 0.023, MD rate: 0.028
-Model=ARIMA(p=1, q=0), ROC AUC=0.0699785102556, Past Prediction Horizon=80, Future Prediction Horizon=6, Threshold=3.625, FA=0.0231522707035, MD=0.0276046304541
-======================
-Best: Model=ARIMA(p=1, q=1), ROC AUC=0.0700928931278, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.425, FA=0.0302775441548, MD=0.0328006728343
-======================
-Past prediction horizon:  96
-ROC AUC:  0.0661301587302
-Ideal threshold found:  3.675
-FA rate: 0.029, MD rate: 0.029
-Model=ARIMA(p=1, q=0), ROC AUC=0.0661301587302, Past Prediction Horizon=96, Future Prediction Horizon=6, Threshold=3.675, FA=0.0287253141831, MD=0.0287253141831
-======================
-Best: Model=ARIMA(p=1, q=1), ROC AUC=0.0700928931278, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.425, FA=0.0302775441548, MD=0.0328006728343
-======================
-Past prediction horizon:  32
-ROC AUC:  0.0707721862117
-Ideal threshold found:  3.325
-FA rate: 0.026, MD rate: 0.026
-Model=ARIMA(p=2, q=0), ROC AUC=0.0707721862117, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.325, FA=0.0263829787234, MD=0.0255319148936
-======================
-Best: Model=ARIMA(p=2, q=0), ROC AUC=0.0707721862117, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.325, FA=0.0263829787234, MD=0.0255319148936
-======================
-Past prediction horizon:  48
-ROC AUC:  0.0688219348974
-Ideal threshold found:  3.425
-FA rate: 0.027, MD rate: 0.028
-Model=ARIMA(p=2, q=0), ROC AUC=0.0688219348974, Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=3.425, FA=0.0267011197244, MD=0.0275624461671
-======================
-Best: Model=ARIMA(p=2, q=0), ROC AUC=0.0707721862117, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.325, FA=0.0263829787234, MD=0.0255319148936
-======================
-Past prediction horizon:  64
-ROC AUC:  0.0666941994868
-Ideal threshold found:  3.525
-FA rate: 0.023, MD rate: 0.018
-Model=ARIMA(p=2, q=0), ROC AUC=0.0666941994868, Past Prediction Horizon=64, Future Prediction Horizon=6, Threshold=3.525, FA=0.0230496453901, MD=0.0177304964539
-======================
-Best: Model=ARIMA(p=2, q=0), ROC AUC=0.0707721862117, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.325, FA=0.0263829787234, MD=0.0255319148936
-======================
-Past prediction horizon:  80
-ROC AUC:  0.0676420945549
-Ideal threshold found:  3.625
-FA rate: 0.024, MD rate: 0.029
-Model=ARIMA(p=2, q=0), ROC AUC=0.0676420945549, Past Prediction Horizon=80, Future Prediction Horizon=6, Threshold=3.625, FA=0.0239786856128, MD=0.0293072824156
-======================
-Best: Model=ARIMA(p=2, q=0), ROC AUC=0.0707721862117, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.325, FA=0.0263829787234, MD=0.0255319148936
-======================
-Past prediction horizon:  96
-ROC AUC:  0.0661092970522
-Ideal threshold found:  3.725
-FA rate: 0.028, MD rate: 0.030
-Model=ARIMA(p=2, q=0), ROC AUC=0.0661092970522, Past Prediction Horizon=96, Future Prediction Horizon=6, Threshold=3.725, FA=0.0278276481149, MD=0.0296229802513
-======================
-Best: Model=ARIMA(p=2, q=0), ROC AUC=0.0707721862117, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.325, FA=0.0263829787234, MD=0.0255319148936
-======================
-Past prediction horizon:  32
-ROC AUC:  0.0703398721672
-Ideal threshold found:  3.375
-FA rate: 0.033, MD rate: 0.034
-Model=ARIMA(p=4, q=0), ROC AUC=0.0703398721672, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.375, FA=0.0326906957251, MD=0.0335289186924
-======================
-Best: Model=ARIMA(p=2, q=0), ROC AUC=0.0707721862117, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.325, FA=0.0263829787234, MD=0.0255319148936
-======================
-Past prediction horizon:  48
-ROC AUC:  0.0693598395493
-Ideal threshold found:  3.425
-FA rate: 0.029, MD rate: 0.029
-Model=ARIMA(p=4, q=0), ROC AUC=0.0693598395493, Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=3.425, FA=0.0291595197256, MD=0.0291595197256
-======================
-Best: Model=ARIMA(p=2, q=0), ROC AUC=0.0707721862117, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.325, FA=0.0263829787234, MD=0.0255319148936
-======================
-Past prediction horizon:  64
-ROC AUC:  0.0671844943813
-Ideal threshold found:  3.525
-FA rate: 0.025, MD rate: 0.019
-Model=ARIMA(p=4, q=0), ROC AUC=0.0671844943813, Past Prediction Horizon=64, Future Prediction Horizon=6, Threshold=3.525, FA=0.0247349823322, MD=0.0194346289753
-======================
-Best: Model=ARIMA(p=2, q=0), ROC AUC=0.0707721862117, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.325, FA=0.0263829787234, MD=0.0255319148936
-======================
-Past prediction horizon:  80
-ROC AUC:  0.0688895029375
-Ideal threshold found:  3.625
-FA rate: 0.028, MD rate: 0.029
-Model=ARIMA(p=4, q=0), ROC AUC=0.0688895029375, Past Prediction Horizon=80, Future Prediction Horizon=6, Threshold=3.625, FA=0.0282935455349, MD=0.0291777188329
-======================
-Best: Model=ARIMA(p=2, q=0), ROC AUC=0.0707721862117, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.325, FA=0.0263829787234, MD=0.0255319148936
-======================
-Past prediction horizon:  96
-ROC AUC:  0.067673015873
-Ideal threshold found:  3.875
-FA rate: 0.030, MD rate: 0.030
-Model=ARIMA(p=4, q=0), ROC AUC=0.067673015873, Past Prediction Horizon=96, Future Prediction Horizon=6, Threshold=3.875, FA=0.0295434198747, MD=0.0304386750224
-======================
-Best: Model=ARIMA(p=2, q=0), ROC AUC=0.0707721862117, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.325, FA=0.0263829787234, MD=0.0255319148936
-======================
-Past prediction horizon:  32
-ROC AUC:  0.0043650422725
-Ideal threshold found:  2.375
-FA rate: 0.124, MD rate: 0.126
-Model=GARCH(p=1, q=1), ROC AUC=0.0043650422725, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=2.375, FA=0.124411566913, MD=0.126429051782
-======================
-Best: Model=ARIMA(p=2, q=0), ROC AUC=0.0707721862117, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.325, FA=0.0263829787234, MD=0.0255319148936
-======================
-Past prediction horizon:  48
-ROC AUC:  0.00232704934622
-Ideal threshold found:  1.375
-FA rate: 0.128, MD rate: 0.129
-Model=GARCH(p=1, q=1), ROC AUC=0.00232704934622, Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=1.375, FA=0.127875507442, MD=0.129228687415
-======================
-Best: Model=ARIMA(p=2, q=0), ROC AUC=0.0707721862117, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.325, FA=0.0263829787234, MD=0.0255319148936
-======================
-Past prediction horizon:  64
-ROC AUC:  0.00228106710036
-Ideal threshold found:  1.275
-FA rate: 0.123, MD rate: 0.124
-Model=GARCH(p=1, q=1), ROC AUC=0.00228106710036, Past Prediction Horizon=64, Future Prediction Horizon=6, Threshold=1.275, FA=0.123087621697, MD=0.124478442281
-======================
-Best: Model=ARIMA(p=2, q=0), ROC AUC=0.0707721862117, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.325, FA=0.0263829787234, MD=0.0255319148936
-======================
-Past prediction horizon:  80
-ROC AUC:  0.00113256761085
-Ideal threshold found:  1.025
-FA rate: 0.100, MD rate: 0.128
-Model=GARCH(p=1, q=1), ROC AUC=0.00113256761085, Past Prediction Horizon=80, Future Prediction Horizon=6, Threshold=1.025, FA=0.0999275887038, MD=0.128167994207
-======================
-Best: Model=ARIMA(p=2, q=0), ROC AUC=0.0707721862117, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.325, FA=0.0263829787234, MD=0.0255319148936
-======================
-Past prediction horizon:  96
-ROC AUC:  0.002
-Ideal threshold found:  1.025
-FA rate: 0.057, MD rate: 0.115
-Model=GARCH(p=1, q=1), ROC AUC=0.002, Past Prediction Horizon=96, Future Prediction Horizon=6, Threshold=1.025, FA=0.0567823343849, MD=0.115141955836
-======================
-Best: Model=ARIMA(p=2, q=0), ROC AUC=0.0707721862117, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.325, FA=0.0263829787234, MD=0.0255319148936
-======================
-Past prediction horizon:  32
-ROC AUC:  0.0691585629607
-Ideal threshold found:  3.375
-FA rate: 0.018, MD rate: 0.019
-Model=GGSM, ROC AUC=0.0691585629607, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.375, FA=0.0181503889369, MD=0.019014693172
-======================
-Best: Model=ARIMA(p=2, q=0), ROC AUC=0.0707721862117, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.325, FA=0.0263829787234, MD=0.0255319148936
-======================
-Past prediction horizon:  48
-ROC AUC:  0.0691985096267
-Ideal threshold found:  3.575
-FA rate: 0.017, MD rate: 0.030
-Model=GGSM, ROC AUC=0.0691985096267, Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=3.575, FA=0.0165073848827, MD=0.0295395308427
-======================
-Best: Model=ARIMA(p=2, q=0), ROC AUC=0.0707721862117, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.325, FA=0.0263829787234, MD=0.0255319148936
-======================
-Past prediction horizon:  64
-ROC AUC:  0.0681091358851
-Ideal threshold found:  3.575
-FA rate: 0.017, MD rate: 0.030
-Model=GGSM, ROC AUC=0.0681091358851, Past Prediction Horizon=64, Future Prediction Horizon=6, Threshold=3.575, FA=0.0167400881057, MD=0.0299559471366
-======================
-Best: Model=ARIMA(p=2, q=0), ROC AUC=0.0707721862117, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.325, FA=0.0263829787234, MD=0.0255319148936
-======================
-Past prediction horizon:  80
-ROC AUC:  0.0699987503916
-Ideal threshold found:  3.575
-FA rate: 0.017, MD rate: 0.030
-Model=GGSM, ROC AUC=0.0699987503916, Past Prediction Horizon=80, Future Prediction Horizon=6, Threshold=3.575, FA=0.0169794459339, MD=0.0303842716711
-======================
-Best: Model=ARIMA(p=2, q=0), ROC AUC=0.0707721862117, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.325, FA=0.0263829787234, MD=0.0255319148936
-======================
-Past prediction horizon:  96
-ROC AUC:  0.072335600907
-Ideal threshold found:  3.575
-FA rate: 0.017, MD rate: 0.031
-Model=GGSM, ROC AUC=0.072335600907, Past Prediction Horizon=96, Future Prediction Horizon=6, Threshold=3.575, FA=0.0172257479601, MD=0.0308250226655
-======================
-Best: Model=GGSM, ROC AUC=0.072335600907, Past Prediction Horizon=96, Future Prediction Horizon=6, Threshold=3.575, FA=0.0172257479601, MD=0.0308250226655
-======================
-Past prediction horizon:  32
-ROC AUC:  0.0706801698185
-Ideal threshold found:  3.275
-FA rate: 0.039, MD rate: 0.038
-Model=ARIMA(p=1, q=1), ROC AUC=0.0706801698185, Past Prediction Horizon=32, Future Prediction Horizon=12, Threshold=3.275, FA=0.0391340549542, MD=0.0383014154871
-======================
-Best: Model=GGSM, ROC AUC=0.072335600907, Past Prediction Horizon=96, Future Prediction Horizon=6, Threshold=3.575, FA=0.0172257479601, MD=0.0308250226655
-======================
-Past prediction horizon:  48
-ROC AUC:  0.0714591803191
-Ideal threshold found:  3.325
-FA rate: 0.031, MD rate: 0.028
-Model=ARIMA(p=1, q=1), ROC AUC=0.0714591803191, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.325, FA=0.0310344827586, MD=0.0275862068966
-======================
-Best: Model=GGSM, ROC AUC=0.072335600907, Past Prediction Horizon=96, Future Prediction Horizon=6, Threshold=3.575, FA=0.0172257479601, MD=0.0308250226655
-======================
-Past prediction horizon:  64
-ROC AUC:  0.0700325451555
-Ideal threshold found:  3.575
-FA rate: 0.030, MD rate: 0.031
-Model=ARIMA(p=1, q=1), ROC AUC=0.0700325451555, Past Prediction Horizon=64, Future Prediction Horizon=12, Threshold=3.575, FA=0.0296943231441, MD=0.0305676855895
-======================
-Best: Model=GGSM, ROC AUC=0.072335600907, Past Prediction Horizon=96, Future Prediction Horizon=6, Threshold=3.575, FA=0.0172257479601, MD=0.0308250226655
-======================
-Past prediction horizon:  80
-ROC AUC:  0.0692319330723
-Ideal threshold found:  3.675
-FA rate: 0.031, MD rate: 0.032
-Model=ARIMA(p=1, q=1), ROC AUC=0.0692319330723, Past Prediction Horizon=80, Future Prediction Horizon=12, Threshold=3.675, FA=0.0309460654288, MD=0.0318302387268
-======================
-Best: Model=GGSM, ROC AUC=0.072335600907, Past Prediction Horizon=96, Future Prediction Horizon=6, Threshold=3.575, FA=0.0172257479601, MD=0.0308250226655
-======================
-Past prediction horizon:  96
-ROC AUC:  0.0631174674476
-Ideal threshold found:  3.875
-FA rate: 0.037, MD rate: 0.037
-Model=ARIMA(p=1, q=1), ROC AUC=0.0631174674476, Past Prediction Horizon=96, Future Prediction Horizon=12, Threshold=3.875, FA=0.0372340425532, MD=0.0372340425532
-======================
-Best: Model=GGSM, ROC AUC=0.072335600907, Past Prediction Horizon=96, Future Prediction Horizon=6, Threshold=3.575, FA=0.0172257479601, MD=0.0308250226655
-======================
-Past prediction horizon:  32
-ROC AUC:  0.0716959200563
+ROC AUC:  0.0692286679409
 Ideal threshold found:  3.225
-FA rate: 0.030, MD rate: 0.033
-Model=ARIMA(p=1, q=0), ROC AUC=0.0716959200563, Past Prediction Horizon=32, Future Prediction Horizon=12, Threshold=3.225, FA=0.0296108291032, MD=0.0329949238579
+FA rate: 0.028, MD rate: 0.024
+Model=ARIMA(p=2, q=0), ROC AUC=0.0692286679409, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.225, FA=0.028085106383, MD=0.023829787234
 ======================
-Best: Model=GGSM, ROC AUC=0.072335600907, Past Prediction Horizon=96, Future Prediction Horizon=6, Threshold=3.575, FA=0.0172257479601, MD=0.0308250226655
+Best: Model=ARIMA(p=1, q=0), ROC AUC=0.0732255367434, Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=3.375, FA=0.0216076058773, MD=0.0293863439931
 ======================
 Past prediction horizon:  48
-ROC AUC:  0.0719837244563
-Ideal threshold found:  3.325
-FA rate: 0.028, MD rate: 0.029
-Model=ARIMA(p=1, q=0), ROC AUC=0.0719837244563, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.325, FA=0.0276577355229, MD=0.028522039758
+ROC AUC:  0.0721800027206
+Ideal threshold found:  3.375
+FA rate: 0.024, MD rate: 0.031
+Model=ARIMA(p=2, q=0), ROC AUC=0.0721800027206, Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=3.375, FA=0.0240963855422, MD=0.0309810671256
 ======================
-Best: Model=GGSM, ROC AUC=0.072335600907, Past Prediction Horizon=96, Future Prediction Horizon=6, Threshold=3.575, FA=0.0172257479601, MD=0.0308250226655
+Best: Model=ARIMA(p=1, q=0), ROC AUC=0.0732255367434, Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=3.375, FA=0.0216076058773, MD=0.0293863439931
 ======================
 Past prediction horizon:  64
-ROC AUC:  0.0723430093559
+ROC AUC:  0.0691503719066
+Ideal threshold found:  3.425
+FA rate: 0.019, MD rate: 0.015
+Model=ARIMA(p=2, q=0), ROC AUC=0.0691503719066, Past Prediction Horizon=64, Future Prediction Horizon=6, Threshold=3.425, FA=0.01875, MD=0.0151785714286
+======================
+Best: Model=ARIMA(p=1, q=0), ROC AUC=0.0732255367434, Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=3.375, FA=0.0216076058773, MD=0.0293863439931
+======================
+Past prediction horizon:  80
+ROC AUC:  0.0652638785733
+Ideal threshold found:  3.525
+FA rate: 0.017, MD rate: 0.021
+Model=ARIMA(p=2, q=0), ROC AUC=0.0652638785733, Past Prediction Horizon=80, Future Prediction Horizon=6, Threshold=3.525, FA=0.0171480144404, MD=0.0207581227437
+======================
+Best: Model=ARIMA(p=1, q=0), ROC AUC=0.0732255367434, Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=3.375, FA=0.0216076058773, MD=0.0293863439931
+======================
+Past prediction horizon:  96
+ROC AUC:  0.0630390022676
+Ideal threshold found:  3.575
+FA rate: 0.027, MD rate: 0.028
+Model=ARIMA(p=2, q=0), ROC AUC=0.0630390022676, Past Prediction Horizon=96, Future Prediction Horizon=6, Threshold=3.575, FA=0.02700270027, MD=0.027902790279
+======================
+Best: Model=ARIMA(p=1, q=0), ROC AUC=0.0732255367434, Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=3.375, FA=0.0216076058773, MD=0.0293863439931
+======================
+Past prediction horizon:  32
+ROC AUC:  0.069688379334
+Ideal threshold found:  3.325
+FA rate: 0.036, MD rate: 0.035
+Model=ARIMA(p=4, q=0), ROC AUC=0.069688379334, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.325, FA=0.0358632193495, MD=0.0350291909925
+======================
+Best: Model=ARIMA(p=1, q=0), ROC AUC=0.0732255367434, Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=3.375, FA=0.0216076058773, MD=0.0293863439931
+======================
+Past prediction horizon:  48
+ROC AUC:  0.0745767266864
+Ideal threshold found:  3.325
+FA rate: 0.027, MD rate: 0.026
+Model=ARIMA(p=4, q=0), ROC AUC=0.0745767266864, Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=3.325, FA=0.0267471958585, MD=0.0258843830889
+======================
+Best: Model=ARIMA(p=4, q=0), ROC AUC=0.0745767266864, Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=3.325, FA=0.0267471958585, MD=0.0258843830889
+======================
+Past prediction horizon:  64
+ROC AUC:  0.0700446902942
+Ideal threshold found:  3.475
+FA rate: 0.023, MD rate: 0.025
+Model=ARIMA(p=4, q=0), ROC AUC=0.0700446902942, Past Prediction Horizon=64, Future Prediction Horizon=6, Threshold=3.475, FA=0.0228873239437, MD=0.0246478873239
+======================
+Best: Model=ARIMA(p=4, q=0), ROC AUC=0.0745767266864, Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=3.325, FA=0.0267471958585, MD=0.0258843830889
+======================
+Past prediction horizon:  80
+ROC AUC:  0.0649171562433
+Ideal threshold found:  3.525
+FA rate: 0.025, MD rate: 0.020
+Model=ARIMA(p=4, q=0), ROC AUC=0.0649171562433, Past Prediction Horizon=80, Future Prediction Horizon=6, Threshold=3.525, FA=0.0250896057348, MD=0.0197132616487
+======================
+Best: Model=ARIMA(p=4, q=0), ROC AUC=0.0745767266864, Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=3.325, FA=0.0267471958585, MD=0.0258843830889
+======================
+Past prediction horizon:  96
+ROC AUC:  0.0631637188209
+Ideal threshold found:  3.625
+FA rate: 0.032, MD rate: 0.031
+Model=ARIMA(p=4, q=0), ROC AUC=0.0631637188209, Past Prediction Horizon=96, Future Prediction Horizon=6, Threshold=3.625, FA=0.0321141837645, MD=0.0312221231044
+======================
+Best: Model=ARIMA(p=4, q=0), ROC AUC=0.0745767266864, Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=3.325, FA=0.0267471958585, MD=0.0258843830889
+======================
+Past prediction horizon:  32
+ROC AUC:  0.00589042994498
+Ideal threshold found:  2.675
+FA rate: 0.122, MD rate: 0.123
+Model=GARCH(p=1, q=1), ROC AUC=0.00589042994498, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=2.675, FA=0.122033898305, MD=0.122711864407
+======================
+Best: Model=ARIMA(p=4, q=0), ROC AUC=0.0745767266864, Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=3.325, FA=0.0267471958585, MD=0.0258843830889
+======================
+Past prediction horizon:  48
+ROC AUC:  0.00372510376542
+Ideal threshold found:  2.275
+FA rate: 0.127, MD rate: 0.128
+Model=GARCH(p=1, q=1), ROC AUC=0.00372510376542, Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=2.275, FA=0.127457627119, MD=0.12813559322
+======================
+Best: Model=ARIMA(p=4, q=0), ROC AUC=0.0745767266864, Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=3.325, FA=0.0267471958585, MD=0.0258843830889
+======================
+Past prediction horizon:  64
+ROC AUC:  0.00388990060851
+Ideal threshold found:  2.525
+FA rate: 0.127, MD rate: 0.127
+Model=GARCH(p=1, q=1), ROC AUC=0.00388990060851, Past Prediction Horizon=64, Future Prediction Horizon=6, Threshold=2.525, FA=0.126896551724, MD=0.126896551724
+======================
+Best: Model=ARIMA(p=4, q=0), ROC AUC=0.0745767266864, Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=3.325, FA=0.0267471958585, MD=0.0258843830889
+======================
+Past prediction horizon:  80
+ROC AUC:  0.00189817275572
+Ideal threshold found:  1.825
+FA rate: 0.129, MD rate: 0.130
+Model=GARCH(p=1, q=1), ROC AUC=0.00189817275572, Past Prediction Horizon=80, Future Prediction Horizon=6, Threshold=1.825, FA=0.128650904033, MD=0.130041724618
+======================
+Best: Model=ARIMA(p=4, q=0), ROC AUC=0.0745767266864, Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=3.325, FA=0.0267471958585, MD=0.0258843830889
+======================
+Past prediction horizon:  96
+ROC AUC:  0.00112426303855
+Ideal threshold found:  1.025
+FA rate: 0.081, MD rate: 0.114
+Model=GARCH(p=1, q=1), ROC AUC=0.00112426303855, Past Prediction Horizon=96, Future Prediction Horizon=6, Threshold=1.025, FA=0.0812260536398, MD=0.114176245211
+======================
+Best: Model=ARIMA(p=4, q=0), ROC AUC=0.0745767266864, Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=3.325, FA=0.0267471958585, MD=0.0258843830889
+======================
+Past prediction horizon:  32
+ROC AUC:  0.0755397277671
+Ideal threshold found:  3.375
+FA rate: 0.017, MD rate: 0.018
+Model=GGSM, ROC AUC=0.0755397277671, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.375, FA=0.017316017316, MD=0.0181818181818
+======================
+Best: Model=GGSM, ROC AUC=0.0755397277671, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.375, FA=0.017316017316, MD=0.0181818181818
+======================
+Past prediction horizon:  48
+ROC AUC:  0.0734536381764
+Ideal threshold found:  3.375
+FA rate: 0.017, MD rate: 0.014
+Model=GGSM, ROC AUC=0.0734536381764, Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=3.375, FA=0.0167696381289, MD=0.0141218005296
+======================
+Best: Model=GGSM, ROC AUC=0.0755397277671, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.375, FA=0.017316017316, MD=0.0181818181818
+======================
+Past prediction horizon:  64
+ROC AUC:  0.0735186089975
+Ideal threshold found:  3.375
+FA rate: 0.017, MD rate: 0.014
+Model=GGSM, ROC AUC=0.0735186089975, Past Prediction Horizon=64, Future Prediction Horizon=6, Threshold=3.375, FA=0.0170098478066, MD=0.0143240823635
+======================
+Best: Model=GGSM, ROC AUC=0.0755397277671, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.375, FA=0.017316017316, MD=0.0181818181818
+======================
+Past prediction horizon:  80
+ROC AUC:  0.0755507077008
+Ideal threshold found:  3.375
+FA rate: 0.016, MD rate: 0.015
+Model=GGSM, ROC AUC=0.0755507077008, Past Prediction Horizon=80, Future Prediction Horizon=6, Threshold=3.375, FA=0.0163636363636, MD=0.0145454545455
+======================
+Best: Model=GGSM, ROC AUC=0.0755507077008, Past Prediction Horizon=80, Future Prediction Horizon=6, Threshold=3.375, FA=0.0163636363636, MD=0.0145454545455
+======================
+Past prediction horizon:  96
+ROC AUC:  0.0747365079365
+Ideal threshold found:  3.375
+FA rate: 0.018, MD rate: 0.015
+Model=GGSM, ROC AUC=0.0747365079365, Past Prediction Horizon=96, Future Prediction Horizon=6, Threshold=3.375, FA=0.0175115207373, MD=0.0147465437788
+======================
+Best: Model=GGSM, ROC AUC=0.0755507077008, Past Prediction Horizon=80, Future Prediction Horizon=6, Threshold=3.375, FA=0.0163636363636, MD=0.0145454545455
+======================
+Past prediction horizon:  32
+ROC AUC:  0.074867390426
+Ideal threshold found:  3.175
+FA rate: 0.032, MD rate: 0.032
+Model=ARIMA(p=1, q=1), ROC AUC=0.074867390426, Past Prediction Horizon=32, Future Prediction Horizon=12, Threshold=3.175, FA=0.0320945945946, MD=0.0320945945946
+======================
+Best: Model=GGSM, ROC AUC=0.0755507077008, Past Prediction Horizon=80, Future Prediction Horizon=6, Threshold=3.375, FA=0.0163636363636, MD=0.0145454545455
+======================
+Past prediction horizon:  48
+ROC AUC:  0.0762681305264
+Ideal threshold found:  3.225
+FA rate: 0.026, MD rate: 0.023
+Model=ARIMA(p=1, q=1), ROC AUC=0.0762681305264, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.225, FA=0.0261096605744, MD=0.023498694517
+======================
+Best: Model=ARIMA(p=1, q=1), ROC AUC=0.0762681305264, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.225, FA=0.0261096605744, MD=0.023498694517
+======================
+Past prediction horizon:  64
+ROC AUC:  0.0717962714722
+Ideal threshold found:  3.475
+FA rate: 0.031, MD rate: 0.033
+Model=ARIMA(p=1, q=1), ROC AUC=0.0717962714722, Past Prediction Horizon=64, Future Prediction Horizon=12, Threshold=3.475, FA=0.0313043478261, MD=0.0330434782609
+======================
+Best: Model=ARIMA(p=1, q=1), ROC AUC=0.0762681305264, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.225, FA=0.0261096605744, MD=0.023498694517
+======================
+Past prediction horizon:  80
+ROC AUC:  0.0670158419366
+Ideal threshold found:  3.575
+FA rate: 0.031, MD rate: 0.034
+Model=ARIMA(p=1, q=1), ROC AUC=0.0670158419366, Past Prediction Horizon=80, Future Prediction Horizon=12, Threshold=3.575, FA=0.0308914386584, MD=0.0335392762577
+======================
+Best: Model=ARIMA(p=1, q=1), ROC AUC=0.0762681305264, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.225, FA=0.0261096605744, MD=0.023498694517
+======================
+Past prediction horizon:  96
+ROC AUC:  0.0649395927834
+Ideal threshold found:  3.625
+FA rate: 0.032, MD rate: 0.033
+Model=ARIMA(p=1, q=1), ROC AUC=0.0649395927834, Past Prediction Horizon=96, Future Prediction Horizon=12, Threshold=3.625, FA=0.0322291853178, MD=0.0331244404655
+======================
+Best: Model=ARIMA(p=1, q=1), ROC AUC=0.0762681305264, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.225, FA=0.0261096605744, MD=0.023498694517
+======================
+Past prediction horizon:  32
+ROC AUC:  0.0751801795931
+Ideal threshold found:  3.125
+FA rate: 0.026, MD rate: 0.027
+Model=ARIMA(p=1, q=0), ROC AUC=0.0751801795931, Past Prediction Horizon=32, Future Prediction Horizon=12, Threshold=3.125, FA=0.0256629597947, MD=0.0265183917879
+======================
+Best: Model=ARIMA(p=1, q=1), ROC AUC=0.0762681305264, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.225, FA=0.0261096605744, MD=0.023498694517
+======================
+Past prediction horizon:  48
+ROC AUC:  0.0791990366166
+Ideal threshold found:  3.175
+FA rate: 0.023, MD rate: 0.021
+Model=ARIMA(p=1, q=0), ROC AUC=0.0791990366166, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.175, FA=0.0227670753065, MD=0.0210157618214
+======================
+Best: Model=ARIMA(p=1, q=0), ROC AUC=0.0791990366166, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.175, FA=0.0227670753065, MD=0.0210157618214
+======================
+Past prediction horizon:  64
+ROC AUC:  0.0782025193129
+Ideal threshold found:  3.425
+FA rate: 0.023, MD rate: 0.026
+Model=ARIMA(p=1, q=0), ROC AUC=0.0782025193129, Past Prediction Horizon=64, Future Prediction Horizon=12, Threshold=3.425, FA=0.0229885057471, MD=0.025641025641
+======================
+Best: Model=ARIMA(p=1, q=0), ROC AUC=0.0791990366166, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.175, FA=0.0227670753065, MD=0.0210157618214
+======================
+Past prediction horizon:  80
+ROC AUC:  0.0740054289783
 Ideal threshold found:  3.525
 FA rate: 0.025, MD rate: 0.026
-Model=ARIMA(p=1, q=0), ROC AUC=0.0723430093559, Past Prediction Horizon=64, Future Prediction Horizon=12, Threshold=3.525, FA=0.0246913580247, MD=0.026455026455
+Model=ARIMA(p=1, q=0), ROC AUC=0.0740054289783, Past Prediction Horizon=80, Future Prediction Horizon=12, Threshold=3.525, FA=0.0250671441361, MD=0.0259623992838
 ======================
-Best: Model=ARIMA(p=1, q=0), ROC AUC=0.0723430093559, Past Prediction Horizon=64, Future Prediction Horizon=12, Threshold=3.525, FA=0.0246913580247, MD=0.026455026455
-======================
-Past prediction horizon:  80
-ROC AUC:  0.0711160555358
-Ideal threshold found:  3.625
-FA rate: 0.031, MD rate: 0.028
-Model=ARIMA(p=1, q=0), ROC AUC=0.0711160555358, Past Prediction Horizon=80, Future Prediction Horizon=12, Threshold=3.625, FA=0.0310559006211, MD=0.0283939662822
-======================
-Best: Model=ARIMA(p=1, q=0), ROC AUC=0.0723430093559, Past Prediction Horizon=64, Future Prediction Horizon=12, Threshold=3.525, FA=0.0246913580247, MD=0.026455026455
+Best: Model=ARIMA(p=1, q=0), ROC AUC=0.0791990366166, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.175, FA=0.0227670753065, MD=0.0210157618214
 ======================
 Past prediction horizon:  96
-ROC AUC:  0.0664116975676
-Ideal threshold found:  3.675
-FA rate: 0.032, MD rate: 0.029
-Model=ARIMA(p=1, q=0), ROC AUC=0.0664116975676, Past Prediction Horizon=96, Future Prediction Horizon=12, Threshold=3.675, FA=0.031503150315, MD=0.028802880288
+ROC AUC:  0.0687577068745
+Ideal threshold found:  3.575
+FA rate: 0.029, MD rate: 0.025
+Model=ARIMA(p=1, q=0), ROC AUC=0.0687577068745, Past Prediction Horizon=96, Future Prediction Horizon=12, Threshold=3.575, FA=0.0289855072464, MD=0.0253623188406
 ======================
-Best: Model=ARIMA(p=1, q=0), ROC AUC=0.0723430093559, Past Prediction Horizon=64, Future Prediction Horizon=12, Threshold=3.525, FA=0.0246913580247, MD=0.026455026455
-======================
-Past prediction horizon:  32
-ROC AUC:  0.0703034380743
-Ideal threshold found:  3.225
-FA rate: 0.034, MD rate: 0.034
-Model=ARIMA(p=2, q=0), ROC AUC=0.0703034380743, Past Prediction Horizon=32, Future Prediction Horizon=12, Threshold=3.225, FA=0.03367003367, MD=0.03367003367
-======================
-Best: Model=ARIMA(p=1, q=0), ROC AUC=0.0723430093559, Past Prediction Horizon=64, Future Prediction Horizon=12, Threshold=3.525, FA=0.0246913580247, MD=0.026455026455
-======================
-Past prediction horizon:  48
-ROC AUC:  0.0724650807068
-Ideal threshold found:  3.325
-FA rate: 0.028, MD rate: 0.029
-Model=ARIMA(p=2, q=0), ROC AUC=0.0724650807068, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.325, FA=0.0284728213978, MD=0.0293356341674
-======================
-Best: Model=ARIMA(p=2, q=0), ROC AUC=0.0724650807068, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.325, FA=0.0284728213978, MD=0.0293356341674
-======================
-Past prediction horizon:  64
-ROC AUC:  0.070462680173
-Ideal threshold found:  3.525
-FA rate: 0.027, MD rate: 0.026
-Model=ARIMA(p=2, q=0), ROC AUC=0.070462680173, Past Prediction Horizon=64, Future Prediction Horizon=12, Threshold=3.525, FA=0.0272647317502, MD=0.0263852242744
-======================
-Best: Model=ARIMA(p=2, q=0), ROC AUC=0.0724650807068, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.325, FA=0.0284728213978, MD=0.0293356341674
-======================
-Past prediction horizon:  80
-ROC AUC:  0.0690299038804
-Ideal threshold found:  3.675
-FA rate: 0.029, MD rate: 0.033
-Model=ARIMA(p=2, q=0), ROC AUC=0.0690299038804, Past Prediction Horizon=80, Future Prediction Horizon=12, Threshold=3.675, FA=0.029203539823, MD=0.0327433628319
-======================
-Best: Model=ARIMA(p=2, q=0), ROC AUC=0.0724650807068, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.325, FA=0.0284728213978, MD=0.0293356341674
-======================
-Past prediction horizon:  96
-ROC AUC:  0.0646927893014
-Ideal threshold found:  3.775
-FA rate: 0.036, MD rate: 0.036
-Model=ARIMA(p=2, q=0), ROC AUC=0.0646927893014, Past Prediction Horizon=96, Future Prediction Horizon=12, Threshold=3.775, FA=0.0355555555556, MD=0.0364444444444
-======================
-Best: Model=ARIMA(p=2, q=0), ROC AUC=0.0724650807068, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.325, FA=0.0284728213978, MD=0.0293356341674
+Best: Model=ARIMA(p=1, q=0), ROC AUC=0.0791990366166, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.175, FA=0.0227670753065, MD=0.0210157618214
 ======================
 Past prediction horizon:  32
-ROC AUC:  0.0732965208722
-Ideal threshold found:  3.475
-FA rate: 0.047, MD rate: 0.047
-Model=ARIMA(p=4, q=0), ROC AUC=0.0732965208722, Past Prediction Horizon=32, Future Prediction Horizon=12, Threshold=3.475, FA=0.0466448445172, MD=0.0466448445172
-======================
-Best: Model=ARIMA(p=4, q=0), ROC AUC=0.0732965208722, Past Prediction Horizon=32, Future Prediction Horizon=12, Threshold=3.475, FA=0.0466448445172, MD=0.0466448445172
-======================
-Past prediction horizon:  48
-ROC AUC:  0.0737728770009
-Ideal threshold found:  3.325
-FA rate: 0.031, MD rate: 0.033
-Model=ARIMA(p=4, q=0), ROC AUC=0.0737728770009, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.325, FA=0.0308483290488, MD=0.0334190231362
-======================
-Best: Model=ARIMA(p=4, q=0), ROC AUC=0.0737728770009, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.325, FA=0.0308483290488, MD=0.0334190231362
-======================
-Past prediction horizon:  64
-ROC AUC:  0.0692970833736
-Ideal threshold found:  3.525
-FA rate: 0.030, MD rate: 0.028
-Model=ARIMA(p=4, q=0), ROC AUC=0.0692970833736, Past Prediction Horizon=64, Future Prediction Horizon=12, Threshold=3.525, FA=0.0297723292469, MD=0.0280210157618
-======================
-Best: Model=ARIMA(p=4, q=0), ROC AUC=0.0737728770009, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.325, FA=0.0308483290488, MD=0.0334190231362
-======================
-Past prediction horizon:  80
-ROC AUC:  0.0700173549306
-Ideal threshold found:  3.675
-FA rate: 0.030, MD rate: 0.034
-Model=ARIMA(p=4, q=0), ROC AUC=0.0700173549306, Past Prediction Horizon=80, Future Prediction Horizon=12, Threshold=3.675, FA=0.030035335689, MD=0.0335689045936
-======================
-Best: Model=ARIMA(p=4, q=0), ROC AUC=0.0737728770009, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.325, FA=0.0308483290488, MD=0.0334190231362
-======================
-Past prediction horizon:  96
-ROC AUC:  0.0658309295225
-Ideal threshold found:  3.875
-FA rate: 0.035, MD rate: 0.037
-Model=ARIMA(p=4, q=0), ROC AUC=0.0658309295225, Past Prediction Horizon=96, Future Prediction Horizon=12, Threshold=3.875, FA=0.0346666666667, MD=0.0373333333333
-======================
-Best: Model=ARIMA(p=4, q=0), ROC AUC=0.0737728770009, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.325, FA=0.0308483290488, MD=0.0334190231362
-======================
-Past prediction horizon:  32
-ROC AUC:  0.00519482529422
-Ideal threshold found:  1.725
-FA rate: 0.134, MD rate: 0.134
-Model=GARCH(p=1, q=1), ROC AUC=0.00519482529422, Past Prediction Horizon=32, Future Prediction Horizon=12, Threshold=1.725, FA=0.133597883598, MD=0.133597883598
-======================
-Best: Model=ARIMA(p=4, q=0), ROC AUC=0.0737728770009, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.325, FA=0.0308483290488, MD=0.0334190231362
-======================
-Past prediction horizon:  48
-ROC AUC:  0.00285081981511
-Ideal threshold found:  1.025
-FA rate: 0.130, MD rate: 0.130
-Model=GARCH(p=1, q=1), ROC AUC=0.00285081981511, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=1.025, FA=0.130081300813, MD=0.130081300813
-======================
-Best: Model=ARIMA(p=4, q=0), ROC AUC=0.0737728770009, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.325, FA=0.0308483290488, MD=0.0334190231362
-======================
-Past prediction horizon:  64
-ROC AUC:  0.0023769710203
-Ideal threshold found:  1.025
-FA rate: 0.118, MD rate: 0.128
-Model=GARCH(p=1, q=1), ROC AUC=0.0023769710203, Past Prediction Horizon=64, Future Prediction Horizon=12, Threshold=1.025, FA=0.118347338936, MD=0.128151260504
-======================
-Best: Model=ARIMA(p=4, q=0), ROC AUC=0.0737728770009, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.325, FA=0.0308483290488, MD=0.0334190231362
-======================
-Past prediction horizon:  80
-ROC AUC:  0.00124154503382
-Ideal threshold found:  1.025
-FA rate: 0.080, MD rate: 0.136
-Model=GARCH(p=1, q=1), ROC AUC=0.00124154503382, Past Prediction Horizon=80, Future Prediction Horizon=12, Threshold=1.025, FA=0.0798816568047, MD=0.136094674556
-======================
-Best: Model=ARIMA(p=4, q=0), ROC AUC=0.0737728770009, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.325, FA=0.0308483290488, MD=0.0334190231362
-======================
-Past prediction horizon:  96
-ROC AUC:  0.00095234949575
-Ideal threshold found:  1.025
-FA rate: 0.035, MD rate: 0.128
-Model=GARCH(p=1, q=1), ROC AUC=0.00095234949575, Past Prediction Horizon=96, Future Prediction Horizon=12, Threshold=1.025, FA=0.0352564102564, MD=0.128205128205
-======================
-Best: Model=ARIMA(p=4, q=0), ROC AUC=0.0737728770009, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.325, FA=0.0308483290488, MD=0.0334190231362
-======================
-Past prediction horizon:  32
-ROC AUC:  0.071903224335
-Ideal threshold found:  3.025
-FA rate: 0.028, MD rate: 0.029
-Model=GGSM, ROC AUC=0.071903224335, Past Prediction Horizon=32, Future Prediction Horizon=12, Threshold=3.025, FA=0.028085106383, MD=0.0289361702128
-======================
-Best: Model=ARIMA(p=4, q=0), ROC AUC=0.0737728770009, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.325, FA=0.0308483290488, MD=0.0334190231362
-======================
-Past prediction horizon:  48
-ROC AUC:  0.0721195776141
-Ideal threshold found:  3.375
-FA rate: 0.013, MD rate: 0.025
-Model=GGSM, ROC AUC=0.0721195776141, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.375, FA=0.0132158590308, MD=0.0246696035242
-======================
-Best: Model=ARIMA(p=4, q=0), ROC AUC=0.0737728770009, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.325, FA=0.0308483290488, MD=0.0334190231362
-======================
-Past prediction horizon:  64
-ROC AUC:  0.0710111455066
-Ideal threshold found:  3.275
-FA rate: 0.028, MD rate: 0.019
-Model=GGSM, ROC AUC=0.0710111455066, Past Prediction Horizon=64, Future Prediction Horizon=12, Threshold=3.275, FA=0.0283185840708, MD=0.0194690265487
-======================
-Best: Model=ARIMA(p=4, q=0), ROC AUC=0.0737728770009, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.325, FA=0.0308483290488, MD=0.0334190231362
-======================
-Past prediction horizon:  80
-ROC AUC:  0.0729748131007
-Ideal threshold found:  3.275
-FA rate: 0.029, MD rate: 0.020
-Model=GGSM, ROC AUC=0.0729748131007, Past Prediction Horizon=80, Future Prediction Horizon=12, Threshold=3.275, FA=0.0287253141831, MD=0.0197486535009
-======================
-Best: Model=ARIMA(p=4, q=0), ROC AUC=0.0737728770009, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.325, FA=0.0308483290488, MD=0.0334190231362
-======================
-Past prediction horizon:  96
-ROC AUC:  0.0754402093334
-Ideal threshold found:  3.275
-FA rate: 0.029, MD rate: 0.020
-Model=GGSM, ROC AUC=0.0754402093334, Past Prediction Horizon=96, Future Prediction Horizon=12, Threshold=3.275, FA=0.0291438979964, MD=0.0200364298725
-======================
-Best: Model=GGSM, ROC AUC=0.0754402093334, Past Prediction Horizon=96, Future Prediction Horizon=12, Threshold=3.275, FA=0.0291438979964, MD=0.0200364298725
-======================
-Past prediction horizon:  32
-ROC AUC:  0.0711867714533
-Ideal threshold found:  3.175
-FA rate: 0.035, MD rate: 0.035
-Model=ARIMA(p=1, q=1), ROC AUC=0.0711867714533, Past Prediction Horizon=32, Future Prediction Horizon=18, Threshold=3.175, FA=0.0346283783784, MD=0.0346283783784
-======================
-Best: Model=GGSM, ROC AUC=0.0754402093334, Past Prediction Horizon=96, Future Prediction Horizon=12, Threshold=3.275, FA=0.0291438979964, MD=0.0200364298725
-======================
-Past prediction horizon:  48
-ROC AUC:  0.0761173515935
-Ideal threshold found:  3.175
-FA rate: 0.023, MD rate: 0.023
-Model=ARIMA(p=1, q=1), ROC AUC=0.0761173515935, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.175, FA=0.0228471001757, MD=0.0228471001757
-======================
-Best: Model=ARIMA(p=1, q=1), ROC AUC=0.0761173515935, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.175, FA=0.0228471001757, MD=0.0228471001757
-======================
-Past prediction horizon:  64
-ROC AUC:  0.0754000349375
-Ideal threshold found:  3.425
-FA rate: 0.024, MD rate: 0.024
-Model=ARIMA(p=1, q=1), ROC AUC=0.0754000349375, Past Prediction Horizon=64, Future Prediction Horizon=18, Threshold=3.425, FA=0.0240213523132, MD=0.0240213523132
-======================
-Best: Model=ARIMA(p=1, q=1), ROC AUC=0.0761173515935, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.175, FA=0.0228471001757, MD=0.0228471001757
-======================
-Past prediction horizon:  80
-ROC AUC:  0.0695646655553
-Ideal threshold found:  3.625
-FA rate: 0.028, MD rate: 0.030
-Model=ARIMA(p=1, q=1), ROC AUC=0.0695646655553, Past Prediction Horizon=80, Future Prediction Horizon=18, Threshold=3.625, FA=0.0277033065237, MD=0.0303842716711
-======================
-Best: Model=ARIMA(p=1, q=1), ROC AUC=0.0761173515935, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.175, FA=0.0228471001757, MD=0.0228471001757
-======================
-Past prediction horizon:  96
-ROC AUC:  0.0652572198648
-Ideal threshold found:  3.725
-FA rate: 0.033, MD rate: 0.034
-Model=ARIMA(p=1, q=1), ROC AUC=0.0652572198648, Past Prediction Horizon=96, Future Prediction Horizon=18, Threshold=3.725, FA=0.0332434860737, MD=0.0341419586703
-======================
-Best: Model=ARIMA(p=1, q=1), ROC AUC=0.0761173515935, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.175, FA=0.0228471001757, MD=0.0228471001757
-======================
-Past prediction horizon:  32
-ROC AUC:  0.0713662833785
-Ideal threshold found:  3.075
-FA rate: 0.031, MD rate: 0.031
-Model=ARIMA(p=1, q=0), ROC AUC=0.0713662833785, Past Prediction Horizon=32, Future Prediction Horizon=18, Threshold=3.075, FA=0.03066439523, MD=0.03066439523
-======================
-Best: Model=ARIMA(p=1, q=1), ROC AUC=0.0761173515935, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.175, FA=0.0228471001757, MD=0.0228471001757
-======================
-Past prediction horizon:  48
-ROC AUC:  0.0754568440117
-Ideal threshold found:  3.175
-FA rate: 0.023, MD rate: 0.024
-Model=ARIMA(p=1, q=0), ROC AUC=0.0754568440117, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.175, FA=0.0228270412643, MD=0.0237050043898
-======================
-Best: Model=ARIMA(p=1, q=1), ROC AUC=0.0761173515935, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.175, FA=0.0228471001757, MD=0.0228471001757
-======================
-Past prediction horizon:  64
-ROC AUC:  0.0786640754651
-Ideal threshold found:  3.325
-FA rate: 0.021, MD rate: 0.021
-Model=ARIMA(p=1, q=0), ROC AUC=0.0786640754651, Past Prediction Horizon=64, Future Prediction Horizon=18, Threshold=3.325, FA=0.0205908683975, MD=0.0214861235452
-======================
-Best: Model=ARIMA(p=1, q=0), ROC AUC=0.0786640754651, Past Prediction Horizon=64, Future Prediction Horizon=18, Threshold=3.325, FA=0.0205908683975, MD=0.0214861235452
-======================
-Past prediction horizon:  80
-ROC AUC:  0.0705750929863
-Ideal threshold found:  3.425
-FA rate: 0.024, MD rate: 0.024
-Model=ARIMA(p=1, q=0), ROC AUC=0.0705750929863, Past Prediction Horizon=80, Future Prediction Horizon=18, Threshold=3.425, FA=0.0243682310469, MD=0.0243682310469
-======================
-Best: Model=ARIMA(p=1, q=0), ROC AUC=0.0786640754651, Past Prediction Horizon=64, Future Prediction Horizon=18, Threshold=3.325, FA=0.0205908683975, MD=0.0214861235452
-======================
-Past prediction horizon:  96
-ROC AUC:  0.0686945214786
-Ideal threshold found:  3.675
-FA rate: 0.028, MD rate: 0.030
-Model=ARIMA(p=1, q=0), ROC AUC=0.0686945214786, Past Prediction Horizon=96, Future Prediction Horizon=18, Threshold=3.675, FA=0.0281306715064, MD=0.029945553539
-======================
-Best: Model=ARIMA(p=1, q=0), ROC AUC=0.0786640754651, Past Prediction Horizon=64, Future Prediction Horizon=18, Threshold=3.325, FA=0.0205908683975, MD=0.0214861235452
-======================
-Past prediction horizon:  32
-ROC AUC:  0.0705378934852
+ROC AUC:  0.0735042324284
 Ideal threshold found:  3.125
-FA rate: 0.032, MD rate: 0.032
-Model=ARIMA(p=2, q=0), ROC AUC=0.0705378934852, Past Prediction Horizon=32, Future Prediction Horizon=18, Threshold=3.125, FA=0.0322580645161, MD=0.0322580645161
+FA rate: 0.027, MD rate: 0.030
+Model=ARIMA(p=2, q=0), ROC AUC=0.0735042324284, Past Prediction Horizon=32, Future Prediction Horizon=12, Threshold=3.125, FA=0.0272340425532, MD=0.0297872340426
 ======================
-Best: Model=ARIMA(p=1, q=0), ROC AUC=0.0786640754651, Past Prediction Horizon=64, Future Prediction Horizon=18, Threshold=3.325, FA=0.0205908683975, MD=0.0214861235452
+Best: Model=ARIMA(p=1, q=0), ROC AUC=0.0791990366166, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.175, FA=0.0227670753065, MD=0.0210157618214
 ======================
 Past prediction horizon:  48
-ROC AUC:  0.0756679690282
+ROC AUC:  0.0773884997786
 Ideal threshold found:  3.175
-FA rate: 0.024, MD rate: 0.025
-Model=ARIMA(p=2, q=0), ROC AUC=0.0756679690282, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.175, FA=0.0236634531113, MD=0.0245398773006
+FA rate: 0.025, MD rate: 0.022
+Model=ARIMA(p=2, q=0), ROC AUC=0.0773884997786, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.175, FA=0.0253054101222, MD=0.021815008726
 ======================
-Best: Model=ARIMA(p=1, q=0), ROC AUC=0.0786640754651, Past Prediction Horizon=64, Future Prediction Horizon=18, Threshold=3.325, FA=0.0205908683975, MD=0.0214861235452
+Best: Model=ARIMA(p=1, q=0), ROC AUC=0.0791990366166, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.175, FA=0.0227670753065, MD=0.0210157618214
 ======================
 Past prediction horizon:  64
-ROC AUC:  0.0757153463185
-Ideal threshold found:  3.375
-FA rate: 0.021, MD rate: 0.022
-Model=ARIMA(p=2, q=0), ROC AUC=0.0757153463185, Past Prediction Horizon=64, Future Prediction Horizon=18, Threshold=3.375, FA=0.0214477211796, MD=0.0223413762288
+ROC AUC:  0.0737068310278
+Ideal threshold found:  3.425
+FA rate: 0.020, MD rate: 0.025
+Model=ARIMA(p=2, q=0), ROC AUC=0.0737068310278, Past Prediction Horizon=64, Future Prediction Horizon=12, Threshold=3.425, FA=0.0204081632653, MD=0.0248447204969
 ======================
-Best: Model=ARIMA(p=1, q=0), ROC AUC=0.0786640754651, Past Prediction Horizon=64, Future Prediction Horizon=18, Threshold=3.325, FA=0.0205908683975, MD=0.0214861235452
+Best: Model=ARIMA(p=1, q=0), ROC AUC=0.0791990366166, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.175, FA=0.0227670753065, MD=0.0210157618214
 ======================
 Past prediction horizon:  80
-ROC AUC:  0.0695295593906
-Ideal threshold found:  3.475
-FA rate: 0.023, MD rate: 0.024
-Model=ARIMA(p=2, q=0), ROC AUC=0.0695295593906, Past Prediction Horizon=80, Future Prediction Horizon=18, Threshold=3.475, FA=0.0234869015357, MD=0.0243902439024
+ROC AUC:  0.0687571199715
+Ideal threshold found:  3.525
+FA rate: 0.024, MD rate: 0.024
+Model=ARIMA(p=2, q=0), ROC AUC=0.0687571199715, Past Prediction Horizon=80, Future Prediction Horizon=12, Threshold=3.525, FA=0.024236983842, MD=0.024236983842
 ======================
-Best: Model=ARIMA(p=1, q=0), ROC AUC=0.0786640754651, Past Prediction Horizon=64, Future Prediction Horizon=18, Threshold=3.325, FA=0.0205908683975, MD=0.0214861235452
+Best: Model=ARIMA(p=1, q=0), ROC AUC=0.0791990366166, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.175, FA=0.0227670753065, MD=0.0210157618214
 ======================
 Past prediction horizon:  96
-ROC AUC:  0.0688898912612
-Ideal threshold found:  3.675
-FA rate: 0.030, MD rate: 0.030
-Model=ARIMA(p=2, q=0), ROC AUC=0.0688898912612, Past Prediction Horizon=96, Future Prediction Horizon=18, Threshold=3.675, FA=0.0298913043478, MD=0.0298913043478
+ROC AUC:  0.0659020346149
+Ideal threshold found:  3.575
+FA rate: 0.030, MD rate: 0.025
+Model=ARIMA(p=2, q=0), ROC AUC=0.0659020346149, Past Prediction Horizon=96, Future Prediction Horizon=12, Threshold=3.575, FA=0.0298642533937, MD=0.0253393665158
 ======================
-Best: Model=ARIMA(p=1, q=0), ROC AUC=0.0786640754651, Past Prediction Horizon=64, Future Prediction Horizon=18, Threshold=3.325, FA=0.0205908683975, MD=0.0214861235452
+Best: Model=ARIMA(p=1, q=0), ROC AUC=0.0791990366166, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.175, FA=0.0227670753065, MD=0.0210157618214
 ======================
 Past prediction horizon:  32
-ROC AUC:  0.0740861360799
-Ideal threshold found:  3.275
-FA rate: 0.041, MD rate: 0.042
-Model=ARIMA(p=4, q=0), ROC AUC=0.0740861360799, Past Prediction Horizon=32, Future Prediction Horizon=18, Threshold=3.275, FA=0.0407993338884, MD=0.0416319733555
+ROC AUC:  0.0752371984517
+Ideal threshold found:  3.225
+FA rate: 0.043, MD rate: 0.037
+Model=ARIMA(p=4, q=0), ROC AUC=0.0752371984517, Past Prediction Horizon=32, Future Prediction Horizon=12, Threshold=3.225, FA=0.043153526971, MD=0.0373443983402
 ======================
-Best: Model=ARIMA(p=1, q=0), ROC AUC=0.0786640754651, Past Prediction Horizon=64, Future Prediction Horizon=18, Threshold=3.325, FA=0.0205908683975, MD=0.0214861235452
+Best: Model=ARIMA(p=1, q=0), ROC AUC=0.0791990366166, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.175, FA=0.0227670753065, MD=0.0210157618214
 ======================
 Past prediction horizon:  48
-ROC AUC:  0.0761266784015
-Ideal threshold found:  3.175
-FA rate: 0.029, MD rate: 0.027
-Model=ARIMA(p=4, q=0), ROC AUC=0.0761266784015, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.175, FA=0.0286956521739, MD=0.0269565217391
+ROC AUC:  0.0803013759745
+Ideal threshold found:  3.225
+FA rate: 0.032, MD rate: 0.029
+Model=ARIMA(p=4, q=0), ROC AUC=0.0803013759745, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.225, FA=0.0318142734308, MD=0.0292347377472
 ======================
-Best: Model=ARIMA(p=1, q=0), ROC AUC=0.0786640754651, Past Prediction Horizon=64, Future Prediction Horizon=18, Threshold=3.325, FA=0.0205908683975, MD=0.0214861235452
+Best: Model=ARIMA(p=4, q=0), ROC AUC=0.0803013759745, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.225, FA=0.0318142734308, MD=0.0292347377472
 ======================
 Past prediction horizon:  64
-ROC AUC:  0.0742798497685
+ROC AUC:  0.0746457000318
+Ideal threshold found:  3.475
+FA rate: 0.030, MD rate: 0.035
+Model=ARIMA(p=4, q=0), ROC AUC=0.0746457000318, Past Prediction Horizon=64, Future Prediction Horizon=12, Threshold=3.475, FA=0.0304083405734, MD=0.0347523892268
+======================
+Best: Model=ARIMA(p=4, q=0), ROC AUC=0.0803013759745, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.225, FA=0.0318142734308, MD=0.0292347377472
+======================
+Past prediction horizon:  80
+ROC AUC:  0.0709625311499
+Ideal threshold found:  3.575
+FA rate: 0.027, MD rate: 0.029
+Model=ARIMA(p=4, q=0), ROC AUC=0.0709625311499, Past Prediction Horizon=80, Future Prediction Horizon=12, Threshold=3.575, FA=0.026714158504, MD=0.0293855743544
+======================
+Best: Model=ARIMA(p=4, q=0), ROC AUC=0.0803013759745, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.225, FA=0.0318142734308, MD=0.0292347377472
+======================
+Past prediction horizon:  96
+ROC AUC:  0.0677622355808
+Ideal threshold found:  3.625
+FA rate: 0.031, MD rate: 0.030
+Model=ARIMA(p=4, q=0), ROC AUC=0.0677622355808, Past Prediction Horizon=96, Future Prediction Horizon=12, Threshold=3.625, FA=0.030603060306, MD=0.029702970297
+======================
+Best: Model=ARIMA(p=4, q=0), ROC AUC=0.0803013759745, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.225, FA=0.0318142734308, MD=0.0292347377472
+======================
+Past prediction horizon:  32
+ROC AUC:  0.00652336469914
+Ideal threshold found:  1.875
+FA rate: 0.125, MD rate: 0.126
+Model=GARCH(p=1, q=1), ROC AUC=0.00652336469914, Past Prediction Horizon=32, Future Prediction Horizon=12, Threshold=1.875, FA=0.125084516565, MD=0.125760649087
+======================
+Best: Model=ARIMA(p=4, q=0), ROC AUC=0.0803013759745, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.225, FA=0.0318142734308, MD=0.0292347377472
+======================
+Past prediction horizon:  48
+ROC AUC:  0.00439342403628
+Ideal threshold found:  1.675
+FA rate: 0.129, MD rate: 0.131
+Model=GARCH(p=1, q=1), ROC AUC=0.00439342403628, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=1.675, FA=0.129316181449, MD=0.13134732566
+======================
+Best: Model=ARIMA(p=4, q=0), ROC AUC=0.0803013759745, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.225, FA=0.0318142734308, MD=0.0292347377472
+======================
+Past prediction horizon:  64
+ROC AUC:  0.00426550559003
+Ideal threshold found:  1.825
+FA rate: 0.132, MD rate: 0.133
+Model=GARCH(p=1, q=1), ROC AUC=0.00426550559003, Past Prediction Horizon=64, Future Prediction Horizon=12, Threshold=1.825, FA=0.132423208191, MD=0.133105802048
+======================
+Best: Model=ARIMA(p=4, q=0), ROC AUC=0.0803013759745, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.225, FA=0.0318142734308, MD=0.0292347377472
+======================
+Past prediction horizon:  80
+ROC AUC:  0.00269535421858
+Ideal threshold found:  1.325
+FA rate: 0.127, MD rate: 0.129
+Model=GARCH(p=1, q=1), ROC AUC=0.00269535421858, Past Prediction Horizon=80, Future Prediction Horizon=12, Threshold=1.325, FA=0.127106741573, MD=0.128511235955
+======================
+Best: Model=ARIMA(p=4, q=0), ROC AUC=0.0803013759745, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.225, FA=0.0318142734308, MD=0.0292347377472
+======================
+Past prediction horizon:  96
+ROC AUC:  0.0011688759707
+Ideal threshold found:  1.025
+FA rate: 0.069, MD rate: 0.118
+Model=GARCH(p=1, q=1), ROC AUC=0.0011688759707, Past Prediction Horizon=96, Future Prediction Horizon=12, Threshold=1.025, FA=0.0685358255452, MD=0.118380062305
+======================
+Best: Model=ARIMA(p=4, q=0), ROC AUC=0.0803013759745, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.225, FA=0.0318142734308, MD=0.0292347377472
+======================
+Past prediction horizon:  32
+ROC AUC:  0.0775256910686
+Ideal threshold found:  3.125
+FA rate: 0.027, MD rate: 0.027
+Model=GGSM, ROC AUC=0.0775256910686, Past Prediction Horizon=32, Future Prediction Horizon=12, Threshold=3.125, FA=0.0273037542662, MD=0.0273037542662
+======================
+Best: Model=ARIMA(p=4, q=0), ROC AUC=0.0803013759745, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.225, FA=0.0318142734308, MD=0.0292347377472
+======================
+Past prediction horizon:  48
+ROC AUC:  0.0754655905755
+Ideal threshold found:  3.275
+FA rate: 0.023, MD rate: 0.024
+Model=GGSM, ROC AUC=0.0754655905755, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.275, FA=0.022687609075, MD=0.0244328097731
+======================
+Best: Model=ARIMA(p=4, q=0), ROC AUC=0.0803013759745, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.225, FA=0.0318142734308, MD=0.0292347377472
+======================
+Past prediction horizon:  64
+ROC AUC:  0.0755923425602
+Ideal threshold found:  3.275
+FA rate: 0.024, MD rate: 0.025
+Model=GGSM, ROC AUC=0.0755923425602, Past Prediction Horizon=64, Future Prediction Horizon=12, Threshold=3.275, FA=0.0238726790451, MD=0.0247568523431
+======================
+Best: Model=ARIMA(p=4, q=0), ROC AUC=0.0803013759745, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.225, FA=0.0318142734308, MD=0.0292347377472
+======================
+Past prediction horizon:  80
+ROC AUC:  0.0776766642933
+Ideal threshold found:  3.275
+FA rate: 0.024, MD rate: 0.025
+Model=GGSM, ROC AUC=0.0776766642933, Past Prediction Horizon=80, Future Prediction Horizon=12, Threshold=3.275, FA=0.0242152466368, MD=0.0251121076233
+======================
+Best: Model=ARIMA(p=4, q=0), ROC AUC=0.0803013759745, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.225, FA=0.0318142734308, MD=0.0292347377472
+======================
+Past prediction horizon:  96
+ROC AUC:  0.0766467021917
+Ideal threshold found:  3.275
+FA rate: 0.025, MD rate: 0.025
+Model=GGSM, ROC AUC=0.0766467021917, Past Prediction Horizon=96, Future Prediction Horizon=12, Threshold=3.275, FA=0.024567788899, MD=0.0254777070064
+======================
+Best: Model=ARIMA(p=4, q=0), ROC AUC=0.0803013759745, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.225, FA=0.0318142734308, MD=0.0292347377472
+======================
+Past prediction horizon:  32
+ROC AUC:  0.0771250753456
+Ideal threshold found:  3.075
+FA rate: 0.032, MD rate: 0.030
+Model=ARIMA(p=1, q=1), ROC AUC=0.0771250753456, Past Prediction Horizon=32, Future Prediction Horizon=18, Threshold=3.075, FA=0.0315161839864, MD=0.0298126064736
+======================
+Best: Model=ARIMA(p=4, q=0), ROC AUC=0.0803013759745, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.225, FA=0.0318142734308, MD=0.0292347377472
+======================
+Past prediction horizon:  48
+ROC AUC:  0.0813488429671
+Ideal threshold found:  3.125
+FA rate: 0.019, MD rate: 0.019
+Model=ARIMA(p=1, q=1), ROC AUC=0.0813488429671, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.125, FA=0.0194690265487, MD=0.0194690265487
+======================
+Best: Model=ARIMA(p=1, q=1), ROC AUC=0.0813488429671, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.125, FA=0.0194690265487, MD=0.0194690265487
+======================
+Past prediction horizon:  64
+ROC AUC:  0.0755275569919
+Ideal threshold found:  3.425
+FA rate: 0.027, MD rate: 0.024
+Model=ARIMA(p=1, q=1), ROC AUC=0.0755275569919, Past Prediction Horizon=64, Future Prediction Horizon=18, Threshold=3.425, FA=0.0266193433895, MD=0.0239574090506
+======================
+Best: Model=ARIMA(p=1, q=1), ROC AUC=0.0813488429671, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.125, FA=0.0194690265487, MD=0.0194690265487
+======================
+Past prediction horizon:  80
+ROC AUC:  0.0689075501658
+Ideal threshold found:  3.575
+FA rate: 0.022, MD rate: 0.024
+Model=ARIMA(p=1, q=1), ROC AUC=0.0689075501658, Past Prediction Horizon=80, Future Prediction Horizon=18, Threshold=3.575, FA=0.0217391304348, MD=0.0235507246377
+======================
+Best: Model=ARIMA(p=1, q=1), ROC AUC=0.0813488429671, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.125, FA=0.0194690265487, MD=0.0194690265487
+======================
+Past prediction horizon:  96
+ROC AUC:  0.0706588927128
+Ideal threshold found:  3.675
+FA rate: 0.033, MD rate: 0.034
+Model=ARIMA(p=1, q=1), ROC AUC=0.0706588927128, Past Prediction Horizon=96, Future Prediction Horizon=18, Threshold=3.675, FA=0.0332434860737, MD=0.0341419586703
+======================
+Best: Model=ARIMA(p=1, q=1), ROC AUC=0.0813488429671, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.125, FA=0.0194690265487, MD=0.0194690265487
+======================
+Past prediction horizon:  32
+ROC AUC:  0.0782902559609
+Ideal threshold found:  2.975
+FA rate: 0.025, MD rate: 0.024
+Model=ARIMA(p=1, q=0), ROC AUC=0.0782902559609, Past Prediction Horizon=32, Future Prediction Horizon=18, Threshold=2.975, FA=0.0250215703192, MD=0.0241587575496
+======================
+Best: Model=ARIMA(p=1, q=1), ROC AUC=0.0813488429671, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.125, FA=0.0194690265487, MD=0.0194690265487
+======================
+Past prediction horizon:  48
+ROC AUC:  0.0822153882157
+Ideal threshold found:  3.125
+FA rate: 0.021, MD rate: 0.020
+Model=ARIMA(p=1, q=0), ROC AUC=0.0822153882157, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.125, FA=0.0211827007944, MD=0.0203000882613
+======================
+Best: Model=ARIMA(p=1, q=0), ROC AUC=0.0822153882157, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.125, FA=0.0211827007944, MD=0.0203000882613
+======================
+Past prediction horizon:  64
+ROC AUC:  0.0809070661193
+Ideal threshold found:  3.375
+FA rate: 0.021, MD rate: 0.021
+Model=ARIMA(p=1, q=0), ROC AUC=0.0809070661193, Past Prediction Horizon=64, Future Prediction Horizon=18, Threshold=3.375, FA=0.0214861235452, MD=0.0205908683975
+======================
+Best: Model=ARIMA(p=1, q=0), ROC AUC=0.0822153882157, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.125, FA=0.0211827007944, MD=0.0203000882613
+======================
+Past prediction horizon:  80
+ROC AUC:  0.0737805558656
+Ideal threshold found:  3.525
+FA rate: 0.020, MD rate: 0.017
+Model=ARIMA(p=1, q=0), ROC AUC=0.0737805558656, Past Prediction Horizon=80, Future Prediction Horizon=18, Threshold=3.525, FA=0.0200913242009, MD=0.0173515981735
+======================
+Best: Model=ARIMA(p=1, q=0), ROC AUC=0.0822153882157, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.125, FA=0.0211827007944, MD=0.0203000882613
+======================
+Past prediction horizon:  96
+ROC AUC:  0.0711340914238
+Ideal threshold found:  3.625
+FA rate: 0.032, MD rate: 0.030
+Model=ARIMA(p=1, q=0), ROC AUC=0.0711340914238, Past Prediction Horizon=96, Future Prediction Horizon=18, Threshold=3.625, FA=0.0316455696203, MD=0.0298372513562
+======================
+Best: Model=ARIMA(p=1, q=0), ROC AUC=0.0822153882157, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.125, FA=0.0211827007944, MD=0.0203000882613
+======================
+Past prediction horizon:  32
+ROC AUC:  0.0758948422436
+Ideal threshold found:  2.975
+FA rate: 0.027, MD rate: 0.026
+Model=ARIMA(p=2, q=0), ROC AUC=0.0758948422436, Past Prediction Horizon=32, Future Prediction Horizon=18, Threshold=2.975, FA=0.0274914089347, MD=0.0257731958763
+======================
+Best: Model=ARIMA(p=1, q=0), ROC AUC=0.0822153882157, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.125, FA=0.0211827007944, MD=0.0203000882613
+======================
+Past prediction horizon:  48
+ROC AUC:  0.0832201398004
+Ideal threshold found:  3.075
+FA rate: 0.018, MD rate: 0.020
+Model=ARIMA(p=2, q=0), ROC AUC=0.0832201398004, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.075, FA=0.0177304964539, MD=0.0195035460993
+======================
+Best: Model=ARIMA(p=2, q=0), ROC AUC=0.0832201398004, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.075, FA=0.0177304964539, MD=0.0195035460993
+======================
+Past prediction horizon:  64
+ROC AUC:  0.0785046728972
+Ideal threshold found:  3.375
+FA rate: 0.021, MD rate: 0.021
+Model=ARIMA(p=2, q=0), ROC AUC=0.0785046728972, Past Prediction Horizon=64, Future Prediction Horizon=18, Threshold=3.375, FA=0.0205908683975, MD=0.0214861235452
+======================
+Best: Model=ARIMA(p=2, q=0), ROC AUC=0.0832201398004, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.075, FA=0.0177304964539, MD=0.0195035460993
+======================
+Past prediction horizon:  80
+ROC AUC:  0.0706961642464
+Ideal threshold found:  3.525
+FA rate: 0.018, MD rate: 0.016
+Model=ARIMA(p=2, q=0), ROC AUC=0.0706961642464, Past Prediction Horizon=80, Future Prediction Horizon=18, Threshold=3.525, FA=0.018315018315, MD=0.0164835164835
+======================
+Best: Model=ARIMA(p=2, q=0), ROC AUC=0.0832201398004, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.075, FA=0.0177304964539, MD=0.0195035460993
+======================
+Past prediction horizon:  96
+ROC AUC:  0.0709628528258
+Ideal threshold found:  3.675
+FA rate: 0.032, MD rate: 0.034
+Model=ARIMA(p=2, q=0), ROC AUC=0.0709628528258, Past Prediction Horizon=96, Future Prediction Horizon=18, Threshold=3.675, FA=0.031503150315, MD=0.034203420342
+======================
+Best: Model=ARIMA(p=2, q=0), ROC AUC=0.0832201398004, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.075, FA=0.0177304964539, MD=0.0195035460993
+======================
+Past prediction horizon:  32
+ROC AUC:  0.0778838837817
+Ideal threshold found:  3.225
+FA rate: 0.043, MD rate: 0.042
+Model=ARIMA(p=4, q=0), ROC AUC=0.0778838837817, Past Prediction Horizon=32, Future Prediction Horizon=18, Threshold=3.225, FA=0.043153526971, MD=0.0423236514523
+======================
+Best: Model=ARIMA(p=2, q=0), ROC AUC=0.0832201398004, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.075, FA=0.0177304964539, MD=0.0195035460993
+======================
+Past prediction horizon:  48
+ROC AUC:  0.0821640907719
+Ideal threshold found:  3.075
+FA rate: 0.023, MD rate: 0.025
+Model=ARIMA(p=4, q=0), ROC AUC=0.0821640907719, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.075, FA=0.0228070175439, MD=0.0245614035088
+======================
+Best: Model=ARIMA(p=2, q=0), ROC AUC=0.0832201398004, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.075, FA=0.0177304964539, MD=0.0195035460993
+======================
+Past prediction horizon:  64
+ROC AUC:  0.0787177919469
 Ideal threshold found:  3.425
 FA rate: 0.024, MD rate: 0.027
-Model=ARIMA(p=4, q=0), ROC AUC=0.0742798497685, Past Prediction Horizon=64, Future Prediction Horizon=18, Threshold=3.425, FA=0.0239574090506, MD=0.0266193433895
+Model=ARIMA(p=4, q=0), ROC AUC=0.0787177919469, Past Prediction Horizon=64, Future Prediction Horizon=18, Threshold=3.425, FA=0.0239574090506, MD=0.0266193433895
 ======================
-Best: Model=ARIMA(p=1, q=0), ROC AUC=0.0786640754651, Past Prediction Horizon=64, Future Prediction Horizon=18, Threshold=3.325, FA=0.0205908683975, MD=0.0214861235452
+Best: Model=ARIMA(p=2, q=0), ROC AUC=0.0832201398004, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.075, FA=0.0177304964539, MD=0.0195035460993
 ======================
 Past prediction horizon:  80
-ROC AUC:  0.0712736156469
+ROC AUC:  0.0701421169557
 Ideal threshold found:  3.575
-FA rate: 0.024, MD rate: 0.025
-Model=ARIMA(p=4, q=0), ROC AUC=0.0712736156469, Past Prediction Horizon=80, Future Prediction Horizon=18, Threshold=3.575, FA=0.02434625789, MD=0.0252479711452
+FA rate: 0.021, MD rate: 0.023
+Model=ARIMA(p=4, q=0), ROC AUC=0.0701421169557, Past Prediction Horizon=80, Future Prediction Horizon=18, Threshold=3.575, FA=0.0208711433757, MD=0.0226860254083
 ======================
-Best: Model=ARIMA(p=1, q=0), ROC AUC=0.0786640754651, Past Prediction Horizon=64, Future Prediction Horizon=18, Threshold=3.325, FA=0.0205908683975, MD=0.0214861235452
+Best: Model=ARIMA(p=2, q=0), ROC AUC=0.0832201398004, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.075, FA=0.0177304964539, MD=0.0195035460993
 ======================
 Past prediction horizon:  96
-ROC AUC:  0.0650706672458
+ROC AUC:  0.0704352151945
 Ideal threshold found:  3.725
-FA rate: 0.032, MD rate: 0.032
-Model=ARIMA(p=4, q=0), ROC AUC=0.0650706672458, Past Prediction Horizon=96, Future Prediction Horizon=18, Threshold=3.725, FA=0.0324324324324, MD=0.0324324324324
+FA rate: 0.032, MD rate: 0.034
+Model=ARIMA(p=4, q=0), ROC AUC=0.0704352151945, Past Prediction Horizon=96, Future Prediction Horizon=18, Threshold=3.725, FA=0.0323741007194, MD=0.0341726618705
 ======================
-Best: Model=ARIMA(p=1, q=0), ROC AUC=0.0786640754651, Past Prediction Horizon=64, Future Prediction Horizon=18, Threshold=3.325, FA=0.0205908683975, MD=0.0214861235452
-======================
-Past prediction horizon:  32
-ROC AUC:  0.00520008168616
-Ideal threshold found:  1.225
-FA rate: 0.135, MD rate: 0.136
-Model=GARCH(p=1, q=1), ROC AUC=0.00520008168616, Past Prediction Horizon=32, Future Prediction Horizon=18, Threshold=1.225, FA=0.135492399207, MD=0.13615333774
-======================
-Best: Model=ARIMA(p=1, q=0), ROC AUC=0.0786640754651, Past Prediction Horizon=64, Future Prediction Horizon=18, Threshold=3.325, FA=0.0205908683975, MD=0.0214861235452
-======================
-Past prediction horizon:  48
-ROC AUC:  0.00366204396149
-Ideal threshold found:  1.025
-FA rate: 0.115, MD rate: 0.134
-Model=GARCH(p=1, q=1), ROC AUC=0.00366204396149, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=1.025, FA=0.115411195577, MD=0.13407049067
-======================
-Best: Model=ARIMA(p=1, q=0), ROC AUC=0.0786640754651, Past Prediction Horizon=64, Future Prediction Horizon=18, Threshold=3.325, FA=0.0205908683975, MD=0.0214861235452
-======================
-Past prediction horizon:  64
-ROC AUC:  0.00261594899118
-Ideal threshold found:  1.025
-FA rate: 0.110, MD rate: 0.139
-Model=GARCH(p=1, q=1), ROC AUC=0.00261594899118, Past Prediction Horizon=64, Future Prediction Horizon=18, Threshold=1.025, FA=0.110175438596, MD=0.138947368421
-======================
-Best: Model=ARIMA(p=1, q=0), ROC AUC=0.0786640754651, Past Prediction Horizon=64, Future Prediction Horizon=18, Threshold=3.325, FA=0.0205908683975, MD=0.0214861235452
-======================
-Past prediction horizon:  80
-ROC AUC:  0.00117470627842
-Ideal threshold found:  1.025
-FA rate: 0.068, MD rate: 0.145
-Model=GARCH(p=1, q=1), ROC AUC=0.00117470627842, Past Prediction Horizon=80, Future Prediction Horizon=18, Threshold=1.025, FA=0.0679611650485, MD=0.144884241972
-======================
-Best: Model=ARIMA(p=1, q=0), ROC AUC=0.0786640754651, Past Prediction Horizon=64, Future Prediction Horizon=18, Threshold=3.325, FA=0.0205908683975, MD=0.0214861235452
-======================
-Past prediction horizon:  96
-ROC AUC:  0.000840414907875
-Ideal threshold found:  1.025
-FA rate: 0.029, MD rate: 0.144
-Model=GARCH(p=1, q=1), ROC AUC=0.000840414907875, Past Prediction Horizon=96, Future Prediction Horizon=18, Threshold=1.025, FA=0.0294585987261, MD=0.144108280255
-======================
-Best: Model=ARIMA(p=1, q=0), ROC AUC=0.0786640754651, Past Prediction Horizon=64, Future Prediction Horizon=18, Threshold=3.325, FA=0.0205908683975, MD=0.0214861235452
+Best: Model=ARIMA(p=2, q=0), ROC AUC=0.0832201398004, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.075, FA=0.0177304964539, MD=0.0195035460993
 ======================
 Past prediction horizon:  32
-ROC AUC:  0.0736571190477
-Ideal threshold found:  2.875
-FA rate: 0.020, MD rate: 0.022
-Model=GGSM, ROC AUC=0.0736571190477, Past Prediction Horizon=32, Future Prediction Horizon=18, Threshold=2.875, FA=0.02, MD=0.0217391304348
+ROC AUC:  0.006938794668
+Ideal threshold found:  1.475
+FA rate: 0.132, MD rate: 0.130
+Model=GARCH(p=1, q=1), ROC AUC=0.006938794668, Past Prediction Horizon=32, Future Prediction Horizon=18, Threshold=1.475, FA=0.132441471572, MD=0.130434782609
 ======================
-Best: Model=ARIMA(p=1, q=0), ROC AUC=0.0786640754651, Past Prediction Horizon=64, Future Prediction Horizon=18, Threshold=3.325, FA=0.0205908683975, MD=0.0214861235452
+Best: Model=ARIMA(p=2, q=0), ROC AUC=0.0832201398004, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.075, FA=0.0177304964539, MD=0.0195035460993
 ======================
 Past prediction horizon:  48
-ROC AUC:  0.0739844801916
-Ideal threshold found:  2.875
-FA rate: 0.021, MD rate: 0.010
-Model=GGSM, ROC AUC=0.0739844801916, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=2.875, FA=0.0205357142857, MD=0.00982142857143
+ROC AUC:  0.00543286563631
+Ideal threshold found:  1.325
+FA rate: 0.132, MD rate: 0.130
+Model=GARCH(p=1, q=1), ROC AUC=0.00543286563631, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=1.325, FA=0.13188307274, MD=0.12984364378
 ======================
-Best: Model=ARIMA(p=1, q=0), ROC AUC=0.0786640754651, Past Prediction Horizon=64, Future Prediction Horizon=18, Threshold=3.325, FA=0.0205908683975, MD=0.0214861235452
+Best: Model=ARIMA(p=2, q=0), ROC AUC=0.0832201398004, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.075, FA=0.0177304964539, MD=0.0195035460993
 ======================
 Past prediction horizon:  64
-ROC AUC:  0.0728421696218
-Ideal threshold found:  2.875
-FA rate: 0.020, MD rate: 0.009
-Model=GGSM, ROC AUC=0.0728421696218, Past Prediction Horizon=64, Future Prediction Horizon=18, Threshold=2.875, FA=0.0199637023593, MD=0.00907441016334
+ROC AUC:  0.0054480740676
+Ideal threshold found:  1.575
+FA rate: 0.133, MD rate: 0.134
+Model=GARCH(p=1, q=1), ROC AUC=0.0054480740676, Past Prediction Horizon=64, Future Prediction Horizon=18, Threshold=1.575, FA=0.132876712329, MD=0.134246575342
 ======================
-Best: Model=ARIMA(p=1, q=0), ROC AUC=0.0786640754651, Past Prediction Horizon=64, Future Prediction Horizon=18, Threshold=3.325, FA=0.0205908683975, MD=0.0214861235452
+Best: Model=ARIMA(p=2, q=0), ROC AUC=0.0832201398004, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.075, FA=0.0177304964539, MD=0.0195035460993
 ======================
 Past prediction horizon:  80
-ROC AUC:  0.0748476932549
-Ideal threshold found:  2.875
-FA rate: 0.020, MD rate: 0.009
-Model=GGSM, ROC AUC=0.0748476932549, Past Prediction Horizon=80, Future Prediction Horizon=18, Threshold=2.875, FA=0.0202578268877, MD=0.00920810313076
+ROC AUC:  0.00419878730705
+Ideal threshold found:  1.025
+FA rate: 0.119, MD rate: 0.129
+Model=GARCH(p=1, q=1), ROC AUC=0.00419878730705, Past Prediction Horizon=80, Future Prediction Horizon=18, Threshold=1.025, FA=0.119115549215, MD=0.12910128388
 ======================
-Best: Model=ARIMA(p=1, q=0), ROC AUC=0.0786640754651, Past Prediction Horizon=64, Future Prediction Horizon=18, Threshold=3.325, FA=0.0205908683975, MD=0.0214861235452
+Best: Model=ARIMA(p=2, q=0), ROC AUC=0.0832201398004, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.075, FA=0.0177304964539, MD=0.0195035460993
 ======================
 Past prediction horizon:  96
-ROC AUC:  0.0774012384866
-Ideal threshold found:  2.875
-FA rate: 0.021, MD rate: 0.010
-Model=GGSM, ROC AUC=0.0774012384866, Past Prediction Horizon=96, Future Prediction Horizon=18, Threshold=2.875, FA=0.0205415499533, MD=0.0102707749767
+ROC AUC:  0.00131654174138
+Ideal threshold found:  1.025
+FA rate: 0.060, MD rate: 0.125
+Model=GARCH(p=1, q=1), ROC AUC=0.00131654174138, Past Prediction Horizon=96, Future Prediction Horizon=18, Threshold=1.025, FA=0.0597014925373, MD=0.124901806756
 ======================
-Best: Model=ARIMA(p=1, q=0), ROC AUC=0.0786640754651, Past Prediction Horizon=64, Future Prediction Horizon=18, Threshold=3.325, FA=0.0205908683975, MD=0.0214861235452
+Best: Model=ARIMA(p=2, q=0), ROC AUC=0.0832201398004, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.075, FA=0.0177304964539, MD=0.0195035460993
+======================
+Past prediction horizon:  32
+ROC AUC:  0.0787785613354
+Ideal threshold found:  2.875
+FA rate: 0.019, MD rate: 0.017
+Model=GGSM, ROC AUC=0.0787785613354, Past Prediction Horizon=32, Future Prediction Horizon=18, Threshold=2.875, FA=0.0192475940507, MD=0.0166229221347
+======================
+Best: Model=ARIMA(p=2, q=0), ROC AUC=0.0832201398004, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.075, FA=0.0177304964539, MD=0.0195035460993
+======================
+Past prediction horizon:  48
+ROC AUC:  0.0768829977378
+Ideal threshold found:  3.075
+FA rate: 0.019, MD rate: 0.025
+Model=GGSM, ROC AUC=0.0768829977378, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.075, FA=0.0185022026432, MD=0.0246696035242
+======================
+Best: Model=ARIMA(p=2, q=0), ROC AUC=0.0832201398004, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.075, FA=0.0177304964539, MD=0.0195035460993
+======================
+Past prediction horizon:  64
+ROC AUC:  0.0770608786794
+Ideal threshold found:  3.075
+FA rate: 0.019, MD rate: 0.025
+Model=GGSM, ROC AUC=0.0770608786794, Past Prediction Horizon=64, Future Prediction Horizon=18, Threshold=3.075, FA=0.0187667560322, MD=0.0250223413762
+======================
+Best: Model=ARIMA(p=2, q=0), ROC AUC=0.0832201398004, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.075, FA=0.0177304964539, MD=0.0195035460993
+======================
+Past prediction horizon:  80
+ROC AUC:  0.0791855549835
+Ideal threshold found:  3.075
+FA rate: 0.019, MD rate: 0.025
+Model=GGSM, ROC AUC=0.0791855549835, Past Prediction Horizon=80, Future Prediction Horizon=18, Threshold=3.075, FA=0.0190389845875, MD=0.0253853127833
+======================
+Best: Model=ARIMA(p=2, q=0), ROC AUC=0.0832201398004, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.075, FA=0.0177304964539, MD=0.0195035460993
+======================
+Past prediction horizon:  96
+ROC AUC:  0.0779070652396
+Ideal threshold found:  3.075
+FA rate: 0.019, MD rate: 0.026
+Model=GGSM, ROC AUC=0.0779070652396, Past Prediction Horizon=96, Future Prediction Horizon=18, Threshold=3.075, FA=0.0193192272309, MD=0.0257589696412
+======================
+Best: Model=ARIMA(p=2, q=0), ROC AUC=0.0832201398004, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.075, FA=0.0177304964539, MD=0.0195035460993
 ======================
 Sorted results
-Model=ARIMA(p=1, q=0), ROC AUC=0.0786640754651, Past Prediction Horizon=64, Future Prediction Horizon=18, Threshold=3.325, FA=0.0205908683975, MD=0.0214861235452
-Model=GGSM, ROC AUC=0.0774012384866, Past Prediction Horizon=96, Future Prediction Horizon=18, Threshold=2.875, FA=0.0205415499533, MD=0.0102707749767
-Model=ARIMA(p=4, q=0), ROC AUC=0.0761266784015, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.175, FA=0.0286956521739, MD=0.0269565217391
-Model=ARIMA(p=1, q=1), ROC AUC=0.0761173515935, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.175, FA=0.0228471001757, MD=0.0228471001757
-Model=ARIMA(p=2, q=0), ROC AUC=0.0757153463185, Past Prediction Horizon=64, Future Prediction Horizon=18, Threshold=3.375, FA=0.0214477211796, MD=0.0223413762288
-Model=ARIMA(p=2, q=0), ROC AUC=0.0756679690282, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.175, FA=0.0236634531113, MD=0.0245398773006
-Model=ARIMA(p=1, q=0), ROC AUC=0.0754568440117, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.175, FA=0.0228270412643, MD=0.0237050043898
-Model=GGSM, ROC AUC=0.0754402093334, Past Prediction Horizon=96, Future Prediction Horizon=12, Threshold=3.275, FA=0.0291438979964, MD=0.0200364298725
-Model=ARIMA(p=1, q=1), ROC AUC=0.0754000349375, Past Prediction Horizon=64, Future Prediction Horizon=18, Threshold=3.425, FA=0.0240213523132, MD=0.0240213523132
-Model=GGSM, ROC AUC=0.0748476932549, Past Prediction Horizon=80, Future Prediction Horizon=18, Threshold=2.875, FA=0.0202578268877, MD=0.00920810313076
-Model=ARIMA(p=4, q=0), ROC AUC=0.0742798497685, Past Prediction Horizon=64, Future Prediction Horizon=18, Threshold=3.425, FA=0.0239574090506, MD=0.0266193433895
-Model=ARIMA(p=4, q=0), ROC AUC=0.0740861360799, Past Prediction Horizon=32, Future Prediction Horizon=18, Threshold=3.275, FA=0.0407993338884, MD=0.0416319733555
-Model=GGSM, ROC AUC=0.0739844801916, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=2.875, FA=0.0205357142857, MD=0.00982142857143
-Model=ARIMA(p=4, q=0), ROC AUC=0.0737728770009, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.325, FA=0.0308483290488, MD=0.0334190231362
-Model=GGSM, ROC AUC=0.0736571190477, Past Prediction Horizon=32, Future Prediction Horizon=18, Threshold=2.875, FA=0.02, MD=0.0217391304348
-Model=ARIMA(p=4, q=0), ROC AUC=0.0732965208722, Past Prediction Horizon=32, Future Prediction Horizon=12, Threshold=3.475, FA=0.0466448445172, MD=0.0466448445172
-Model=GGSM, ROC AUC=0.0729748131007, Past Prediction Horizon=80, Future Prediction Horizon=12, Threshold=3.275, FA=0.0287253141831, MD=0.0197486535009
-Model=GGSM, ROC AUC=0.0728421696218, Past Prediction Horizon=64, Future Prediction Horizon=18, Threshold=2.875, FA=0.0199637023593, MD=0.00907441016334
-Model=ARIMA(p=2, q=0), ROC AUC=0.0724650807068, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.325, FA=0.0284728213978, MD=0.0293356341674
-Model=ARIMA(p=1, q=0), ROC AUC=0.0723430093559, Past Prediction Horizon=64, Future Prediction Horizon=12, Threshold=3.525, FA=0.0246913580247, MD=0.026455026455
-Model=GGSM, ROC AUC=0.072335600907, Past Prediction Horizon=96, Future Prediction Horizon=6, Threshold=3.575, FA=0.0172257479601, MD=0.0308250226655
-Model=GGSM, ROC AUC=0.0721195776141, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.375, FA=0.0132158590308, MD=0.0246696035242
-Model=ARIMA(p=1, q=0), ROC AUC=0.0719837244563, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.325, FA=0.0276577355229, MD=0.028522039758
-Model=GGSM, ROC AUC=0.071903224335, Past Prediction Horizon=32, Future Prediction Horizon=12, Threshold=3.025, FA=0.028085106383, MD=0.0289361702128
-Model=ARIMA(p=1, q=0), ROC AUC=0.0716959200563, Past Prediction Horizon=32, Future Prediction Horizon=12, Threshold=3.225, FA=0.0296108291032, MD=0.0329949238579
-Model=ARIMA(p=1, q=1), ROC AUC=0.0714591803191, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.325, FA=0.0310344827586, MD=0.0275862068966
-Model=ARIMA(p=1, q=0), ROC AUC=0.0713662833785, Past Prediction Horizon=32, Future Prediction Horizon=18, Threshold=3.075, FA=0.03066439523, MD=0.03066439523
-Model=ARIMA(p=4, q=0), ROC AUC=0.0712736156469, Past Prediction Horizon=80, Future Prediction Horizon=18, Threshold=3.575, FA=0.02434625789, MD=0.0252479711452
-Model=ARIMA(p=1, q=1), ROC AUC=0.0711867714533, Past Prediction Horizon=32, Future Prediction Horizon=18, Threshold=3.175, FA=0.0346283783784, MD=0.0346283783784
-Model=ARIMA(p=1, q=0), ROC AUC=0.0711160555358, Past Prediction Horizon=80, Future Prediction Horizon=12, Threshold=3.625, FA=0.0310559006211, MD=0.0283939662822
-Model=GGSM, ROC AUC=0.0710111455066, Past Prediction Horizon=64, Future Prediction Horizon=12, Threshold=3.275, FA=0.0283185840708, MD=0.0194690265487
-Model=ARIMA(p=2, q=0), ROC AUC=0.0707721862117, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.325, FA=0.0263829787234, MD=0.0255319148936
-Model=ARIMA(p=1, q=1), ROC AUC=0.0706801698185, Past Prediction Horizon=32, Future Prediction Horizon=12, Threshold=3.275, FA=0.0391340549542, MD=0.0383014154871
-Model=ARIMA(p=1, q=0), ROC AUC=0.0705750929863, Past Prediction Horizon=80, Future Prediction Horizon=18, Threshold=3.425, FA=0.0243682310469, MD=0.0243682310469
-Model=ARIMA(p=2, q=0), ROC AUC=0.0705378934852, Past Prediction Horizon=32, Future Prediction Horizon=18, Threshold=3.125, FA=0.0322580645161, MD=0.0322580645161
-Model=ARIMA(p=2, q=0), ROC AUC=0.070462680173, Past Prediction Horizon=64, Future Prediction Horizon=12, Threshold=3.525, FA=0.0272647317502, MD=0.0263852242744
-Model=ARIMA(p=4, q=0), ROC AUC=0.0703398721672, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.375, FA=0.0326906957251, MD=0.0335289186924
-Model=ARIMA(p=2, q=0), ROC AUC=0.0703034380743, Past Prediction Horizon=32, Future Prediction Horizon=12, Threshold=3.225, FA=0.03367003367, MD=0.03367003367
-Model=ARIMA(p=1, q=1), ROC AUC=0.0700928931278, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.425, FA=0.0302775441548, MD=0.0328006728343
-Model=ARIMA(p=1, q=1), ROC AUC=0.0700325451555, Past Prediction Horizon=64, Future Prediction Horizon=12, Threshold=3.575, FA=0.0296943231441, MD=0.0305676855895
-Model=ARIMA(p=4, q=0), ROC AUC=0.0700173549306, Past Prediction Horizon=80, Future Prediction Horizon=12, Threshold=3.675, FA=0.030035335689, MD=0.0335689045936
-Model=GGSM, ROC AUC=0.0699987503916, Past Prediction Horizon=80, Future Prediction Horizon=6, Threshold=3.575, FA=0.0169794459339, MD=0.0303842716711
-Model=ARIMA(p=1, q=0), ROC AUC=0.0699785102556, Past Prediction Horizon=80, Future Prediction Horizon=6, Threshold=3.625, FA=0.0231522707035, MD=0.0276046304541
-Model=ARIMA(p=1, q=0), ROC AUC=0.0698644475889, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.325, FA=0.0247651579846, MD=0.0239111870196
-Model=ARIMA(p=1, q=0), ROC AUC=0.0698512944549, Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=3.425, FA=0.0276100086281, MD=0.0250215703192
-Model=ARIMA(p=1, q=1), ROC AUC=0.0695646655553, Past Prediction Horizon=80, Future Prediction Horizon=18, Threshold=3.625, FA=0.0277033065237, MD=0.0303842716711
-Model=ARIMA(p=2, q=0), ROC AUC=0.0695295593906, Past Prediction Horizon=80, Future Prediction Horizon=18, Threshold=3.475, FA=0.0234869015357, MD=0.0243902439024
-Model=ARIMA(p=4, q=0), ROC AUC=0.0693598395493, Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=3.425, FA=0.0291595197256, MD=0.0291595197256
-Model=ARIMA(p=4, q=0), ROC AUC=0.0692970833736, Past Prediction Horizon=64, Future Prediction Horizon=12, Threshold=3.525, FA=0.0297723292469, MD=0.0280210157618
-Model=ARIMA(p=1, q=1), ROC AUC=0.0692319330723, Past Prediction Horizon=80, Future Prediction Horizon=12, Threshold=3.675, FA=0.0309460654288, MD=0.0318302387268
-Model=GGSM, ROC AUC=0.0691985096267, Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=3.575, FA=0.0165073848827, MD=0.0295395308427
-Model=GGSM, ROC AUC=0.0691585629607, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.375, FA=0.0181503889369, MD=0.019014693172
-Model=ARIMA(p=2, q=0), ROC AUC=0.0690299038804, Past Prediction Horizon=80, Future Prediction Horizon=12, Threshold=3.675, FA=0.029203539823, MD=0.0327433628319
-Model=ARIMA(p=2, q=0), ROC AUC=0.0688898912612, Past Prediction Horizon=96, Future Prediction Horizon=18, Threshold=3.675, FA=0.0298913043478, MD=0.0298913043478
-Model=ARIMA(p=4, q=0), ROC AUC=0.0688895029375, Past Prediction Horizon=80, Future Prediction Horizon=6, Threshold=3.625, FA=0.0282935455349, MD=0.0291777188329
-Model=ARIMA(p=2, q=0), ROC AUC=0.0688219348974, Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=3.425, FA=0.0267011197244, MD=0.0275624461671
-Model=ARIMA(p=1, q=0), ROC AUC=0.0686945214786, Past Prediction Horizon=96, Future Prediction Horizon=18, Threshold=3.675, FA=0.0281306715064, MD=0.029945553539
-Model=GGSM, ROC AUC=0.0681091358851, Past Prediction Horizon=64, Future Prediction Horizon=6, Threshold=3.575, FA=0.0167400881057, MD=0.0299559471366
-Model=ARIMA(p=4, q=0), ROC AUC=0.067673015873, Past Prediction Horizon=96, Future Prediction Horizon=6, Threshold=3.875, FA=0.0295434198747, MD=0.0304386750224
-Model=ARIMA(p=2, q=0), ROC AUC=0.0676420945549, Past Prediction Horizon=80, Future Prediction Horizon=6, Threshold=3.625, FA=0.0239786856128, MD=0.0293072824156
-Model=ARIMA(p=1, q=1), ROC AUC=0.067508333656, Past Prediction Horizon=80, Future Prediction Horizon=6, Threshold=3.625, FA=0.0274822695035, MD=0.0274822695035
-Model=ARIMA(p=1, q=0), ROC AUC=0.0673912040754, Past Prediction Horizon=64, Future Prediction Horizon=6, Threshold=3.525, FA=0.0230700976043, MD=0.01685891748
-Model=ARIMA(p=4, q=0), ROC AUC=0.0671844943813, Past Prediction Horizon=64, Future Prediction Horizon=6, Threshold=3.525, FA=0.0247349823322, MD=0.0194346289753
-Model=ARIMA(p=2, q=0), ROC AUC=0.0666941994868, Past Prediction Horizon=64, Future Prediction Horizon=6, Threshold=3.525, FA=0.0230496453901, MD=0.0177304964539
-Model=ARIMA(p=1, q=1), ROC AUC=0.0665836377451, Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=3.475, FA=0.0283018867925, MD=0.0300171526587
-Model=ARIMA(p=1, q=0), ROC AUC=0.0664116975676, Past Prediction Horizon=96, Future Prediction Horizon=12, Threshold=3.675, FA=0.031503150315, MD=0.028802880288
-Model=ARIMA(p=1, q=1), ROC AUC=0.0663201814059, Past Prediction Horizon=96, Future Prediction Horizon=6, Threshold=3.725, FA=0.0304659498208, MD=0.0286738351254
-Model=ARIMA(p=1, q=1), ROC AUC=0.0662628424804, Past Prediction Horizon=64, Future Prediction Horizon=6, Threshold=3.575, FA=0.0253940455342, MD=0.0271453590193
-Model=ARIMA(p=1, q=0), ROC AUC=0.0661301587302, Past Prediction Horizon=96, Future Prediction Horizon=6, Threshold=3.675, FA=0.0287253141831, MD=0.0287253141831
-Model=ARIMA(p=2, q=0), ROC AUC=0.0661092970522, Past Prediction Horizon=96, Future Prediction Horizon=6, Threshold=3.725, FA=0.0278276481149, MD=0.0296229802513
-Model=ARIMA(p=4, q=0), ROC AUC=0.0658309295225, Past Prediction Horizon=96, Future Prediction Horizon=12, Threshold=3.875, FA=0.0346666666667, MD=0.0373333333333
-Model=ARIMA(p=1, q=1), ROC AUC=0.0652572198648, Past Prediction Horizon=96, Future Prediction Horizon=18, Threshold=3.725, FA=0.0332434860737, MD=0.0341419586703
-Model=ARIMA(p=4, q=0), ROC AUC=0.0650706672458, Past Prediction Horizon=96, Future Prediction Horizon=18, Threshold=3.725, FA=0.0324324324324, MD=0.0324324324324
-Model=ARIMA(p=2, q=0), ROC AUC=0.0646927893014, Past Prediction Horizon=96, Future Prediction Horizon=12, Threshold=3.775, FA=0.0355555555556, MD=0.0364444444444
-Model=ARIMA(p=1, q=1), ROC AUC=0.0631174674476, Past Prediction Horizon=96, Future Prediction Horizon=12, Threshold=3.875, FA=0.0372340425532, MD=0.0372340425532
-Model=GARCH(p=1, q=1), ROC AUC=0.00520008168616, Past Prediction Horizon=32, Future Prediction Horizon=18, Threshold=1.225, FA=0.135492399207, MD=0.13615333774
-Model=GARCH(p=1, q=1), ROC AUC=0.00519482529422, Past Prediction Horizon=32, Future Prediction Horizon=12, Threshold=1.725, FA=0.133597883598, MD=0.133597883598
-Model=GARCH(p=1, q=1), ROC AUC=0.0043650422725, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=2.375, FA=0.124411566913, MD=0.126429051782
-Model=GARCH(p=1, q=1), ROC AUC=0.00366204396149, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=1.025, FA=0.115411195577, MD=0.13407049067
-Model=GARCH(p=1, q=1), ROC AUC=0.00285081981511, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=1.025, FA=0.130081300813, MD=0.130081300813
-Model=GARCH(p=1, q=1), ROC AUC=0.00261594899118, Past Prediction Horizon=64, Future Prediction Horizon=18, Threshold=1.025, FA=0.110175438596, MD=0.138947368421
-Model=GARCH(p=1, q=1), ROC AUC=0.0023769710203, Past Prediction Horizon=64, Future Prediction Horizon=12, Threshold=1.025, FA=0.118347338936, MD=0.128151260504
-Model=GARCH(p=1, q=1), ROC AUC=0.00232704934622, Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=1.375, FA=0.127875507442, MD=0.129228687415
-Model=GARCH(p=1, q=1), ROC AUC=0.00228106710036, Past Prediction Horizon=64, Future Prediction Horizon=6, Threshold=1.275, FA=0.123087621697, MD=0.124478442281
-Model=GARCH(p=1, q=1), ROC AUC=0.002, Past Prediction Horizon=96, Future Prediction Horizon=6, Threshold=1.025, FA=0.0567823343849, MD=0.115141955836
-Model=GARCH(p=1, q=1), ROC AUC=0.00124154503382, Past Prediction Horizon=80, Future Prediction Horizon=12, Threshold=1.025, FA=0.0798816568047, MD=0.136094674556
-Model=GARCH(p=1, q=1), ROC AUC=0.00117470627842, Past Prediction Horizon=80, Future Prediction Horizon=18, Threshold=1.025, FA=0.0679611650485, MD=0.144884241972
-Model=GARCH(p=1, q=1), ROC AUC=0.00113256761085, Past Prediction Horizon=80, Future Prediction Horizon=6, Threshold=1.025, FA=0.0999275887038, MD=0.128167994207
-Model=GARCH(p=1, q=1), ROC AUC=0.00095234949575, Past Prediction Horizon=96, Future Prediction Horizon=12, Threshold=1.025, FA=0.0352564102564, MD=0.128205128205
-Model=GARCH(p=1, q=1), ROC AUC=0.000840414907875, Past Prediction Horizon=96, Future Prediction Horizon=18, Threshold=1.025, FA=0.0294585987261, MD=0.144108280255
+Model=ARIMA(p=2, q=0), ROC AUC=0.0832201398004, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.075, FA=0.0177304964539, MD=0.0195035460993
+Model=ARIMA(p=1, q=0), ROC AUC=0.0822153882157, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.125, FA=0.0211827007944, MD=0.0203000882613
+Model=ARIMA(p=4, q=0), ROC AUC=0.0821640907719, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.075, FA=0.0228070175439, MD=0.0245614035088
+Model=ARIMA(p=1, q=1), ROC AUC=0.0813488429671, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.125, FA=0.0194690265487, MD=0.0194690265487
+Model=ARIMA(p=1, q=0), ROC AUC=0.0809070661193, Past Prediction Horizon=64, Future Prediction Horizon=18, Threshold=3.375, FA=0.0214861235452, MD=0.0205908683975
+Model=ARIMA(p=4, q=0), ROC AUC=0.0803013759745, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.225, FA=0.0318142734308, MD=0.0292347377472
+Model=ARIMA(p=1, q=0), ROC AUC=0.0791990366166, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.175, FA=0.0227670753065, MD=0.0210157618214
+Model=GGSM, ROC AUC=0.0791855549835, Past Prediction Horizon=80, Future Prediction Horizon=18, Threshold=3.075, FA=0.0190389845875, MD=0.0253853127833
+Model=GGSM, ROC AUC=0.0787785613354, Past Prediction Horizon=32, Future Prediction Horizon=18, Threshold=2.875, FA=0.0192475940507, MD=0.0166229221347
+Model=ARIMA(p=4, q=0), ROC AUC=0.0787177919469, Past Prediction Horizon=64, Future Prediction Horizon=18, Threshold=3.425, FA=0.0239574090506, MD=0.0266193433895
+Model=ARIMA(p=2, q=0), ROC AUC=0.0785046728972, Past Prediction Horizon=64, Future Prediction Horizon=18, Threshold=3.375, FA=0.0205908683975, MD=0.0214861235452
+Model=ARIMA(p=1, q=0), ROC AUC=0.0782902559609, Past Prediction Horizon=32, Future Prediction Horizon=18, Threshold=2.975, FA=0.0250215703192, MD=0.0241587575496
+Model=ARIMA(p=1, q=0), ROC AUC=0.0782025193129, Past Prediction Horizon=64, Future Prediction Horizon=12, Threshold=3.425, FA=0.0229885057471, MD=0.025641025641
+Model=GGSM, ROC AUC=0.0779070652396, Past Prediction Horizon=96, Future Prediction Horizon=18, Threshold=3.075, FA=0.0193192272309, MD=0.0257589696412
+Model=ARIMA(p=4, q=0), ROC AUC=0.0778838837817, Past Prediction Horizon=32, Future Prediction Horizon=18, Threshold=3.225, FA=0.043153526971, MD=0.0423236514523
+Model=GGSM, ROC AUC=0.0776766642933, Past Prediction Horizon=80, Future Prediction Horizon=12, Threshold=3.275, FA=0.0242152466368, MD=0.0251121076233
+Model=GGSM, ROC AUC=0.0775256910686, Past Prediction Horizon=32, Future Prediction Horizon=12, Threshold=3.125, FA=0.0273037542662, MD=0.0273037542662
+Model=ARIMA(p=2, q=0), ROC AUC=0.0773884997786, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.175, FA=0.0253054101222, MD=0.021815008726
+Model=ARIMA(p=1, q=1), ROC AUC=0.0771250753456, Past Prediction Horizon=32, Future Prediction Horizon=18, Threshold=3.075, FA=0.0315161839864, MD=0.0298126064736
+Model=GGSM, ROC AUC=0.0770608786794, Past Prediction Horizon=64, Future Prediction Horizon=18, Threshold=3.075, FA=0.0187667560322, MD=0.0250223413762
+Model=GGSM, ROC AUC=0.0768829977378, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.075, FA=0.0185022026432, MD=0.0246696035242
+Model=GGSM, ROC AUC=0.0766467021917, Past Prediction Horizon=96, Future Prediction Horizon=12, Threshold=3.275, FA=0.024567788899, MD=0.0254777070064
+Model=ARIMA(p=1, q=1), ROC AUC=0.0762681305264, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.225, FA=0.0261096605744, MD=0.023498694517
+Model=ARIMA(p=2, q=0), ROC AUC=0.0758948422436, Past Prediction Horizon=32, Future Prediction Horizon=18, Threshold=2.975, FA=0.0274914089347, MD=0.0257731958763
+Model=GGSM, ROC AUC=0.0755923425602, Past Prediction Horizon=64, Future Prediction Horizon=12, Threshold=3.275, FA=0.0238726790451, MD=0.0247568523431
+Model=GGSM, ROC AUC=0.0755507077008, Past Prediction Horizon=80, Future Prediction Horizon=6, Threshold=3.375, FA=0.0163636363636, MD=0.0145454545455
+Model=GGSM, ROC AUC=0.0755397277671, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.375, FA=0.017316017316, MD=0.0181818181818
+Model=ARIMA(p=1, q=1), ROC AUC=0.0755275569919, Past Prediction Horizon=64, Future Prediction Horizon=18, Threshold=3.425, FA=0.0266193433895, MD=0.0239574090506
+Model=GGSM, ROC AUC=0.0754655905755, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.275, FA=0.022687609075, MD=0.0244328097731
+Model=ARIMA(p=4, q=0), ROC AUC=0.0752371984517, Past Prediction Horizon=32, Future Prediction Horizon=12, Threshold=3.225, FA=0.043153526971, MD=0.0373443983402
+Model=ARIMA(p=1, q=0), ROC AUC=0.0751801795931, Past Prediction Horizon=32, Future Prediction Horizon=12, Threshold=3.125, FA=0.0256629597947, MD=0.0265183917879
+Model=ARIMA(p=1, q=1), ROC AUC=0.074867390426, Past Prediction Horizon=32, Future Prediction Horizon=12, Threshold=3.175, FA=0.0320945945946, MD=0.0320945945946
+Model=GGSM, ROC AUC=0.0747365079365, Past Prediction Horizon=96, Future Prediction Horizon=6, Threshold=3.375, FA=0.0175115207373, MD=0.0147465437788
+Model=ARIMA(p=4, q=0), ROC AUC=0.0746457000318, Past Prediction Horizon=64, Future Prediction Horizon=12, Threshold=3.475, FA=0.0304083405734, MD=0.0347523892268
+Model=ARIMA(p=4, q=0), ROC AUC=0.0745767266864, Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=3.325, FA=0.0267471958585, MD=0.0258843830889
+Model=ARIMA(p=1, q=0), ROC AUC=0.0740054289783, Past Prediction Horizon=80, Future Prediction Horizon=12, Threshold=3.525, FA=0.0250671441361, MD=0.0259623992838
+Model=ARIMA(p=1, q=0), ROC AUC=0.0737805558656, Past Prediction Horizon=80, Future Prediction Horizon=18, Threshold=3.525, FA=0.0200913242009, MD=0.0173515981735
+Model=ARIMA(p=2, q=0), ROC AUC=0.0737068310278, Past Prediction Horizon=64, Future Prediction Horizon=12, Threshold=3.425, FA=0.0204081632653, MD=0.0248447204969
+Model=GGSM, ROC AUC=0.0735186089975, Past Prediction Horizon=64, Future Prediction Horizon=6, Threshold=3.375, FA=0.0170098478066, MD=0.0143240823635
+Model=ARIMA(p=2, q=0), ROC AUC=0.0735042324284, Past Prediction Horizon=32, Future Prediction Horizon=12, Threshold=3.125, FA=0.0272340425532, MD=0.0297872340426
+Model=GGSM, ROC AUC=0.0734536381764, Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=3.375, FA=0.0167696381289, MD=0.0141218005296
+Model=ARIMA(p=1, q=0), ROC AUC=0.0732255367434, Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=3.375, FA=0.0216076058773, MD=0.0293863439931
+Model=ARIMA(p=1, q=1), ROC AUC=0.0729124156854, Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=3.375, FA=0.0249140893471, MD=0.0317869415808
+Model=ARIMA(p=2, q=0), ROC AUC=0.0721800027206, Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=3.375, FA=0.0240963855422, MD=0.0309810671256
+Model=ARIMA(p=1, q=1), ROC AUC=0.0717962714722, Past Prediction Horizon=64, Future Prediction Horizon=12, Threshold=3.475, FA=0.0313043478261, MD=0.0330434782609
+Model=ARIMA(p=1, q=0), ROC AUC=0.0711340914238, Past Prediction Horizon=96, Future Prediction Horizon=18, Threshold=3.625, FA=0.0316455696203, MD=0.0298372513562
+Model=ARIMA(p=2, q=0), ROC AUC=0.0709628528258, Past Prediction Horizon=96, Future Prediction Horizon=18, Threshold=3.675, FA=0.031503150315, MD=0.034203420342
+Model=ARIMA(p=4, q=0), ROC AUC=0.0709625311499, Past Prediction Horizon=80, Future Prediction Horizon=12, Threshold=3.575, FA=0.026714158504, MD=0.0293855743544
+Model=ARIMA(p=2, q=0), ROC AUC=0.0706961642464, Past Prediction Horizon=80, Future Prediction Horizon=18, Threshold=3.525, FA=0.018315018315, MD=0.0164835164835
+Model=ARIMA(p=1, q=1), ROC AUC=0.0706588927128, Past Prediction Horizon=96, Future Prediction Horizon=18, Threshold=3.675, FA=0.0332434860737, MD=0.0341419586703
+Model=ARIMA(p=4, q=0), ROC AUC=0.0704352151945, Past Prediction Horizon=96, Future Prediction Horizon=18, Threshold=3.725, FA=0.0323741007194, MD=0.0341726618705
+Model=ARIMA(p=4, q=0), ROC AUC=0.0701421169557, Past Prediction Horizon=80, Future Prediction Horizon=18, Threshold=3.575, FA=0.0208711433757, MD=0.0226860254083
+Model=ARIMA(p=4, q=0), ROC AUC=0.0700446902942, Past Prediction Horizon=64, Future Prediction Horizon=6, Threshold=3.475, FA=0.0228873239437, MD=0.0246478873239
+Model=ARIMA(p=1, q=0), ROC AUC=0.0698455111862, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.275, FA=0.0214408233276, MD=0.0231560891938
+Model=ARIMA(p=1, q=0), ROC AUC=0.0698337097386, Past Prediction Horizon=64, Future Prediction Horizon=6, Threshold=3.425, FA=0.0169946332737, MD=0.0152057245081
+Model=ARIMA(p=4, q=0), ROC AUC=0.069688379334, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.325, FA=0.0358632193495, MD=0.0350291909925
+Model=ARIMA(p=1, q=1), ROC AUC=0.0696662197138, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.275, FA=0.0313293818798, MD=0.0254022015241
+Model=ARIMA(p=2, q=0), ROC AUC=0.0692286679409, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.225, FA=0.028085106383, MD=0.023829787234
+Model=ARIMA(p=2, q=0), ROC AUC=0.0691503719066, Past Prediction Horizon=64, Future Prediction Horizon=6, Threshold=3.425, FA=0.01875, MD=0.0151785714286
+Model=ARIMA(p=1, q=1), ROC AUC=0.0689075501658, Past Prediction Horizon=80, Future Prediction Horizon=18, Threshold=3.575, FA=0.0217391304348, MD=0.0235507246377
+Model=ARIMA(p=1, q=0), ROC AUC=0.0687577068745, Past Prediction Horizon=96, Future Prediction Horizon=12, Threshold=3.575, FA=0.0289855072464, MD=0.0253623188406
+Model=ARIMA(p=2, q=0), ROC AUC=0.0687571199715, Past Prediction Horizon=80, Future Prediction Horizon=12, Threshold=3.525, FA=0.024236983842, MD=0.024236983842
+Model=ARIMA(p=1, q=1), ROC AUC=0.0677807066397, Past Prediction Horizon=64, Future Prediction Horizon=6, Threshold=3.475, FA=0.0230088495575, MD=0.0194690265487
+Model=ARIMA(p=4, q=0), ROC AUC=0.0677622355808, Past Prediction Horizon=96, Future Prediction Horizon=12, Threshold=3.625, FA=0.030603060306, MD=0.029702970297
+Model=ARIMA(p=1, q=1), ROC AUC=0.0670158419366, Past Prediction Horizon=80, Future Prediction Horizon=12, Threshold=3.575, FA=0.0308914386584, MD=0.0335392762577
+Model=ARIMA(p=1, q=0), ROC AUC=0.0667198483574, Past Prediction Horizon=80, Future Prediction Horizon=6, Threshold=3.525, FA=0.0162601626016, MD=0.0207768744354
+Model=ARIMA(p=2, q=0), ROC AUC=0.0659020346149, Past Prediction Horizon=96, Future Prediction Horizon=12, Threshold=3.575, FA=0.0298642533937, MD=0.0253393665158
+Model=ARIMA(p=2, q=0), ROC AUC=0.0652638785733, Past Prediction Horizon=80, Future Prediction Horizon=6, Threshold=3.525, FA=0.0171480144404, MD=0.0207581227437
+Model=ARIMA(p=1, q=1), ROC AUC=0.0649395927834, Past Prediction Horizon=96, Future Prediction Horizon=12, Threshold=3.625, FA=0.0322291853178, MD=0.0331244404655
+Model=ARIMA(p=4, q=0), ROC AUC=0.0649171562433, Past Prediction Horizon=80, Future Prediction Horizon=6, Threshold=3.525, FA=0.0250896057348, MD=0.0197132616487
+Model=ARIMA(p=1, q=1), ROC AUC=0.0639764299216, Past Prediction Horizon=80, Future Prediction Horizon=6, Threshold=3.525, FA=0.0259623992838, MD=0.0196956132498
+Model=ARIMA(p=1, q=1), ROC AUC=0.063198185941, Past Prediction Horizon=96, Future Prediction Horizon=6, Threshold=3.575, FA=0.028802880288, MD=0.026102610261
+Model=ARIMA(p=4, q=0), ROC AUC=0.0631637188209, Past Prediction Horizon=96, Future Prediction Horizon=6, Threshold=3.625, FA=0.0321141837645, MD=0.0312221231044
+Model=ARIMA(p=2, q=0), ROC AUC=0.0630390022676, Past Prediction Horizon=96, Future Prediction Horizon=6, Threshold=3.575, FA=0.02700270027, MD=0.027902790279
+Model=ARIMA(p=1, q=0), ROC AUC=0.062714739229, Past Prediction Horizon=96, Future Prediction Horizon=6, Threshold=3.575, FA=0.0252707581227, MD=0.0270758122744
+Model=GARCH(p=1, q=1), ROC AUC=0.006938794668, Past Prediction Horizon=32, Future Prediction Horizon=18, Threshold=1.475, FA=0.132441471572, MD=0.130434782609
+Model=GARCH(p=1, q=1), ROC AUC=0.00652336469914, Past Prediction Horizon=32, Future Prediction Horizon=12, Threshold=1.875, FA=0.125084516565, MD=0.125760649087
+Model=GARCH(p=1, q=1), ROC AUC=0.00589042994498, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=2.675, FA=0.122033898305, MD=0.122711864407
+Model=GARCH(p=1, q=1), ROC AUC=0.0054480740676, Past Prediction Horizon=64, Future Prediction Horizon=18, Threshold=1.575, FA=0.132876712329, MD=0.134246575342
+Model=GARCH(p=1, q=1), ROC AUC=0.00543286563631, Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=1.325, FA=0.13188307274, MD=0.12984364378
+Model=GARCH(p=1, q=1), ROC AUC=0.00439342403628, Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=1.675, FA=0.129316181449, MD=0.13134732566
+Model=GARCH(p=1, q=1), ROC AUC=0.00426550559003, Past Prediction Horizon=64, Future Prediction Horizon=12, Threshold=1.825, FA=0.132423208191, MD=0.133105802048
+Model=GARCH(p=1, q=1), ROC AUC=0.00419878730705, Past Prediction Horizon=80, Future Prediction Horizon=18, Threshold=1.025, FA=0.119115549215, MD=0.12910128388
+Model=GARCH(p=1, q=1), ROC AUC=0.00388990060851, Past Prediction Horizon=64, Future Prediction Horizon=6, Threshold=2.525, FA=0.126896551724, MD=0.126896551724
+Model=GARCH(p=1, q=1), ROC AUC=0.00372510376542, Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=2.275, FA=0.127457627119, MD=0.12813559322
+Model=GARCH(p=1, q=1), ROC AUC=0.00269535421858, Past Prediction Horizon=80, Future Prediction Horizon=12, Threshold=1.325, FA=0.127106741573, MD=0.128511235955
+Model=GARCH(p=1, q=1), ROC AUC=0.00189817275572, Past Prediction Horizon=80, Future Prediction Horizon=6, Threshold=1.825, FA=0.128650904033, MD=0.130041724618
+Model=GARCH(p=1, q=1), ROC AUC=0.00131654174138, Past Prediction Horizon=96, Future Prediction Horizon=18, Threshold=1.025, FA=0.0597014925373, MD=0.124901806756
+Model=GARCH(p=1, q=1), ROC AUC=0.0011688759707, Past Prediction Horizon=96, Future Prediction Horizon=12, Threshold=1.025, FA=0.0685358255452, MD=0.118380062305
+Model=GARCH(p=1, q=1), ROC AUC=0.00112426303855, Past Prediction Horizon=96, Future Prediction Horizon=6, Threshold=1.025, FA=0.0812260536398, MD=0.114176245211
