@@ -45,3 +45,9 @@ for top_result in top_results:
         future = tokens[4].split('=')[1]
         threshold = tokens[5].split('=')[1]
     print 'Algorithm=%s, Past=%s, Future=%s, Threshold=%s' % (algorithm, past, future, threshold)
+
+print 'Top results run list'
+print 'r = ['
+for top_result in top_results:
+    print ' \'' + top_result + '\','
+print ']'
