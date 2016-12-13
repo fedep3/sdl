@@ -16,7 +16,7 @@ def best_run():
                 (ARIMAFuturePredictionModel(18, 2, 0), 48, 3.025),
                 (ARIMAFuturePredictionModel(18, 1, 1), 48, 3.225),
 
-                (ARIMAFuturePredictionModel(18, 4, 0), 48, 3.475),
+                (ARIMAFuturePredictionModel(12, 4, 0), 48, 3.475),
                 (ARIMAFuturePredictionModel(12, 2, 0), 48, 3.025),
                 (ARIMAFuturePredictionModel(12, 1, 1), 48, 3.375),
 
@@ -73,7 +73,7 @@ def print_best_run_results(future_prediction_model_results):
 
 
 def compare_detection_algorithms():
-    for algorithm in ['SVN', 'LR', 'BNN']:
+    for algorithm in ['SVM', 'LR', 'BNN']:
         print algorithm
         print '======================'
 

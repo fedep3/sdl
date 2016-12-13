@@ -1,8 +1,8 @@
 Using SVM
 ======================
 Model=ARIMA(p=4, q=0), Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=3.825, FA=0.0651340996169, MD=0.00574712643678
+Model=ARIMA(p=4, q=0), Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.475, FA=0.0891472868217, MD=0.00193798449612
 Model=ARIMA(p=1, q=1), Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.625, FA=0.0966542750929, MD=0.0
-Model=ARIMA(p=4, q=0), Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.475, FA=0.1, MD=0.00196078431373
 Model=ARIMA(p=4, q=0), Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.475, FA=0.1, MD=0.00196078431373
 Model=GGSM, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.575, FA=0.0966542750929, MD=0.00557620817844
 Model=ARIMA(p=1, q=1), Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.375, FA=0.102713178295, MD=0.0
