@@ -46,10 +46,10 @@ workon sdl
 The software has 3 modes: regression toolbox mode, detection toolbox mode, and best run mode. The -t command line option is used to specify what mode to run. 
 
 ## Regression Toolbox Mode
-To run the regression algorithm comparison and generate the corresponding box plot, use the \verb|-t reg| option, which will run the data preprocessing and regression algorithm comparison and display a box plot representing the statistics on the negative mean squared error for observation.
+To run the regression algorithm comparison and generate the corresponding box plot, use the '-t reg' option, which will run the data preprocessing and regression algorithm comparison and display a box plot representing the statistics on the negative mean squared error for observation.
 
 ## Detection Toolbox Mode
-The detection toolbox mode is designed to search for the ideal parameters for a given regression algorithm, and output the best findings ranked by the AUC value. To run this mode, use the \verb|-t det| option, as well as the \verb|-r| option used to specify which regression algorithm to use in the detection toolbox. For instance, to run the detection toolbox using SVM, use the \verb|SVM| option.
+The detection toolbox mode is designed to search for the ideal parameters for a given regression algorithm, and output the best findings ranked by the AUC value. To run this mode, use the '-t det' option, as well as the '-r' option used to specify which regression algorithm to use in the detection toolbox. For instance, to run the detection toolbox using SVM, use the '-r SVM' option.
 
 ## Best Run Mode
 This mode is designed to generate final results using testing data. The best runs are currently hardcoded into this function, including the top results from the top three regression algorithms. The results are ranked based on lowest combined false alarm and missed detection rate
