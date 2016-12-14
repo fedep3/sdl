@@ -72,47 +72,46 @@ def print_best_run_results(future_prediction_model_results):
         print 'Model=%s, Past Prediction Horizon=%s, Future Prediction Horizon=%s, Threshold=%s, FA=%s, MD=%s' % future_prediction_model_result
 
 
-def compare_detection_algorithms():
-    for algorithm in ['SVM', 'LR', 'BNN']:
-        print algorithm
-        print '======================'
+def compare_detection_algorithms(algorithm):
+    print algorithm
+    print '======================'
 
-        regression_model, ts, standardized_xs, ys = RegressionToolbox.get_instance(algorithm, 'ColdComplaintData/Training', 'ColdComplaintData/Validation')
-        future_prediction_model_results = []
-        best_model_position = -1
-        max_score = -1.0
-        count = 0
+    regression_model, ts, standardized_xs, ys = RegressionToolbox.get_instance(algorithm, 'ColdComplaintData/Training', 'ColdComplaintData/Validation')
+    future_prediction_model_results = []
+    best_model_position = -1
+    max_score = -1.0
+    count = 0
 
-        for future_prediction_horizon in [6, 12, 18]:
-            for future_prediction_model in [ARIMAFuturePredictionModel(future_prediction_horizon, 1, 1),
-                                            ARIMAFuturePredictionModel(future_prediction_horizon, 1, 0),
-                                            ARIMAFuturePredictionModel(future_prediction_horizon, 2, 0),
-                                            ARIMAFuturePredictionModel(future_prediction_horizon, 4, 0),
-                                            GARCHFuturePredictionModel(future_prediction_horizon, 1, 1),
-                                            GGSMFuturePredictionModel(future_prediction_horizon)]:
-                for past_prediction_horizon in [32, 48, 64, 80, 96]:
-                        if isinstance(future_prediction_model, AggregatingFuturePredictionModel) and past_prediction_horizon < 48:
-                            continue
-                        print 'Past prediction horizon: ', past_prediction_horizon
-                        roc_auc, fa_rate, md_rate, threshold = detect(regression_model, future_prediction_model, past_prediction_horizon,
-                                                                      ts, standardized_xs, ys)
-                        future_prediction_model_results.append(
-                            (future_prediction_model, roc_auc, past_prediction_horizon, future_prediction_horizon, threshold, fa_rate, md_rate))
-                        print 'Model=%s, ROC AUC=%s, Past Prediction Horizon=%s, Future Prediction Horizon=%s, Threshold=%s, FA=%s, MD=%s' \
-                              % future_prediction_model_results[-1]
-                        print '======================'
-                        if best_model_position == -1 or roc_auc > max_score:
-                            best_model_position = count
-                            max_score = roc_auc
-                        print 'Best: Model=%s, ROC AUC=%s, Past Prediction Horizon=%s, Future Prediction Horizon=%s, Threshold=%s, FA=%s, MD=%s' \
-                              % future_prediction_model_results[best_model_position]
-                        count += 1
-                        print '======================'
+    for future_prediction_horizon in [6, 12, 18]:
+        for future_prediction_model in [ARIMAFuturePredictionModel(future_prediction_horizon, 1, 1),
+                                        ARIMAFuturePredictionModel(future_prediction_horizon, 1, 0),
+                                        ARIMAFuturePredictionModel(future_prediction_horizon, 2, 0),
+                                        ARIMAFuturePredictionModel(future_prediction_horizon, 4, 0),
+                                        GARCHFuturePredictionModel(future_prediction_horizon, 1, 1),
+                                        GGSMFuturePredictionModel(future_prediction_horizon)]:
+            for past_prediction_horizon in [32, 48, 64, 80, 96]:
+                    if isinstance(future_prediction_model, AggregatingFuturePredictionModel) and past_prediction_horizon < 48:
+                        continue
+                    print 'Past prediction horizon: ', past_prediction_horizon
+                    roc_auc, fa_rate, md_rate, threshold = detect(regression_model, future_prediction_model, past_prediction_horizon,
+                                                                  ts, standardized_xs, ys)
+                    future_prediction_model_results.append(
+                        (future_prediction_model, roc_auc, past_prediction_horizon, future_prediction_horizon, threshold, fa_rate, md_rate))
+                    print 'Model=%s, ROC AUC=%s, Past Prediction Horizon=%s, Future Prediction Horizon=%s, Threshold=%s, FA=%s, MD=%s' \
+                          % future_prediction_model_results[-1]
+                    print '======================'
+                    if best_model_position == -1 or roc_auc > max_score:
+                        best_model_position = count
+                        max_score = roc_auc
+                    print 'Best: Model=%s, ROC AUC=%s, Past Prediction Horizon=%s, Future Prediction Horizon=%s, Threshold=%s, FA=%s, MD=%s' \
+                          % future_prediction_model_results[best_model_position]
+                    count += 1
+                    print '======================'
 
-        print 'Sorted results'
-        future_prediction_model_results.sort(key=lambda s: s[1], reverse=True)
-        for future_prediction_model_result in future_prediction_model_results:
-            print 'Model=%s, ROC AUC=%s, Past Prediction Horizon=%s, Future Prediction Horizon=%s, Threshold=%s, FA=%s, MD=%s' % future_prediction_model_result
+    print 'Sorted results'
+    future_prediction_model_results.sort(key=lambda s: s[1], reverse=True)
+    for future_prediction_model_result in future_prediction_model_results:
+        print 'Model=%s, ROC AUC=%s, Past Prediction Horizon=%s, Future Prediction Horizon=%s, Threshold=%s, FA=%s, MD=%s' % future_prediction_model_result
 
 
 def detect_with_threshold(regression_model, future_prediction_model, past_prediction_horizon, ts, xs, ys, threshold):
@@ -142,15 +141,18 @@ def compare_regression_algorithms():
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Predicting Adverse Thermal Events in a Smart Building')
-    parser.add_argument("-t", "--type", type=int, choices=[1, 2, 3], default=1,
+    parser.add_argument("-t", "--type", type=str, choices=["best", "reg", "det"], default="best",
                         help="type of run: "
-                             "(1)Best arguments run, "
-                             "(2)Compare regression algorithms, "
-                             "(3)Compare detection algorithms")
+                             "(best) Best arguments run, "
+                             "(reg) Compare regression algorithms, "
+                             "(det) Compare detection algorithms")
+    parser.add_argument("-r", "--reg", type=str, choices=["LR", "SVM", "BNN", "ELM"], default="LR",
+                        help="type of regression alg: LR, SVM, BNN, ELM")
+
     args = parser.parse_args()
-    if args.type == 1:
+    if args.type == "best":
         best_run()
-    elif args.type == 2:
+    elif args.type == "reg":
         compare_regression_algorithms()
-    elif args.type == 3:
-        compare_detection_algorithms()
+    elif args.type == "det":
+        compare_detection_algorithms(args.reg)
