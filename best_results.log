@@ -1,35 +1,35 @@
 Using SVM
 ======================
-Model=ARIMA(p=4, q=0), Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=3.825, FA=0.0651340996169, MD=0.00574712643678
-Model=ARIMA(p=4, q=0), Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.475, FA=0.0891472868217, MD=0.00193798449612
-Model=ARIMA(p=1, q=1), Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.625, FA=0.0966542750929, MD=0.0
-Model=ARIMA(p=4, q=0), Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.475, FA=0.1, MD=0.00196078431373
-Model=GGSM, Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.575, FA=0.0966542750929, MD=0.00557620817844
-Model=ARIMA(p=1, q=1), Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.375, FA=0.102713178295, MD=0.0
-Model=ARIMA(p=1, q=1), Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.225, FA=0.123529411765, MD=0.0
-Model=ARIMA(p=2, q=0), Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.025, FA=0.139534883721, MD=0.0
-Model=ARIMA(p=2, q=0), Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.025, FA=0.154901960784, MD=0.0
+Model=ARIMA(p=1, q=0), Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=2.925, FA=0.447284345048, MD=0.0
+Model=ARIMA(p=2, q=0), Past Prediction Horizon=64, Future Prediction Horizon=6, Threshold=2.575, FA=0.520766773163, MD=0.0
+Model=ARIMA(p=1, q=1), Past Prediction Horizon=64, Future Prediction Horizon=6, Threshold=2.575, FA=0.533546325879, MD=0.0
+Model=ARIMA(p=4, q=0), Past Prediction Horizon=80, Future Prediction Horizon=12, Threshold=2.575, FA=0.538205980066, MD=0.0
+Model=ARIMA(p=2, q=0), Past Prediction Horizon=80, Future Prediction Horizon=12, Threshold=2.525, FA=0.554817275748, MD=0.0
+Model=ARIMA(p=1, q=1), Past Prediction Horizon=80, Future Prediction Horizon=18, Threshold=2.575, FA=0.557093425606, MD=0.0
+Model=ARIMA(p=2, q=0), Past Prediction Horizon=80, Future Prediction Horizon=18, Threshold=2.575, FA=0.560553633218, MD=0.0
+Model=ARIMA(p=1, q=0), Past Prediction Horizon=80, Future Prediction Horizon=18, Threshold=2.575, FA=0.56401384083, MD=0.0
+Model=ARIMA(p=1, q=0), Past Prediction Horizon=64, Future Prediction Horizon=12, Threshold=2.525, FA=0.574750830565, MD=0.0
 
 Using LR
 ======================
-Model=ARIMA(p=4, q=0), Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.925, FA=0.0705882352941, MD=0.0
-Model=ARIMA(p=1, q=0), Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.775, FA=0.0755813953488, MD=0.00193798449612
-Model=GGSM, Past Prediction Horizon=96, Future Prediction Horizon=18, Threshold=3.275, FA=0.0779220779221, MD=0.0
-Model=ARIMA(p=1, q=0), Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=3.925, FA=0.0823754789272, MD=0.00574712643678
-Model=GGSM, Past Prediction Horizon=96, Future Prediction Horizon=12, Threshold=3.625, FA=0.0897435897436, MD=0.0
-Model=ARIMA(p=1, q=1), Past Prediction Horizon=32, Future Prediction Horizon=12, Threshold=3.525, FA=0.0883458646617, MD=0.00187969924812
-Model=ARIMA(p=1, q=0), Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.775, FA=0.0921568627451, MD=0.00196078431373
-Model=ARIMA(p=1, q=1), Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.825, FA=0.0836431226766, MD=0.0111524163569
-Model=GGSM, Past Prediction Horizon=96, Future Prediction Horizon=6, Threshold=3.875, FA=0.0991561181435, MD=0.00632911392405
+Model=ARIMA(p=4, q=0), Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=3.475, FA=0.130990415335, MD=0.0
+Model=GGSM, Past Prediction Horizon=64, Future Prediction Horizon=6, Threshold=3.275, FA=0.153354632588, MD=0.0
+Model=ARIMA(p=4, q=0), Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.075, FA=0.205980066445, MD=0.0
+Model=ARIMA(p=4, q=0), Past Prediction Horizon=64, Future Prediction Horizon=18, Threshold=3.125, FA=0.217993079585, MD=0.0
+Model=GGSM, Past Prediction Horizon=64, Future Prediction Horizon=12, Threshold=3.025, FA=0.43853820598, MD=0.0
+Model=ARIMA(p=1, q=0), Past Prediction Horizon=32, Future Prediction Horizon=6, Threshold=3.025, FA=0.449685534591, MD=0.0
+Model=GGSM, Past Prediction Horizon=64, Future Prediction Horizon=18, Threshold=2.625, FA=0.449826989619, MD=0.0
+Model=ARIMA(p=1, q=0), Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.025, FA=0.458471760797, MD=0.0
+Model=ARIMA(p=1, q=0), Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=2.975, FA=0.501730103806, MD=0.0
 
 Using BNN
 ======================
-Model=GGSM, Past Prediction Horizon=80, Future Prediction Horizon=6, Threshold=3.375, FA=0.00204081632653, MD=0.0183673469388
-Model=ARIMA(p=1, q=0), Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=3.375, FA=0.00383141762452, MD=0.0172413793103
-Model=ARIMA(p=4, q=0), Past Prediction Horizon=48, Future Prediction Horizon=6, Threshold=3.325, FA=0.00383141762452, MD=0.0229885057471
-Model=GGSM, Past Prediction Horizon=80, Future Prediction Horizon=12, Threshold=3.275, FA=0.00413223140496, MD=0.0309917355372
-Model=ARIMA(p=1, q=0), Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.175, FA=0.0348837209302, MD=0.0290697674419
-Model=ARIMA(p=4, q=0), Past Prediction Horizon=48, Future Prediction Horizon=12, Threshold=3.225, FA=0.0368217054264, MD=0.0290697674419
-Model=ARIMA(p=2, q=0), Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.075, FA=0.0470588235294, MD=0.0411764705882
-Model=ARIMA(p=1, q=0), Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.125, FA=0.0549019607843, MD=0.043137254902
-Model=ARIMA(p=4, q=0), Past Prediction Horizon=48, Future Prediction Horizon=18, Threshold=3.075, FA=0.0686274509804, MD=0.0411764705882
+Model=GGSM, Past Prediction Horizon=64, Future Prediction Horizon=6, Threshold=3.225, FA=0.00638977635783, MD=0.0310880829016
+Model=ARIMA(p=4, q=0), Past Prediction Horizon=96, Future Prediction Horizon=6, Threshold=3.425, FA=0.0127795527157, MD=0.0372670807453
+Model=ARIMA(p=2, q=0), Past Prediction Horizon=96, Future Prediction Horizon=6, Threshold=3.275, FA=0.0223642172524, MD=0.0372670807453
+Model=GGSM, Past Prediction Horizon=64, Future Prediction Horizon=12, Threshold=3.075, FA=0.00664451827243, MD=0.0603015075377
+Model=GGSM, Past Prediction Horizon=64, Future Prediction Horizon=18, Threshold=2.925, FA=0.00692041522491, MD=0.0878048780488
+Model=ARIMA(p=4, q=0), Past Prediction Horizon=96, Future Prediction Horizon=12, Threshold=3.475, FA=0.0431893687708, MD=0.0718562874251
+Model=ARIMA(p=1, q=1), Past Prediction Horizon=96, Future Prediction Horizon=12, Threshold=3.275, FA=0.0431893687708, MD=0.0778443113772
+Model=ARIMA(p=4, q=0), Past Prediction Horizon=96, Future Prediction Horizon=18, Threshold=3.325, FA=0.0726643598616, MD=0.104046242775
+Model=ARIMA(p=1, q=1), Past Prediction Horizon=96, Future Prediction Horizon=18, Threshold=3.225, FA=0.0726643598616, MD=0.109826589595

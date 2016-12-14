@@ -12,41 +12,41 @@ warnings.filterwarnings('ignore', category=RuntimeWarning)
 
 
 def best_run():
-    run('SVM', [(ARIMAFuturePredictionModel(18, 4, 0), 48, 3.475),
-                (ARIMAFuturePredictionModel(18, 2, 0), 48, 3.025),
-                (ARIMAFuturePredictionModel(18, 1, 1), 48, 3.225),
+    run('SVM', [(ARIMAFuturePredictionModel(18, 2, 0), 80, 2.575),
+                (ARIMAFuturePredictionModel(18, 1, 0), 80, 2.575),
+                (ARIMAFuturePredictionModel(18, 1, 1), 80, 2.575),
 
-                (ARIMAFuturePredictionModel(12, 4, 0), 48, 3.475),
-                (ARIMAFuturePredictionModel(12, 2, 0), 48, 3.025),
-                (ARIMAFuturePredictionModel(12, 1, 1), 48, 3.375),
+                (ARIMAFuturePredictionModel(12, 2, 0), 80, 2.525),
+                (ARIMAFuturePredictionModel(12, 4, 0), 80, 2.575),
+                (ARIMAFuturePredictionModel(12, 1, 0), 64, 2.525),
 
-                (ARIMAFuturePredictionModel(6, 4, 0), 48, 3.825),
-                (ARIMAFuturePredictionModel(6, 1, 1), 32, 3.625),
-                (GGSMFuturePredictionModel(6), 32, 3.575)])
+                (ARIMAFuturePredictionModel(6, 2, 0), 64, 2.575),
+                (ARIMAFuturePredictionModel(6, 1, 0), 48, 2.925),
+                (ARIMAFuturePredictionModel(6, 1, 1), 64, 2.575)])
 
-    run('LR', [(GGSMFuturePredictionModel(18), 96, 3.275),
-               (ARIMAFuturePredictionModel(18, 4, 0), 48, 3.925),
-               (ARIMAFuturePredictionModel(18, 1, 0), 48, 3.775),
+    run('LR', [(GGSMFuturePredictionModel(18), 64, 2.625),
+               (ARIMAFuturePredictionModel(18, 4, 0), 64, 3.125),
+               (ARIMAFuturePredictionModel(18, 1, 0), 48, 2.975),
 
-               (GGSMFuturePredictionModel(12), 96, 3.625),
-               (ARIMAFuturePredictionModel(12, 1, 1), 32, 3.525),
-               (ARIMAFuturePredictionModel(12, 1, 0), 48, 3.775),
+               (ARIMAFuturePredictionModel(12, 1, 0), 48, 3.025),
+               (GGSMFuturePredictionModel(12), 64, 3.025),
+               (ARIMAFuturePredictionModel(12, 4, 0), 48, 3.075),
 
-               (GGSMFuturePredictionModel(6), 96, 3.875),
-               (ARIMAFuturePredictionModel(6, 1, 1), 32, 3.825),
-               (ARIMAFuturePredictionModel(6, 1, 0), 48, 3.925)])
+               (ARIMAFuturePredictionModel(6, 1, 0), 32, 3.025),
+               (ARIMAFuturePredictionModel(6, 4, 0), 48, 3.475),
+               (GGSMFuturePredictionModel(6), 64, 3.275)])
 
-    run('BNN', [(ARIMAFuturePredictionModel(18, 2, 0), 48, 3.075),
-                (ARIMAFuturePredictionModel(18, 1, 0), 48, 3.125),
-                (ARIMAFuturePredictionModel(18, 4, 0), 48, 3.075),
+    run('BNN', [(GGSMFuturePredictionModel(18), 64, 2.925),
+               (ARIMAFuturePredictionModel(18, 4, 0), 96, 3.325),
+               (ARIMAFuturePredictionModel(18, 1, 1), 96, 3.225),
 
-                (ARIMAFuturePredictionModel(12, 4, 0), 48, 3.225),
-                (ARIMAFuturePredictionModel(12, 1, 0), 48, 3.175),
-                (GGSMFuturePredictionModel(12), 80, 3.275),
+                (ARIMAFuturePredictionModel(12, 4, 0), 96, 3.475),
+                (ARIMAFuturePredictionModel(12, 1, 1), 96, 3.275),
+                (GGSMFuturePredictionModel(12), 64, 3.075),
 
-                (GGSMFuturePredictionModel(6), 80, 3.375),
-                (ARIMAFuturePredictionModel(6, 4, 0), 48, 3.325),
-                (ARIMAFuturePredictionModel(6, 1, 0), 48, 3.375)])
+                (GGSMFuturePredictionModel(6), 64, 3.225),
+                (ARIMAFuturePredictionModel(6, 2, 0), 96, 3.275),
+                (ARIMAFuturePredictionModel(6, 4, 0), 96, 3.425)])
 
 
 def run(algorithm, runs):
