@@ -43,7 +43,9 @@ workon sdl
 
 # Running the Software
 
-The software has 3 modes: regression toolbox mode, detection toolbox mode, and best run mode. The -t command line option is used to specify what mode to run. 
+The software at the time of this writing has 3 modes: regression toolbox mode, detection toolbox mode, and best run mode. The '-t' command line option is used to specify what mode to run, and the optional argument '-r|' is used to specify what regression algorithm to use:
+
+python [-O] main.py [-t type] [-r reg_alg]
 
 ## Regression Toolbox Mode
 To run the regression algorithm comparison and generate the corresponding box plot, use the '-t reg' option, which will run the data preprocessing and regression algorithm comparison and display a box plot representing the statistics on the negative mean squared error for observation.
