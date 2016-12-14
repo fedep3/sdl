@@ -52,6 +52,6 @@ To run the regression algorithm comparison and generate the corresponding box pl
 The detection toolbox mode is designed to search for the ideal parameters for a given regression algorithm, and output the best findings ranked by the AUC value. To run this mode, use the '-t det' option, as well as the '-r' option used to specify which regression algorithm to use in the detection toolbox. For instance, to run the detection toolbox using SVM, use the '-r SVM' option.
 
 ## Best Run Mode
-This mode is designed to generate final results using testing data. The best runs are currently hardcoded into this function, including the top results from the top three regression algorithms. The results are ranked based on lowest combined false alarm and missed detection rate
+This mode is designed to generate final results using testing data. To run it, use the '-t best' option. The best runs are currently hardcoded into this function, including the top results from the top three regression algorithms. The results are ranked based on lowest combined false alarm and missed detection rate
 
 
