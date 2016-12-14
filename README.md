@@ -43,7 +43,7 @@ workon sdl
 
 # Running the Software
 
-The software at the time of this writing has 3 modes: regression toolbox mode, detection toolbox mode, and best run mode. The '-t' command line option is used to specify what mode to run, and the optional argument '-r|' is used to specify what regression algorithm to use:
+The software at the time of this writing has 3 modes: regression toolbox mode, detection toolbox mode, and best run mode. The '-t' command line option is used to specify what mode to run, and the optional argument '-r' is used to specify what regression algorithm to use. Use the '-O' python option to suppress debugging output and graph plotting, which is usually necessary when many different configurations are being run:
 
 python [-O] main.py [-t type] [-r reg_alg]
 
