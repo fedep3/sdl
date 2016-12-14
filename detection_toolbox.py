@@ -42,13 +42,13 @@ class DetectionToolbox:
         return prediction_future
 
     def calculate_roc_curve(self, future_residuals_prediction, ys):
-        fa_rate_data = []
-        md_rate_data = []
-        ta_rate_data = []
+        fp_rate_data = []
+        fn_rate_data = []
+        tp_rate_data = []
 
         ideal_threshold = -1.0
-        ideal_fa_rate = -1.0
-        ideal_md_rate = -1.0
+        ideal_fp_rate = -1.0
+        ideal_fn_rate = -1.0
 
         threshold_found = False
 
@@ -56,36 +56,31 @@ class DetectionToolbox:
             threshold = 1.0 + float(t) * 0.05
             if __debug__:
                 print 'Checking threshold: ', threshold
-            total_count, fa_count, ta_count, md_count = \
+            fp_rate, fn_rate, tp_rate = \
                 self.calculate_counts(future_residuals_prediction, ys, threshold)
             
             if __debug__:
-                print 'True Alarm Count: ', ta_count
-                print 'False Alarm Count: ', fa_count
-                print 'Missed Detection Count: ', md_count
+                print '(True Positive) True Alarm Rate: ', tp_rate
+                print '(False Positive) False Alarm Rate: ', fp_rate
+                print '(False Negative) Missed Detection Rate: ', fn_rate
                 print '------------------------------------'
-            fa_rate = float(fa_count) / total_count
-            md_rate = float(md_count) / total_count
-            ta_rate = float(ta_count) / total_count
 
-            if not threshold_found and fa_count < md_count:
-                final_correct_count, final_fa_count, dummy, final_md_count = self.calculate_counts(future_residuals_prediction, ys, threshold - 0.025)
-                ideal_fa_rate = float(final_fa_count) / (final_correct_count + final_fa_count + final_md_count)
-                ideal_md_rate = float(final_md_count) / (final_correct_count + final_fa_count + final_md_count)
+            if not threshold_found and fp_rate < fn_rate:
+                ideal_fp_rate, ideal_fn_rate, ideal_tp_rate = self.calculate_counts(future_residuals_prediction, ys, threshold - 0.025)
                 ideal_threshold = threshold - 0.025
                 threshold_found = True
             
-            fa_rate_data.append(fa_rate)
-            md_rate_data.append(md_rate)
-            ta_rate_data.append(ta_rate)
+            fp_rate_data.append(fp_rate)
+            fn_rate_data.append(fn_rate)
+            tp_rate_data.append(tp_rate)
 
-        roc_auc = auc(np.array(fa_rate_data), np.array(ta_rate_data), reorder=True)
+        roc_auc = auc(np.array(fp_rate_data), np.array(tp_rate_data), reorder=True)
         
         if __debug__:
             print 'Plotting Detection Error Tradeoff'
             fig = plt.figure()
             plt.title('Detection Error Tradeoff')
-            plt.plot(fa_rate_data, md_rate_data, 'b')
+            plt.plot(fp_rate_data, fn_rate_data, 'b')
             plt.legend(loc='lower right')
             plt.plot([0, 1], [0, 1], 'r--')
             plt.xlim([0.0, 1.0])
@@ -96,7 +91,7 @@ class DetectionToolbox:
             print 'Plotting ROC Curve'
             fig = plt.figure()
             plt.title('ROC Curve')
-            plt.plot(fa_rate_data, ta_rate_data, 'b', label='AUC = %0.2f' % roc_auc)
+            plt.plot(fp_rate_data, tp_rate_data, 'b', label='AUC = %0.2f' % roc_auc)
             plt.legend(loc='lower right')
             plt.plot([0, 1], [0, 1], 'r--')
             plt.xlim([0.0, 1.0])
@@ -105,7 +100,7 @@ class DetectionToolbox:
             plt.xlabel('False Positive Rate')
             fig.savefig('roc.png')
 
-        return roc_auc, ideal_threshold, ideal_fa_rate, ideal_md_rate
+        return roc_auc, ideal_threshold, ideal_fp_rate, ideal_fn_rate
 
     def calculate_counts(self, future_residuals_prediction, ys, threshold):
         return self._calculate_error_rates(threshold,
@@ -135,16 +130,25 @@ class DetectionToolbox:
             alarm_actuals.append(alarm_actual)
 
         # Calculate the false alarm and missed detection rate
-        fa_count = 0
-        md_count = 0
-        ta_count = 0
+        fp_count = 0
+        fn_count = 0
+        tp_count = 0
+        tn_count = 0
         for r in xrange(len(alarms)):
             if alarms[r] == True and alarm_actuals[r] == False:
-                fa_count += 1
+                fp_count += 1
             elif alarms[r] == False and alarm_actuals[r] == True:
-                md_count += 1
+                fn_count += 1
             elif alarms[r] == True and alarm_actuals[r] == True:
-                ta_count += 1
+                tp_count += 1
+            elif alarms[r] == False and alarm_actuals[r] == False:
+                tn_count += 1
+
+        fp_rate = float(fp_count) / float(fp_count + tn_count)
+        fn_rate = float(fn_count) / float(tp_count + fn_count)
+        tp_rate = float(tp_count) / float(tp_count + fn_count)
 
         # return total events, false alarms, true alarms, missed detections
-        return len(alarms), fa_count, ta_count, md_count
+        return fp_rate, fn_rate, tp_rate
+
+

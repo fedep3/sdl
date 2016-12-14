@@ -118,10 +118,8 @@ def compare_detection_algorithms():
 def detect_with_threshold(regression_model, future_prediction_model, past_prediction_horizon, ts, xs, ys, threshold):
     detection_toolbox = DetectionToolbox(regression_model, past_prediction_horizon, future_prediction_model)
     future_residuals_prediction = detection_toolbox.predict_residuals(ts, xs, ys)
-    total_count, fa_count, ta_count, md_count = detection_toolbox.calculate_counts(future_residuals_prediction, ys, threshold)
-    fa_rate = float(fa_count) / total_count
-    md_rate = float(md_count) / total_count
-    return fa_rate, md_rate
+    fp_rate, fn_rate, tp_rate = detection_toolbox.calculate_counts(future_residuals_prediction, ys, threshold)
+    return fp_rate, fn_rate
 
 
 def detect(regression_model, future_prediction_model, past_prediction_horizon, ts, xs, ys):
