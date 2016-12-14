@@ -52,8 +52,8 @@ class DetectionToolbox:
 
         threshold_found = False
 
-        for t in xrange(1, 81):
-            threshold = 1.0 + float(t) * 0.05
+        for t in xrange(1, 141):
+            threshold = 0.0 + float(t) * 0.05
             if __debug__:
                 print 'Checking threshold: ', threshold
             fp_rate, fn_rate, tp_rate = \
