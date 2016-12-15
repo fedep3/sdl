@@ -1,0 +1,29 @@
+\begin{table*}[h!]
+\centering
+\caption{Detection Toolbox Top Results with LR}
+    \label{table:lrexperimenttwotop3}
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+        \hline
+        Detection Algorithm & ROC AUC & Past P. H. & Future P. H. & Threshold & False Alarm Rate & Missed Detection Rate \\
+        \hline
+        \hline
+        ARIMA(p=1, q=0) & 0.9808 & 32 & 6 & 3.025 &  0.067 & 0.066 \\
+        \hline
+        ARIMA(p=4, q=0) & 0.9770 & 48 & 6 & 3.475 &  0.050 & 0.050 \\
+        \hline
+        GGSM & 0.9763 & 64 & 6 & 3.275 &  0.052 & 0.042 \\
+        \hline
+        ARIMA(p=1, q=0) & 0.9742 & 48 & 12 & 3.025 &  0.069 & 0.071 \\
+        \hline
+        GGSM & 0.9729 & 64 & 12 & 3.025 &  0.057 & 0.060 \\
+        \hline
+        ARIMA(p=4, q=0) & 0.9724 & 48 & 12 & 3.075 &  0.070 & 0.071 \\
+        \hline
+        GGSM & 0.9698 & 64 & 18 & 2.625 &  0.053 & 0.071 \\
+        \hline
+        ARIMA(p=4, q=0) & 0.9646 & 64 & 18 & 3.125 &  0.072 & 0.067 \\
+        \hline
+        ARIMA(p=1, q=0) & 0.9622 & 48 & 18 & 2.975 &  0.081 & 0.078 \\
+        \hline
+    \end{tabular}
+\end{table*}
