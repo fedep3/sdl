@@ -1,11 +1,10 @@
-import warnings
 import argparse
+import warnings
 
-from detection_toolbox import DetectionToolbox
-from prediction_model import ARIMAFuturePredictionModel, GARCHFuturePredictionModel, GGSMFuturePredictionModel, \
+from detection.models import ARIMAFuturePredictionModel, GARCHFuturePredictionModel, GGSMFuturePredictionModel, \
     AggregatingFuturePredictionModel
-
-from regression_toolbox import RegressionToolbox
+from detection.toolbox import DetectionToolbox
+from regression.toolbox import RegressionToolbox
 
 warnings.filterwarnings('ignore', category=DeprecationWarning)
 warnings.filterwarnings('ignore', category=RuntimeWarning) 
