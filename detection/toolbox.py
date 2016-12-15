@@ -5,10 +5,10 @@ import numpy as np
 from sklearn.metrics import auc
 
 
-TEMPERATURE_THRESHOLD = 68.1
-
-
 class DetectionToolbox:
+
+    # Below this number is consider a cold event.
+    TEMPERATURE_THRESHOLD = 68.1
 
     def __init__(self, regression_model, past_prediction_horizon, future_prediction_model):
         self.regression_model = regression_model
@@ -16,6 +16,10 @@ class DetectionToolbox:
         self.future_prediction_model = future_prediction_model
 
     def predict_residuals(self, ts, xs, ys):
+        """
+        Computes and return the future residuals using the regression and prediction models.
+        """
+
         # Calculate residuals
         predictions = []
         prediction_residuals = []
@@ -42,6 +46,11 @@ class DetectionToolbox:
         return prediction_future
 
     def calculate_roc_curve(self, future_residuals_prediction, ys):
+        """
+        Computes the AUC, ideal threshold, false positive rate and false negative rate from the predicted residuals
+        and actual values.
+        """
+
         fp_rate_data = []
         fn_rate_data = []
         tp_rate_data = []
@@ -58,7 +67,7 @@ class DetectionToolbox:
                 print 'Checking threshold: ', threshold
             fp_rate, fn_rate, tp_rate = \
                 self.calculate_counts(future_residuals_prediction, ys, threshold)
-            
+
             if __debug__:
                 print '(True Positive) True Alarm Rate: ', tp_rate
                 print '(False Positive) False Alarm Rate: ', fp_rate
@@ -69,13 +78,13 @@ class DetectionToolbox:
                 ideal_fp_rate, ideal_fn_rate, ideal_tp_rate = self.calculate_counts(future_residuals_prediction, ys, threshold - 0.025)
                 ideal_threshold = threshold - 0.025
                 threshold_found = True
-            
+
             fp_rate_data.append(fp_rate)
             fn_rate_data.append(fn_rate)
             tp_rate_data.append(tp_rate)
 
         roc_auc = auc(np.array(fp_rate_data), np.array(tp_rate_data), reorder=True)
-        
+
         if __debug__:
             print 'Plotting Detection Error Tradeoff'
             fig = plt.figure()
@@ -109,6 +118,11 @@ class DetectionToolbox:
                                            ys[self.past_prediction_horizon:])
 
     def _calculate_error_rates(self, threshold, future_residuals_prediction, actuals):
+        """
+        Computes the false positive rate, false negative rate and true positive rate of the detection model with the
+        given threshold.
+        """
+
         La = threshold
 
         # Predict alarms with the given level
@@ -125,7 +139,7 @@ class DetectionToolbox:
         for i in xrange(len(actuals) - self.future_prediction_model.future_prediction_horizon):
             alarm_actual = False
             for x in xrange(self.future_prediction_model.future_prediction_horizon):
-                if actuals[i + x] < TEMPERATURE_THRESHOLD:
+                if actuals[i + x] < self.TEMPERATURE_THRESHOLD:
                     alarm_actual = True
             alarm_actuals.append(alarm_actual)
 

@@ -2,18 +2,34 @@ import pyflux as pf
 
 
 class FuturePredictionModel:
+    """
+    Base class for different prediction models.
+    """
 
     def __init__(self, future_prediction_horizon):
         self.future_prediction_horizon = future_prediction_horizon
         self.model = None
 
     def train(self, df):
+        """
+        Trains the model
+        :param df: Data used to train.
+        :return: nothing.
+        """
         pass
 
     def fit(self):
+        """
+        Fits the data.
+        :return: nothing.
+        """
         pass
 
     def future(self):
+        """
+        Returns the predicted value for the model future prediction horizon.
+        :return: prediction.
+        """
         return self.model.predict(h=self.future_prediction_horizon)['residuals'][self.future_prediction_horizon - 1]
 
 

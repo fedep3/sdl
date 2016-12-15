@@ -12,11 +12,12 @@ class MatReader:
     def __init__(self):
         pass
 
-    """
-    It will read different .mat files in the folder_path and will merge the data.
-    :return Two lists, the first one the Xs values and the second one the corresponding Ys values.
-    """
     def read(self, folder_path):
+        """
+        It will read different .mat files in the folder_path and will merge the data.
+        :return Three lists, the first one the time of each X and Y pair, the second one the Xs values and the third
+        one the corresponding Ys values.
+        """
         ts = []
         xs = []
         ys = []

@@ -12,6 +12,9 @@ from readers.mat_reader import MatReader
 
 
 class NothingScaler:
+    """
+    Scaler that does not transform the data.
+    """
 
     def __init__(self):
         pass
@@ -28,6 +31,7 @@ class RegressionToolbox:
     def __init__(self):
         pass
 
+    # Different regression models with respective constructor and scaler.
     MODELS = {'SVM': {'constructor': svm.SVR, 'scaler': preprocessing.MinMaxScaler()},
               'ELM': {'constructor': ELMRegressor, 'scaler': preprocessing.MinMaxScaler()},
               'LR': {'constructor': LinearRegression, 'scaler': preprocessing.MinMaxScaler()},
@@ -37,6 +41,11 @@ class RegressionToolbox:
 
     @staticmethod
     def get_instance(algorithm, training_data_folder, testing_data_folder):
+        """
+        Returns an instance of the given trained model of the given algorithm with the training and
+        testing/validation data correctly scaled.
+        """
+
         if algorithm not in RegressionToolbox.MODELS:
             raise Exception('Invalid algorithm')
         mat_reader = MatReader()
@@ -50,6 +59,10 @@ class RegressionToolbox:
 
     @staticmethod
     def compare_regression_algorithms(ps=10):
+        """
+        Performs cross-validation between the different regression algorithms.
+        """
+
         mat_reader = MatReader()
         dummy, xs, ys = mat_reader.read('ColdComplaintData/Training')
         results = []
