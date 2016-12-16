@@ -92,7 +92,7 @@ def compare_detection_algorithms(algorithm):
                     if isinstance(future_prediction_model, AggregatingFuturePredictionModel) and past_prediction_horizon < 48:
                         continue
                     print 'Past prediction horizon: ', past_prediction_horizon
-                    roc_auc, fa_rate, md_rate, threshold = detect(regression_model, future_prediction_model, past_prediction_horizon,
+                    roc_auc, threshold, fa_rate, md_rate = detect(regression_model, future_prediction_model, past_prediction_horizon,
                                                                   ts, standardized_xs, ys)
                     future_prediction_model_results.append(
                         (future_prediction_model, roc_auc, past_prediction_horizon, future_prediction_horizon, threshold, fa_rate, md_rate))
@@ -116,7 +116,7 @@ def compare_detection_algorithms(algorithm):
 def detect_with_threshold(regression_model, future_prediction_model, past_prediction_horizon, ts, xs, ys, threshold):
     detection_toolbox = DetectionToolbox(regression_model, past_prediction_horizon, future_prediction_model)
     future_residuals_prediction = detection_toolbox.predict_residuals(ts, xs, ys)
-    fp_rate, fn_rate, tp_rate = detection_toolbox.calculate_counts(future_residuals_prediction, ys, threshold)
+    fp_rate, fn_rate, tp_rate = detection_toolbox.calculate_rates(future_residuals_prediction, ys, threshold)
     return fp_rate, fn_rate
 
 
@@ -131,7 +131,7 @@ def detect(regression_model, future_prediction_model, past_prediction_horizon, t
     print 'ROC AUC: ', roc_auc
     print 'Ideal threshold found: ', threshold
     print 'FA rate: %0.3f, MD rate: %0.3f' % (fa_rate, md_rate)
-    return roc_auc, fa_rate, md_rate, threshold
+    return roc_auc, threshold, fa_rate, md_rate
 
 
 def compare_regression_algorithms():

@@ -66,7 +66,7 @@ class DetectionToolbox:
             if __debug__:
                 print 'Checking threshold: ', threshold
             fp_rate, fn_rate, tp_rate = \
-                self.calculate_counts(future_residuals_prediction, ys, threshold)
+                self.calculate_rates(future_residuals_prediction, ys, threshold)
 
             if __debug__:
                 print '(True Positive) True Alarm Rate: ', tp_rate
@@ -75,7 +75,7 @@ class DetectionToolbox:
                 print '------------------------------------'
 
             if not threshold_found and fp_rate < fn_rate:
-                ideal_fp_rate, ideal_fn_rate, ideal_tp_rate = self.calculate_counts(future_residuals_prediction, ys, threshold - 0.025)
+                ideal_fp_rate, ideal_fn_rate, ideal_tp_rate = self.calculate_rates(future_residuals_prediction, ys, threshold - 0.025)
                 ideal_threshold = threshold - 0.025
                 threshold_found = True
 
@@ -111,13 +111,13 @@ class DetectionToolbox:
 
         return roc_auc, ideal_threshold, ideal_fp_rate, ideal_fn_rate
 
-    def calculate_counts(self, future_residuals_prediction, ys, threshold):
-        return self._calculate_error_rates(threshold,
+    def calculate_rates(self, future_residuals_prediction, ys, threshold):
+        return self._calculate_rates(threshold,
                                            future_residuals_prediction[
                                            :-self.future_prediction_model.future_prediction_horizon],
                                            ys[self.past_prediction_horizon:])
 
-    def _calculate_error_rates(self, threshold, future_residuals_prediction, actuals):
+    def _calculate_rates(self, threshold, future_residuals_prediction, actuals):
         """
         Computes the false positive rate, false negative rate and true positive rate of the detection model with the
         given threshold.
